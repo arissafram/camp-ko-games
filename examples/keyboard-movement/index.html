@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keyboard Movement Example</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; background: #fff; color: #111; padding: 2rem; max-width: 600px; margin: 0 auto; }
+    h1 { font-size: 1.25rem; margin-bottom: 0.375rem; }
+    .concept { font-size: 0.8125rem; color: #888; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1.5rem; }
+    .demo { background: #f2f2f2; border: 1px solid #e5e5e5; border-radius: 2px; padding: 1rem; margin-bottom: 1.5rem; position: relative; height: 220px; overflow: hidden; }
+    .hint { font-size: 0.8125rem; color: #888; text-align: center; margin-bottom: 0.75rem; }
+    #box { width: 48px; height: 48px; background: #111; border-radius: 2px; position: absolute; top: 86px; left: 86px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; }
+    pre { background: #f8f8f8; border: 1px solid #e5e5e5; border-radius: 2px; padding: 1rem; overflow-x: auto; font-size: 0.8125rem; line-height: 1.6; }
+    .source-label { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+
+  <h1>Keyboard Movement</h1>
+  <p class="concept">Concepts: keydown events &amp; DOM style</p>
+
+  <div class="demo">
+    <p class="hint">Click the box first, then use arrow keys to move it.</p>
+    <div id="box" tabindex="0">🟥</div>
+  </div>
+
+  <p class="source-label">Source code</p>
+  <pre><code>var box = document.getElementById('box');
+var x = 86;
+var y = 86;
+var STEP = 10;
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'ArrowLeft')  x = x - STEP;
+  if (e.key === 'ArrowRight') x = x + STEP;
+  if (e.key === 'ArrowUp')    y = y - STEP;
+  if (e.key === 'ArrowDown')  y = y + STEP;
+
+  box.style.left = x + 'px';
+  box.style.top  = y + 'px';
+
+  e.preventDefault(); // stop the page from scrolling
+});</code></pre>
+
+  <script>
+    var box = document.getElementById('box');
+    var x = 86, y = 86;
+    var STEP = 10;
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft')  x = x - STEP;
+      if (e.key === 'ArrowRight') x = x + STEP;
+      if (e.key === 'ArrowUp')    y = y - STEP;
+      if (e.key === 'ArrowDown')  y = y + STEP;
+      box.style.left = x + 'px';
+      box.style.top  = y + 'px';
+      if (['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)) e.preventDefault();
+    });
+  </script>
+</body>
+</html>
