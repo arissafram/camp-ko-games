@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clicker Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="game-wrap">
+    <h1>Clicker</h1>
+
+    <div class="score-display">
+      <div class="score-number" id="score">0</div>
+      <div class="score-label">score</div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat">
+        <span class="stat-value" id="cps">0</span>
+        <span class="stat-label">clicks/sec</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="high-score">0</span>
+        <span class="stat-label">best</span>
+      </div>
+    </div>
+
+    <button id="click-btn" class="click-btn">Click!</button>
+
+    <button id="reset-btn" class="reset-btn">Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
