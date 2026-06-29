@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Templates — Camp KO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <svg style="position:fixed;width:0;height:0;pointer-events:none" aria-hidden="true">
+    <defs>
+      <filter id="crayon-rough" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <nav class="site-nav">
+    <div class="container">
+      <a href="index.html" class="nav-brand">Interactive Web Apps</a>
+      <ul class="nav-links">
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="examples.html">Examples</a></li>
+        <li><a href="cheat-sheets.html">Cheat Sheets</a></li>
+        <li><a href="challenges.html">Challenges</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile">
+      <ul>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="examples.html">Examples</a></li>
+        <li><a href="cheat-sheets.html">Cheat Sheets</a></li>
+        <li><a href="challenges.html">Challenges</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="page-nav" aria-label="Games">
+    <div class="container">
+      <a href="#clicker">Clicker</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#whack-a-mole">Whack-a-Mole</a>
+      <a href="#memory">Memory</a>
+      <a href="#racing">Racing</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header">
+        <h1>Templates</h1>
+        <p>Starter, guided, and finished files for each game.</p>
+      </div>
+
+      <div class="page-content">
+
+        <div class="card" style="margin-bottom:2rem">
+          <h2 style="margin-bottom:1rem;font-size:1.125rem">How to get the files</h2>
+          <ol class="download-steps">
+            <li><div>Go to <strong>github.com/arissafram/camp-ko-games</strong></div></li>
+            <li><div>Click the green <strong>Code</strong> button, then <strong>Download ZIP</strong></div></li>
+            <li><div>Unzip the file in your Downloads folder</div></li>
+            <li><div>Open the <code>templates/</code> folder — pick a game</div></li>
+            <li><div>Open <code>starter/index.html</code> in your browser to begin</div></li>
+          </ol>
+          <p style="margin-top:1rem;color:#555;font-size:0.9375rem"><strong>Starter</strong> = blank JS with TODO comments &nbsp;|&nbsp; <strong>Guided</strong> = ~50% written with hints &nbsp;|&nbsp; <strong>Finished</strong> = fully working (teacher reference)</p>
+        </div>
+
+        <!-- Clicker -->
+        <div class="page-section" id="clicker">
+          <h2 style="margin-bottom:0.375rem">Clicker</h2>
+          <p style="color:#555;margin-bottom:1.25rem">Click a button to increase your score. High score saved between sessions.</p>
+          <p style="font-size:0.8125rem;color:#888;margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.06em">Concepts: variables, events, functions</p>
+          <div class="template-card-links">
+            <a href="templates/clicker-game/starter/index.html" class="btn btn-sm btn-outline">Starter</a>
+            <a href="templates/clicker-game/guided/index.html" class="btn btn-sm btn-outline">Guided</a>
+            <a href="templates/clicker-game/finished/index.html" class="btn btn-sm">Finished</a>
+          </div>
+        </div>
+
+        <!-- Quiz -->
+        <div class="page-section" id="quiz">
+          <h2 style="margin-bottom:0.375rem">Quiz</h2>
+          <p style="color:#555;margin-bottom:1.25rem">10 questions, 4 answers each. Instant feedback and a score at the end.</p>
+          <p style="font-size:0.8125rem;color:#888;margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.06em">Concepts: arrays, objects, conditionals</p>
+          <div class="template-card-links">
+            <a href="templates/quiz-game/starter/index.html" class="btn btn-sm btn-outline">Starter</a>
+            <a href="templates/quiz-game/guided/index.html" class="btn btn-sm btn-outline">Guided</a>
+            <a href="templates/quiz-game/finished/index.html" class="btn btn-sm">Finished</a>
+          </div>
+        </div>
+
+        <!-- Whack-a-Mole -->
+        <div class="page-section" id="whack-a-mole">
+          <h2 style="margin-bottom:0.375rem">Whack-a-Mole</h2>
+          <p style="color:#555;margin-bottom:1.25rem">Moles pop up randomly in a 3×3 grid. Click them before they disappear. 30-second game.</p>
+          <p style="font-size:0.8125rem;color:#888;margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.06em">Concepts: timers, randomness, events</p>
+          <div class="template-card-links">
+            <a href="templates/whack-a-mole/starter/index.html" class="btn btn-sm btn-outline">Starter</a>
+            <a href="templates/whack-a-mole/guided/index.html" class="btn btn-sm btn-outline">Guided</a>
+            <a href="templates/whack-a-mole/finished/index.html" class="btn btn-sm">Finished</a>
+          </div>
+        </div>
+
+        <!-- Memory -->
+        <div class="page-section" id="memory">
+          <h2 style="margin-bottom:0.375rem">Memory</h2>
+          <p style="color:#555;margin-bottom:1.25rem">Flip cards to find matching pairs. 4×4 grid, 8 pairs. Tracks moves taken.</p>
+          <p style="font-size:0.8125rem;color:#888;margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.06em">Concepts: arrays, state tracking, loops</p>
+          <div class="template-card-links">
+            <a href="templates/memory-game/starter/index.html" class="btn btn-sm btn-outline">Starter</a>
+            <a href="templates/memory-game/guided/index.html" class="btn btn-sm btn-outline">Guided</a>
+            <a href="templates/memory-game/finished/index.html" class="btn btn-sm">Finished</a>
+          </div>
+        </div>
+
+        <!-- Racing -->
+        <div class="page-section" id="racing">
+          <h2 style="margin-bottom:0.375rem">Racing</h2>
+          <p style="color:#555;margin-bottom:1.25rem">2-player game on one keyboard. Q key vs P key. First to 100% wins.</p>
+          <p style="font-size:0.8125rem;color:#888;margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.06em">Concepts: keyboard input, conditionals, DOM</p>
+          <div class="template-card-links">
+            <a href="templates/racing-game/starter/index.html" class="btn btn-sm btn-outline">Starter</a>
+            <a href="templates/racing-game/guided/index.html" class="btn btn-sm btn-outline">Guided</a>
+            <a href="templates/racing-game/finished/index.html" class="btn btn-sm">Finished</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      Camp KO &mdash; Kingswood Oxford &mdash; August 3&ndash;7, 2026
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>
