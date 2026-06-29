@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whack-a-Mole</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="game-wrap">
+    <h1>Whack-a-Mole</h1>
+
+    <div class="hud">
+      <div class="hud-item">
+        <span class="hud-value" id="score">0</span>
+        <span class="hud-label">score</span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-value" id="timer">30</span>
+        <span class="hud-label">seconds</span>
+      </div>
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+    <div id="start-screen">
+      <button class="btn" id="start-btn">Start</button>
+    </div>
+
+    <div id="end-screen" style="display:none">
+      <p>Time's up!</p>
+      <div class="final-score" id="final-score">0</div>
+      <button class="btn" id="play-again-btn">Play again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
