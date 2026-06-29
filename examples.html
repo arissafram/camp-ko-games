@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examples — Camp KO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="container">
+      <a href="index.html" class="nav-brand">Interactive Web Apps</a>
+      <ul class="nav-links">
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="examples.html">Examples</a></li>
+        <li><a href="cheat-sheets.html">Cheat Sheets</a></li>
+        <li><a href="challenges.html">Challenges</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile">
+      <ul>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="examples.html">Examples</a></li>
+        <li><a href="cheat-sheets.html">Cheat Sheets</a></li>
+        <li><a href="challenges.html">Challenges</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="page-nav" aria-label="Examples">
+    <div class="container">
+      <a href="#counter">Counter</a>
+      <a href="#keyboard">Keyboard Movement</a>
+      <a href="#random">Random Generator</a>
+      <a href="#timer">Timer</a>
+      <a href="#animation">Animation</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header">
+        <h1>Examples</h1>
+        <p>5 small demos — one concept each. Read the source code below each one.</p>
+      </div>
+
+      <div class="page-content">
+
+        <div class="page-section" id="counter">
+          <h2 style="margin-bottom:0.25rem">Counter</h2>
+          <p style="font-size:0.8125rem;color:#888;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1rem">Events &amp; Variables</p>
+          <p style="color:#555;margin-bottom:1rem">Click the buttons. Notice how the number changes — that's a variable being updated and displayed.</p>
+          <div class="example-frame-wrap">
+            <iframe src="examples/counter/index.html" title="Counter example"></iframe>
+          </div>
+        </div>
+
+        <div class="page-section" id="keyboard">
+          <h2 style="margin-bottom:0.25rem">Keyboard Movement</h2>
+          <p style="font-size:0.8125rem;color:#888;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1rem">Keydown Events &amp; DOM Style</p>
+          <p style="color:#555;margin-bottom:1rem">Click the frame, then press the arrow keys. The box moves because we're updating its <code>left</code> and <code>top</code> style properties.</p>
+          <div class="example-frame-wrap">
+            <iframe src="examples/keyboard-movement/index.html" title="Keyboard movement example"></iframe>
+          </div>
+        </div>
+
+        <div class="page-section" id="random">
+          <h2 style="margin-bottom:0.25rem">Random Color Generator</h2>
+          <p style="font-size:0.8125rem;color:#888;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1rem">Math.random</p>
+          <p style="color:#555;margin-bottom:1rem">Each click generates a random hex color code and sets the background. <code>Math.random()</code> gives a different decimal every time.</p>
+          <div class="example-frame-wrap">
+            <iframe src="examples/random-generator/index.html" title="Random generator example"></iframe>
+          </div>
+        </div>
+
+        <div class="page-section" id="timer">
+          <h2 style="margin-bottom:0.25rem">Countdown Timer</h2>
+          <p style="font-size:0.8125rem;color:#888;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1rem">setInterval &amp; clearInterval</p>
+          <p style="color:#555;margin-bottom:1rem">Type a number of seconds and hit Start. <code>setInterval</code> runs a function every 1000ms; <code>clearInterval</code> stops it.</p>
+          <div class="example-frame-wrap">
+            <iframe src="examples/timer/index.html" title="Timer example"></iframe>
+          </div>
+        </div>
+
+        <div class="page-section" id="animation">
+          <h2 style="margin-bottom:0.25rem">CSS Animation Toggle</h2>
+          <p style="font-size:0.8125rem;color:#888;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1rem">classList.toggle</p>
+          <p style="color:#555;margin-bottom:1rem">The animation is defined in CSS. JavaScript just adds or removes the class that turns it on. That's all <code>classList.toggle</code> does.</p>
+          <div class="example-frame-wrap">
+            <iframe src="examples/animation-basics/index.html" title="Animation basics example"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      Camp KO &mdash; Kingswood Oxford &mdash; August 3&ndash;7, 2026
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>
