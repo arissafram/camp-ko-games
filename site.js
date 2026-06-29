@@ -45,7 +45,7 @@ function getCampDay() {
   return { status: 'during', day: dayNum, theme: themes[dayNum - 1] };
 }
 
-// Anchor scroll handler — updates .page-nav active link on scroll
+// Content-swap page nav — shows one .page-section at a time, no scroll required
 (function () {
   var pageNav = document.querySelector('.page-nav');
   if (!pageNav) return;
@@ -56,17 +56,30 @@ function getCampDay() {
     return document.querySelector(link.getAttribute('href'));
   }).filter(Boolean);
 
-  function updateActive() {
-    var current = sections[0];
+  function showSection(targetId) {
     sections.forEach(function (section) {
-      if (section.getBoundingClientRect().top <= 120) current = section;
+      section.style.display = section.id === targetId ? '' : 'none';
     });
     navLinks.forEach(function (link) {
-      link.classList.toggle('active', link.getAttribute('href') === '#' + current.id);
+      link.classList.toggle('active', link.getAttribute('href') === '#' + targetId);
     });
-    if (current) history.replaceState(null, '', '#' + current.id);
+    window.scrollTo(0, 0);
   }
 
-  window.addEventListener('scroll', updateActive, { passive: true });
-  updateActive();
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var id = link.getAttribute('href').slice(1);
+      history.pushState(null, '', '#' + id);
+      showSection(id);
+    });
+  });
+
+  window.addEventListener('popstate', function () {
+    var id = window.location.hash.slice(1) || (sections[0] && sections[0].id);
+    if (id) showSection(id);
+  });
+
+  var initial = window.location.hash.slice(1) || (sections[0] && sections[0].id);
+  if (initial) showSection(initial);
 })();

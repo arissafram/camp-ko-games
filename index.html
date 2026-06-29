@@ -6,7 +6,7 @@
   <title>Camp KO — Interactive Web Apps</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -60,14 +60,12 @@
 
       <div class="page-content">
 
-        <div id="today-widget" class="today-widget" style="display:none"></div>
-
         <h2 class="section-title">Quick links</h2>
         <div class="grid grid-2 grid-4" style="margin-bottom:3rem">
           <a href="schedule.html" class="quick-link-card has-corner-marks">
             <span class="corner-mark corner-mark--blue corner-mark--top-left"></span>
             <h3>Schedule</h3>
-            <p>5-day plan, current day highlighted</p>
+            <p>Plan, current day highlighted</p>
           </a>
           <a href="lessons.html" class="quick-link-card has-corner-marks">
             <span class="corner-mark corner-mark--green corner-mark--top-right"></span>
@@ -138,32 +136,5 @@
   </footer>
 
   <script src="site.js"></script>
-  <script>
-    // Today widget
-    (function () {
-      var info = getCampDay();
-      var el = document.getElementById('today-widget');
-      if (!el) return;
-      if (info.status === 'during') {
-        el.style.display = '';
-        el.innerHTML =
-          '<p class="day-label">Today</p>' +
-          '<p class="day-name">Day ' + info.day + ' &mdash; ' + info.theme + '</p>';
-      } else if (info.status === 'before') {
-        var today = new Date();
-        var campStart = new Date(2026, 7, 3);
-        var diff = Math.ceil((campStart - today) / (1000 * 60 * 60 * 24));
-        el.style.display = '';
-        el.innerHTML =
-          '<p class="day-label">Coming up</p>' +
-          '<p class="day-name">Camp starts in ' + diff + ' day' + (diff === 1 ? '' : 's') + '</p>';
-      } else {
-        el.style.display = '';
-        el.innerHTML =
-          '<p class="day-label">Camp KO 2026</p>' +
-          '<p class="day-name">See you next year!</p>';
-      }
-    })();
-  </script>
 </body>
 </html>
