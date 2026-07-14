@@ -535,10 +535,10 @@ pre code {
   transition: border-color 0.1s, background 0.1s;
 }
 
-.quick-link-card:has(.corner-mark--blue)   { background: #252c35; }
-.quick-link-card:has(.corner-mark--green)  { background: #252c28; }
-.quick-link-card:has(.corner-mark--yellow) { background: #2a2820; }
-.quick-link-card:has(.corner-mark--red)    { background: #2a2323; }
+.quick-link-card.card-blue   { background: #252c35; }
+.quick-link-card.card-green  { background: #252c28; }
+.quick-link-card.card-yellow { background: #2a2820; }
+.quick-link-card.card-red    { background: #2a2323; }
 
 .quick-link-card:hover {
   border-color: var(--fg-muted);
@@ -551,10 +551,10 @@ pre code {
   color: var(--tn-aqua);
 }
 
-.quick-link-card:has(.corner-mark--blue) h3   { color: var(--tn-blue); }
-.quick-link-card:has(.corner-mark--green) h3  { color: var(--tn-green); }
-.quick-link-card:has(.corner-mark--yellow) h3 { color: var(--tn-yellow); }
-.quick-link-card:has(.corner-mark--red) h3    { color: var(--tn-purple); }
+.quick-link-card.card-blue h3   { color: var(--tn-blue); }
+.quick-link-card.card-green h3  { color: var(--tn-green); }
+.quick-link-card.card-yellow h3 { color: var(--tn-yellow); }
+.quick-link-card.card-red h3    { color: var(--tn-purple); }
 
 .quick-link-card p {
   color: var(--fg-muted);

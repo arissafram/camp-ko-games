@@ -9,7 +9,7 @@ Each step ends with a `git commit`. Check off steps as they're done.
 - [ ] `git init`, create GitHub repo `arissafram/camp-ko-games`, push
 - [ ] Enable GitHub Pages: Settings → Pages → Deploy from branch → `main` → `/` (root)
 - [ ] Confirm `https://arissafram.github.io/camp-ko-games/` resolves (may take a minute)
-- **Commit:** `chore: init repo`
+- **Commit:** `Init`
 
 ---
 
@@ -41,7 +41,7 @@ Each step ends with a `git commit`. Check off steps as they're done.
 - Full nav + hamburger, empty `<main>`, links styles.css + site.js
 - Used to confirm nav + styles render correctly on mobile and desktop
 
-- **Commit:** `feat: shared styles, nav, and site JS`
+- **Commit:** `Add shared styles, nav, and site JS`
 
 ---
 
@@ -53,7 +53,7 @@ Replace the shell with real content.
 - How-to-download instructions: step-by-step for GitHub ZIP download (students don't use git)
 - Camp KO branding header with dates + location
 
-- **Commit:** `feat: home page`
+- **Commit:** `Add home page`
 
 ---
 
@@ -64,7 +64,7 @@ Replace the shell with real content.
 - Day content pulled from PLAN.md curriculum table + Day 1 detail block
 - In-page nav: Day 1 | Day 2 | Day 3 | Day 4 | Day 5 — anchors update the URL on scroll
 
-- **Commit:** `feat: schedule page`
+- **Commit:** `Add schedule page`
 
 ---
 
@@ -76,7 +76,7 @@ Static page that looks like an inline editor. Arissa edits the HTML directly and
 - Edit button: present in HTML but hidden via `display: none` — no functionality
 - Placeholder content pre-filled: `Team Name`, `Value 1`, `Value 2`, etc.
 
-- **Commit:** `feat: team page`
+- **Commit:** `Add team page`
 
 ---
 
@@ -97,7 +97,7 @@ Each concept follows the same 4-piece structure:
 3. One sentence explaining what the code does
 4. One "watch out" — the most common beginner mistake for that concept
 
-- **Commit:** `feat: lessons page`
+- **Commit:** `Add lessons page`
 
 ---
 
@@ -110,7 +110,7 @@ Files: `index.html`, `styles.css`, `script.js`
 - Reset button
 - Clean black/white/grey styling — no special effects
 
-- **Commit:** `feat: clicker game (finished)`
+- **Commit:** `Add clicker game`
 
 ---
 
@@ -124,7 +124,7 @@ Files: `index.html`, `styles.css`, `script.js`
 - 10 JS-themed questions (concept-based, approachable for beginners)
 - Clean black/white/grey styling
 
-- **Commit:** `feat: quiz game (finished)`
+- **Commit:** `Add quiz game`
 
 ---
 
@@ -138,7 +138,7 @@ Files: `index.html`, `styles.css`, `script.js`
 - Game over screen with score + play again
 - Clean black/white/grey styling
 
-- **Commit:** `feat: whack-a-mole game (finished)`
+- **Commit:** `Add whack-a-mole game`
 
 ---
 
@@ -152,7 +152,7 @@ Files: `index.html`, `styles.css`, `script.js`
 - Win state when all pairs matched — shows moves count + play again
 - Clean black/white/grey styling
 
-- **Commit:** `feat: memory game (finished)`
+- **Commit:** `Add memory game`
 
 ---
 
@@ -166,7 +166,7 @@ Files: `index.html`, `styles.css`, `script.js`
 - Play again resets both bars
 - Clean black/white/grey styling
 
-- **Commit:** `feat: racing game (finished)`
+- **Commit:** `Add racing game`
 
 ---
 
@@ -190,35 +190,35 @@ Templates are stripped-back versions of the finished games — don't strip until
 **finished/**
 - Copy of `games/clicker/`
 
-- **Commit:** `feat: clicker templates (starter, guided, finished)`
+- **Commit:** `Add clicker templates`
 
 ---
 
 ## Step 13 — Quiz templates (templates/quiz-game/)
 Same three-tier structure. Guided version has questions array pre-written; student fills in answer-checking logic.
 
-- **Commit:** `feat: quiz templates (starter, guided, finished)`
+- **Commit:** `Add quiz templates`
 
 ---
 
 ## Step 14 — Whack-a-Mole templates (templates/whack-a-mole/)
 Guided version has grid HTML + mole-show logic written; student fills in click handler + timer.
 
-- **Commit:** `feat: whack-a-mole templates (starter, guided, finished)`
+- **Commit:** `Add whack-a-mole templates`
 
 ---
 
 ## Step 15 — Memory templates (templates/memory-game/)
 Guided version has card-flip animation written; student fills in match logic + win condition.
 
-- **Commit:** `feat: memory templates (starter, guided, finished)`
+- **Commit:** `Add memory templates`
 
 ---
 
 ## Step 16 — Racing templates (templates/racing-game/)
 Guided version has keyboard listener wired; student fills in progress update + win check.
 
-- **Commit:** `feat: racing templates (starter, guided, finished)`
+- **Commit:** `Add racing templates`
 
 ---
 
@@ -229,7 +229,7 @@ Blank canvas for Day 1 experimentation. Already exists as a directory — popula
 - `styles.css`: empty with `/* write your styles here */`
 - `script.js`: empty with `/* write your JavaScript here */`
 
-- **Commit:** `feat: scratchpad boilerplate`
+- **Commit:** `Add scratchpad boilerplate`
 
 ---
 
@@ -244,7 +244,7 @@ Blank canvas for Day 1 experimentation. Already exists as a directory — popula
 
 Each example: title, live interactive element, then full source in a `<pre><code>` block below so students can read it.
 
-- **Commit:** `feat: 5 interactive code examples`
+- **Commit:** `Add code examples`
 
 ---
 
@@ -254,7 +254,7 @@ Each example: title, live interactive element, then full source in a `<pre><code
 - Download = link to the GitHub folder (students download full repo as ZIP)
 - Instructions block at top: how to download the repo ZIP, where to find templates/, how to open in browser
 
-- **Commit:** `feat: templates page`
+- **Commit:** `Add templates page`
 
 ---
 
@@ -262,7 +262,7 @@ Each example: title, live interactive element, then full source in a `<pre><code
 - In-page nav: Counter | Keyboard Movement | Random Generator | Timer | Animation — anchors update URL
 - 5 sections: concept label (e.g. "Events + Variables"), `<iframe>` of the live example, one-line note on what to notice
 
-- **Commit:** `feat: examples page`
+- **Commit:** `Add examples page`
 
 ---
 
@@ -287,7 +287,7 @@ Standalone printable reference cards, self-contained HTML with inline styles (no
 
 `cheat-sheets.html`: In-page nav across all 9 cards. Print button per card.
 
-- **Commit:** `feat: cheat sheets`
+- **Commit:** `Add cheat sheets`
 
 ---
 
@@ -299,7 +299,7 @@ Standalone printable reference cards, self-contained HTML with inline styles (no
 
 `challenges.html`: Four tier sections with cards per prompt. Mystery section shows "Unlocked by your instructor" with closed `<details>`.
 
-- **Commit:** `feat: challenges page`
+- **Commit:** `Add challenges page`
 
 ---
 
@@ -307,7 +307,7 @@ Standalone printable reference cards, self-contained HTML with inline styles (no
 - What this repo is + link to live site
 - Folder structure overview (abbreviated)
 - For instructors: how to fork + customize
-- **Commit:** `docs: README`
+- **Commit:** `Add README`
 
 ---
 
