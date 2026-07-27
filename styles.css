@@ -510,7 +510,7 @@ pre code {
 
 .day-meta {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1.5rem;
   font-size: 0.9375rem;
 }
@@ -708,6 +708,14 @@ pre code {
 #camp-schedule .cheat-table th:first-child {
   width: 160px;
   white-space: nowrap;
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: inherit;
+}
+.anchor-link:hover {
+  text-decoration: underline;
 }
 
 /* Challenge tiers */
