@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Race Cars</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <main class="game">
+
+    <h1>🏎️ Race Cars</h1>
+
+    <div class="racer">
+      <p class="label">Player 1 — press A</p>
+      <div class="track">
+        <div class="car" id="car1">🏎️</div>
+      </div>
+    </div>
+
+    <div class="racer">
+      <p class="label">Player 2 — press L</p>
+      <div class="track">
+        <div class="car" id="car2">🚗</div>
+      </div>
+    </div>
+
+    <div id="status"></div>
+
+    <button onclick="resetRace()">Start Over</button>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

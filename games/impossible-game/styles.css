@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  margin: 0;
+}
+
+.game {
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 28px;
+}
+
+.instruction {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hint {
+  color: #888;
+  font-size: 0.875rem;
+  margin-bottom: 28px;
+}
+
+.choices {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+button:hover {
+  background: #f0f0f0;
+}
+
+#forbiddenBtn {
+  padding: 16px 36px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+/* The nearly invisible button in round 3 */
+
+.invisible-btn {
+  color: rgba(0, 0, 0, 0.07);
+  border-color: rgba(0, 0, 0, 0.07);
+  background: transparent;
+}
+
+.invisible-btn:hover {
+  background: rgba(0, 0, 0, 0.02);
+}

@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  padding: 24px 40px;
+}
+
+.game {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+
+/* Each racer row */
+
+.racer {
+  margin-bottom: 16px;
+}
+
+.label {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+}
+
+
+/* The race track */
+
+.track {
+  position: relative;
+  height: 54px;
+  background: #f0f0f0;
+  border-radius: 6px;
+  border-right: 4px solid #cc2200;
+}
+
+
+/* The racer */
+
+.car {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  line-height: 1;
+  transition: left 0.08s;
+}
+
+
+/* Winner message */
+
+#status {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  min-height: 28px;
+  margin: 12px 0;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
