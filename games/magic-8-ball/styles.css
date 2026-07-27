@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  padding: 24px 40px;
+}
+
+.game {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 0 8px;
+}
+
+
+/* The Magic 8 Ball */
+
+.eight-ball {
+  width: 180px;
+  height: 180px;
+  margin: 16px auto;
+
+  background: black;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* The window inside the ball */
+
+.window {
+  width: 90px;
+  height: 90px;
+
+  background: white;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px;
+}
+
+#answer {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+
+input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 20px;
+  font-size: 15px;
+  cursor: pointer;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Games &mdash; Camp KO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="container">
+      <a href="index.html" class="nav-brand">{ .home }</a>
+      <ul class="nav-links">
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="concepts.html">JS Concepts</a></li>
+        <li><a href="games.html">Games</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile">
+      <ul>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="concepts.html">JS Concepts</a></li>
+        <li><a href="games.html">Games</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="page-nav">
+    <div class="container">
+      <a href="#choose" data-text="Choose Your Game">Choose Your Game</a>
+      <a href="#magic-8-ball" data-text="🔮 Magic 8 Ball">🔮 Magic 8 Ball</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header">
+        <h1>Games</h1>
+        <p>Choose a game to build, then make it your own.</p>
+      </div>
+
+      <div class="page-content">
+
+        <!-- ── Choose Your Game ──────────────────────────── -->
+        <section id="choose">
+
+          <p>Each game starts with the same basic project template, so you can decide how it looks, feels, and works.</p>
+          <p>Use the game pages for ideas, challenges, and examples whenever you need them.</p>
+
+          <table class="cheat-table" style="margin-top: 1.5rem;">
+            <thead>
+              <tr>
+                <th>Game</th>
+                <th>The Idea</th>
+                <th>You&rsquo;ll Use</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🎡 Spinner</td>
+                <td>Spin a wheel to randomly choose an option</td>
+                <td>arrays, randomness, functions</td>
+              </tr>
+              <tr>
+                <td>🔮 Magic 8 Ball</td>
+                <td>Ask a question and get a random response</td>
+                <td>arrays, input, events</td>
+              </tr>
+              <tr>
+                <td>😂 Mad Libs</td>
+                <td>Turn player input into a ridiculous story</td>
+                <td>strings, variables, inputs</td>
+              </tr>
+              <tr>
+                <td>🐹 Whack-a-Mole</td>
+                <td>Click a target before it disappears</td>
+                <td>events, timers, score</td>
+              </tr>
+              <tr>
+                <td>🏎️ Race Cars</td>
+                <td>Control a racer with the keyboard</td>
+                <td>keyboard events, movement, position</td>
+              </tr>
+              <tr>
+                <td>🧠 Memory</td>
+                <td>Flip cards and find matching pairs</td>
+                <td>arrays, events, conditionals</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </section>
+
+        <!-- ── Magic 8 Ball ──────────────────────────────── -->
+        <section id="magic-8-ball">
+
+          <h2 style="margin-bottom: 1.75rem;">🔮 Magic 8 Ball</h2>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">What are you building?</p>
+            <p>A game where someone asks a question and gets a randomly chosen response.</p>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Make it yours</p>
+            <p>It doesn&rsquo;t have to be a Magic 8 Ball. Turn it into a fortune teller, advice machine, mysterious oracle, terrible life coach, compliment generator, or something completely different.</p>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Success looks like</p>
+            <ul class="lesson-list" style="margin-bottom: 0;">
+              <li>The player can ask a question</li>
+              <li>The game chooses a random response</li>
+              <li>Your version feels like your own</li>
+            </ul>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Want to go further?</p>
+            <ul class="lesson-list" style="margin-bottom: 0;">
+              <li>Write your own responses</li>
+              <li>Change the message when no question is entered</li>
+              <li>Add different types of answers</li>
+              <li>Add an animation or sound</li>
+              <li><strong>Stretch:</strong> Make certain questions trigger special responses</li>
+            </ul>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Helpful Tricks</p>
+
+            <h3 style="margin-bottom: 0.5rem;">Pick something randomly</h3>
+            <p>First, choose a random spot in an array:</p>
+            <pre><code>let randomIndex = Math.floor(Math.random() * answers.length);</code></pre>
+            <p>Then grab the answer in that spot:</p>
+            <pre><code>let answer = answers[randomIndex];</code></pre>
+
+            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Read what someone typed</h3>
+            <pre><code>let question = questionInput.value;</code></pre>
+
+            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Change text on the page</h3>
+            <pre><code>answerDisplay.textContent = answer;</code></pre>
+          </div>
+
+          <p style="margin-bottom: 0.75rem;">Stuck? <a href="games/magic-8-ball/index.html" target="_blank">Take a look at the example.</a></p>
+
+          <div class="example-frame-wrap">
+            <iframe src="games/magic-8-ball/index.html" title="Magic 8 Ball game example" style="height: 520px;"></iframe>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      Camp KO &mdash; Kingswood Oxford &mdash; August 3&ndash;7, 2026
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
