@@ -21,7 +21,9 @@
   var mobileNav = document.querySelector('.nav-mobile');
   if (hamburger && mobileNav) {
     hamburger.addEventListener('click', function () {
-      mobileNav.classList.toggle('open');
+      var isOpen = mobileNav.classList.toggle('open');
+      hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      hamburger.classList.toggle('is-open', isOpen);
     });
   }
 })();
