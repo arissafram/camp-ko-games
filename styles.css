@@ -515,13 +515,19 @@ pre code {
   font-size: 0.9375rem;
 }
 
-.day-goals ul {
+.day-goals ul,
+.day-meta > div ul {
   list-style: none;
   margin: 0;
 }
 
 .day-goals li::before {
   content: '→ ';
+  color: #888;
+}
+
+.day-meta > div:not(.day-goals) li::before {
+  content: '• ';
   color: #888;
 }
 
