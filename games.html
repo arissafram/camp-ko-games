@@ -34,23 +34,27 @@
 
   <nav class="page-nav">
     <div class="container">
-      <a href="#choose" data-text="Choose Your Game">Choose Your Game</a>
+      <a href="#get-started" data-text="Get Started">Get Started</a>
       <a href="#magic-8-ball" data-text="🔮 Magic 8 Ball">🔮 Magic 8 Ball</a>
+      <a href="#race-cars" data-text="🏎️ Race Cars">🏎️ Race Cars</a>
+      <a href="#memory" data-text="🧠 Memory">🧠 Memory</a>
+      <a href="#rock-paper-scissors" data-text="✊ Rock Paper Scissors">✊ Rock Paper Scissors</a>
+      <a href="#impossible-game" data-text="🚫 Impossible Game">🚫 Impossible Game</a>
     </div>
   </nav>
 
   <main>
     <div class="container">
 
-      <div class="page-header">
-        <h1>Games</h1>
-        <p>Choose a game to build, then make it your own.</p>
-      </div>
-
       <div class="page-content">
 
-        <!-- ── Choose Your Game ──────────────────────────── -->
-        <section id="choose">
+        <!-- ── Get Started ──────────────────────────────── -->
+        <section id="get-started">
+
+          <div class="page-header">
+            <h1>Games</h1>
+            <p>Choose a game to build, then make it your own.</p>
+          </div>
 
           <p>Each game starts with the same basic project template, so you can decide how it looks, feels, and works.</p>
           <p>Use the game pages for ideas, challenges, and examples whenever you need them.</p>
@@ -65,34 +69,29 @@
             </thead>
             <tbody>
               <tr>
-                <td>🎡 Spinner</td>
-                <td>Spin a wheel to randomly choose an option</td>
-                <td>arrays, randomness, functions</td>
-              </tr>
-              <tr>
                 <td>🔮 Magic 8 Ball</td>
                 <td>Ask a question and get a random response</td>
-                <td>arrays, input, events</td>
-              </tr>
-              <tr>
-                <td>😂 Mad Libs</td>
-                <td>Turn player input into a ridiculous story</td>
-                <td>strings, variables, inputs</td>
-              </tr>
-              <tr>
-                <td>🐹 Whack-a-Mole</td>
-                <td>Click a target before it disappears</td>
-                <td>events, timers, score</td>
+                <td>arrays, randomness, input, events</td>
               </tr>
               <tr>
                 <td>🏎️ Race Cars</td>
-                <td>Control a racer with the keyboard</td>
-                <td>keyboard events, movement, position</td>
+                <td>Move a racer to the finish line with the keyboard</td>
+                <td>keyboard events, variables, conditionals</td>
               </tr>
               <tr>
                 <td>🧠 Memory</td>
                 <td>Flip cards and find matching pairs</td>
-                <td>arrays, events, conditionals</td>
+                <td>arrays, events, conditionals, timers</td>
+              </tr>
+              <tr>
+                <td>✊ Rock Paper Scissors</td>
+                <td>Choose a move and play against the computer</td>
+                <td>arrays, randomness, conditionals</td>
+              </tr>
+              <tr>
+                <td>🚫 The Impossible Game</td>
+                <td>A game where the rules are hidden or constantly changing</td>
+                <td>functions, DOM changes, conditionals, timers</td>
               </tr>
             </tbody>
           </table>
@@ -154,6 +153,254 @@
 
           <div class="example-frame-wrap">
             <iframe src="games/magic-8-ball/index.html" title="Magic 8 Ball game example" style="height: 520px;"></iframe>
+          </div>
+
+        </section>
+
+        <!-- ── Race Cars ──────────────────────────────────── -->
+        <section id="race-cars">
+
+          <h2 style="margin-bottom: 1.75rem;">🏎️ Race Cars</h2>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">What are you building?</p>
+            <p>A game where players use the keyboard to move racers toward a finish line.</p>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Make it yours</p>
+            <p>Race cars, animals, spaceships, shopping carts, or anything else you can move across the screen.</p>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Success looks like</p>
+            <ul class="lesson-list" style="margin-bottom: 0;">
+              <li>The keyboard moves the racers</li>
+              <li>Someone can reach the finish line</li>
+              <li>Your version feels like your own</li>
+            </ul>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Want to go further?</p>
+            <ul class="lesson-list" style="margin-bottom: 0;">
+              <li>Change the controls</li>
+              <li>Add a second player</li>
+              <li>Add obstacles or boosts</li>
+              <li><strong>Stretch:</strong> Create a new rule that changes how the race works</li>
+            </ul>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Helpful Tricks</p>
+            <ul class="lesson-list" style="margin-bottom: 0;">
+              <li>Listen for <code>keydown</code></li>
+              <li>Change an element&rsquo;s <code>left</code> position</li>
+              <li>Keep each racer&rsquo;s position in a variable</li>
+              <li>Check whether someone crossed the finish line</li>
+            </ul>
+          </div>
+
+          <p style="margin-bottom: 0.75rem;">Stuck? <a href="games/race-cars/index.html" target="_blank">Take a look at the example.</a></p>
+
+          <div class="example-frame-wrap">
+            <iframe src="games/race-cars/index.html" title="Race Cars game example" style="height: 460px;"></iframe>
+          </div>
+
+        </section>
+
+        <!-- ── Memory ─────────────────────────────────────── -->
+        <section id="memory">
+
+          <h2 style="margin-bottom: 1.75rem;">🧠 Memory</h2>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">What are you building?</p>
+            <p>A matching game where the player flips cards and tries to find pairs.</p>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Make it yours</p>
+            <p>Choose what players are matching: animals, emojis, characters, food, your own drawings, or anything else you want.</p>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Success looks like</p>
+            <ul class="lesson-list" style="margin-bottom: 0;">
+              <li>The player can flip cards</li>
+              <li>Matching pairs stay revealed</li>
+              <li>The game knows when a pair matches</li>
+            </ul>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Want to go further?</p>
+            <ul class="lesson-list" style="margin-bottom: 0;">
+              <li>Keep track of the number of tries</li>
+              <li>Add a timer</li>
+              <li>Add an effect when a match is found</li>
+              <li><strong>Stretch:</strong> Add a new rule that changes how the game works</li>
+            </ul>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Helpful Tricks</p>
+
+            <h3 style="margin-bottom: 0.5rem;">Keep your cards in an array</h3>
+            <pre><code>let cards = [
+  "🐶", "🐶",
+  "🐸", "🐸",
+  "🐱", "🐱"
+];</code></pre>
+
+            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Remember which cards were clicked</h3>
+            <pre><code>let firstCard;
+let secondCard;</code></pre>
+
+            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Check for a match</h3>
+            <pre><code>if (firstCard === secondCard) {
+  console.log("Match!");
+}</code></pre>
+          </div>
+
+          <p style="margin-bottom: 0.75rem;">Stuck? <a href="games/memory/index.html" target="_blank">Take a look at the example.</a></p>
+
+          <div class="example-frame-wrap">
+            <iframe src="games/memory/index.html" title="Memory game example" style="height: 460px;"></iframe>
+          </div>
+
+        </section>
+
+        <!-- ── Rock Paper Scissors ────────────────────────── -->
+        <section id="rock-paper-scissors">
+
+          <h2 style="margin-bottom: 1.75rem;">✊ Rock Paper Scissors</h2>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">What are you building?</p>
+            <p>A game where the player chooses a move and plays against the computer.</p>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Make it yours</p>
+            <p>Keep Rock Paper Scissors, or invent your own three-way battle: fire, water, grass; wizard, knight, dragon; cat, dog, squirrel; or something completely different.</p>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Success looks like</p>
+            <ul class="lesson-list" style="margin-bottom: 0;">
+              <li>The player can choose a move</li>
+              <li>The computer chooses a move</li>
+              <li>The game decides who wins</li>
+            </ul>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Want to go further?</p>
+            <ul class="lesson-list" style="margin-bottom: 0;">
+              <li>Keep score</li>
+              <li>Add a best-of-three mode</li>
+              <li>Add images or animations for each move</li>
+              <li><strong>Stretch:</strong> Invent your own moves and rules</li>
+            </ul>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Helpful Tricks</p>
+
+            <h3 style="margin-bottom: 0.5rem;">Give the computer some choices</h3>
+            <pre><code>let choices = [
+  "rock",
+  "paper",
+  "scissors"
+];</code></pre>
+
+            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Let the computer choose randomly</h3>
+            <pre><code>let randomIndex =
+  Math.floor(Math.random() * choices.length);
+
+let computerChoice =
+  choices[randomIndex];</code></pre>
+
+            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Decide who wins</h3>
+            <pre><code>if (playerChoice === computerChoice) {
+  result.textContent = "Tie!";
+} else if (
+  playerChoice === "rock" &&
+  computerChoice === "scissors"
+) {
+  result.textContent = "You win!";
+} else {
+  result.textContent = "Computer wins!";
+}</code></pre>
+          </div>
+
+          <p style="margin-bottom: 0.75rem;">Stuck? <a href="games/rock-paper-scissors/index.html" target="_blank">Take a look at the example.</a></p>
+
+          <div class="example-frame-wrap">
+            <iframe src="games/rock-paper-scissors/index.html" title="Rock Paper Scissors game example" style="height: 420px;"></iframe>
+          </div>
+
+        </section>
+
+        <!-- ── Impossible Game ────────────────────────────── -->
+        <section id="impossible-game">
+
+          <h2 style="margin-bottom: 1.75rem;">🚫 The Impossible Game</h2>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">What are you building?</p>
+            <p>A game where the rules are hidden, strange, or constantly changing.</p>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Make it yours</p>
+            <p>There are no normal rules. A button might disappear, the wrong-looking choice might be correct, or winning one round might completely change what happens next.</p>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Success looks like</p>
+            <ul class="lesson-list" style="margin-bottom: 0;">
+              <li>The player can make choices</li>
+              <li>Different choices lead to different outcomes</li>
+              <li>The game has at least a few stages or surprises</li>
+            </ul>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Want to go further?</p>
+            <ul class="lesson-list" style="margin-bottom: 0;">
+              <li>Add fake buttons or misleading instructions</li>
+              <li>Change the rules halfway through</li>
+              <li>Add secret ways to win or lose</li>
+              <li><strong>Stretch:</strong> Create a moment where the player has to figure out a rule you never explained</li>
+            </ul>
+          </div>
+
+          <div class="concept-card" style="margin-bottom: 1.5rem;">
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Helpful Tricks</p>
+
+            <h3 style="margin-bottom: 0.5rem;">Show or hide something</h3>
+            <pre><code>triangle.style.display = "none";</code></pre>
+
+            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Change what the player sees</h3>
+            <pre><code>message.textContent = "Wrong. Obviously.";</code></pre>
+
+            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Make choices lead somewhere different</h3>
+            <pre><code>if (choice === "triangleTwo") {
+  showNextRound();
+} else {
+  loseGame();
+}</code></pre>
+
+            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Keep track of what stage you&rsquo;re on</h3>
+            <pre><code>let round = 1;</code></pre>
+          </div>
+
+          <p style="margin-bottom: 0.75rem;">Stuck? <a href="games/impossible-game/index.html" target="_blank">Take a look at the example.</a></p>
+
+          <div class="example-frame-wrap">
+            <iframe src="games/impossible-game/index.html" title="The Impossible Game example" style="height: 380px;"></iframe>
           </div>
 
         </section>
