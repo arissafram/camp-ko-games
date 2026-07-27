@@ -697,11 +697,17 @@ pre code {
   padding: 0.4rem 0.75rem;
   border: 1px solid var(--border);
   vertical-align: top;
-  color: var(--fg);
+  color: var(--black);
 }
 
 .cheat-table td code {
   font-size: 0.8125rem;
+}
+
+#camp-schedule .cheat-table td:first-child,
+#camp-schedule .cheat-table th:first-child {
+  width: 160px;
+  white-space: nowrap;
 }
 
 /* Challenge tiers */
