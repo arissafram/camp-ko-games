@@ -70,7 +70,7 @@ main {
 }
 
 /* Typography */
-h1 { font-size: 2rem; line-height: 1.2; font-weight: 800; font-family: var(--font-display); filter: url(#crayon-rough); }
+h1 { font-size: 2rem; line-height: 1.2; font-weight: 800; font-family: var(--font-display); }
 h2 { font-size: 1.5rem; line-height: 1.3; font-weight: 700; font-family: var(--font-display); }
 h3 { font-size: 1.125rem; line-height: 1.4; font-weight: 600; }
 p { margin-bottom: 1rem; }
