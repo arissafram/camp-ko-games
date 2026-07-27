@@ -457,7 +457,7 @@ pre code {
 
 /* Day section (schedule) */
 .day-section {
-  padding: 2.5rem 0;
+  padding: 2rem 0;
   border-bottom: 1px solid var(--border-light);
 }
 
@@ -468,7 +468,7 @@ pre code {
 .day-section.today {
   background: rgba(240, 198, 116, 0.08);
   margin: 0 -1.25rem;
-  padding: 2.5rem 1.25rem;
+  padding: 2rem 1.25rem;
   border-radius: var(--radius);
 }
 
