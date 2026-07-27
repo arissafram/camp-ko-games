@@ -531,6 +531,13 @@ pre code {
   color: #888;
 }
 
+.day-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  width: 40%;
+  margin: 0;
+}
+
 .day-vocab {
   display: flex;
   flex-wrap: wrap;
