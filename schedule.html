@@ -18,6 +18,7 @@
       <ul class="nav-links">
         <li><a href="schedule.html">Schedule</a></li>
         <li><a href="concepts.html">JS Concepts</a></li>
+        <li><a href="games.html">Games</a></li>
       </ul>
       <button class="nav-hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -27,17 +28,28 @@
       <ul>
         <li><a href="schedule.html">Schedule</a></li>
         <li><a href="concepts.html">JS Concepts</a></li>
+        <li><a href="games.html">Games</a></li>
       </ul>
     </div>
   </nav>
 
-
+  <nav class="page-nav">
+    <div class="container">
+      <a href="#day-1" data-text="Day 1">Day 1</a>
+      <a href="#day-2" data-text="Day 2">Day 2</a>
+      <a href="#day-3" data-text="Day 3">Day 3</a>
+      <a href="#day-4" data-text="Day 4">Day 4</a>
+      <a href="#day-5" data-text="Day 5">Day 5</a>
+      <a href="#camp-schedule" data-text="Camp Schedule">Camp Schedule</a>
+    </div>
+  </nav>
 
   <main>
     <div class="container">
 
       <div class="page-header">
         <h1>Schedule</h1>
+        <p class="page-byline">See what we're learning, building, and creating each day.</p>
       </div>
 
       <div class="page-content">
@@ -45,7 +57,7 @@
         <!-- Day 1 -->
         <div class="day-section" id="day-1">
           <div class="day-header">
-            <h2><a href="#day-1" class="anchor-link">Day 1 — Web Foundations + JavaScript Makes Things Happen</a></h2>
+            <h2>Day 1 — Web Foundations + JavaScript Makes Things Happen</h2>
             <p class="day-quote">"A computer only does what you tell it."</p>
           </div>
           <div class="day-meta">
@@ -107,7 +119,7 @@
         <!-- Day 2 -->
         <div class="day-section" id="day-2">
           <div class="day-header">
-            <h2><a href="#day-2" class="anchor-link">Day 2 — Teaching Computers to Remember</a></h2>
+            <h2>Day 2 — Teaching Computers to Remember</h2>
             <p class="day-quote">"Games need to remember things."</p>
           </div>
           <div class="day-meta">
@@ -162,7 +174,7 @@
         <!-- Day 3 -->
         <div class="day-section" id="day-3">
           <div class="day-header">
-            <h2><a href="#day-3" class="anchor-link">Day 3 — Making Games Interactive</a></h2>
+            <h2>Day 3 — Making Games Interactive</h2>
             <p class="day-quote">"Games make decisions and react to players."</p>
           </div>
           <div class="day-meta">
@@ -218,7 +230,7 @@
         <!-- Day 4 -->
         <div class="day-section" id="day-4">
           <div class="day-header">
-            <h2><a href="#day-4" class="anchor-link">Day 4 — Make It Your Own</a></h2>
+            <h2>Day 4 — Make It Your Own</h2>
             <p class="day-quote">"Make it work. Make it yours."</p>
           </div>
           <div class="day-meta">
@@ -273,7 +285,7 @@
         <!-- Day 5 -->
         <div class="day-section" id="day-5">
           <div class="day-header">
-            <h2><a href="#day-5" class="anchor-link">Day 5 — Showcase Day</a></h2>
+            <h2>Day 5 — Showcase Day</h2>
             <p class="day-quote">"Ship it."</p>
           </div>
           <div class="day-meta">
@@ -316,9 +328,9 @@
         </div>
 
         <!-- Camp Schedule -->
-        <div class="day-section" id="camp-schedule" style="margin-top:3rem">
+        <div class="day-section" id="camp-schedule">
           <div class="day-header">
-            <h2><a href="#camp-schedule" class="anchor-link">Camp Schedule</a></h2>
+            <h2>Camp Schedule</h2>
           </div>
           <table class="cheat-table" style="margin-top:1.25rem">
             <thead>
@@ -391,14 +403,6 @@
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    document.querySelectorAll('.anchor-link').forEach(function (link) {
-      link.addEventListener('click', function () {
-        var hash = link.getAttribute('href');
-        navigator.clipboard.writeText(location.origin + location.pathname + hash);
-      });
-    });
-  </script>
   <script>
     // Highlight today's day section
     (function () {
