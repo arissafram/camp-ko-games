@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+html {
+  scroll-padding-top: 116px;
+}
+
 /* Variables */
 :root {
   /* Tomorrow Night palette */
@@ -408,14 +412,15 @@ pre code {
 /* Team card (home page) */
 .team-card {
   padding: 1.5rem 1.75rem;
-  background: #252c35;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   margin-bottom: 3rem;
+  color: var(--fg);
 }
 
 .team-card h3 {
-  color: var(--tn-blue);
+  color: var(--tn-aqua);
   margin-bottom: 0.25rem;
   margin-top: 1.25rem;
 }
@@ -426,7 +431,7 @@ pre code {
 
 .team-card p,
 .team-card ol {
-  color: var(--fg-muted);
+  color: var(--fg);
   margin-bottom: 0;
 }
 
