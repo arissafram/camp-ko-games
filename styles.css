@@ -806,50 +806,6 @@ pre code {
 }
 
 
-/* Crayon stroke system */
-/* SVG filter is inlined in each page's HTML */
-.corner-mark {
-  position: absolute;
-  width: 32px;
-  height: 5px;
-  border-radius: 3px;
-  filter: url(#crayon-rough);
-  pointer-events: none;
-}
-
-.corner-mark--blue   { background: var(--accent-blue); }
-.corner-mark--red    { background: var(--accent-red); }
-.corner-mark--yellow { background: var(--accent-yellow); }
-.corner-mark--green  { background: var(--accent-green); }
-
-.corner-mark--top-left {
-  top: -4px;
-  left: -4px;
-  transform: rotate(-38deg);
-  transform-origin: left center;
-}
-
-.corner-mark--top-right {
-  top: -4px;
-  right: -4px;
-  transform: rotate(38deg);
-  transform-origin: right center;
-}
-
-.corner-mark--bottom-left {
-  bottom: -4px;
-  left: -4px;
-  transform: rotate(38deg);
-  transform-origin: left center;
-}
-
-.corner-mark--bottom-right {
-  bottom: -4px;
-  right: -4px;
-  transform: rotate(-38deg);
-  transform-origin: right center;
-}
-
 /* Example iframe wrapper */
 .example-frame-wrap {
   border: 1px solid var(--border-light);
