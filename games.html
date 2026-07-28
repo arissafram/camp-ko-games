@@ -134,57 +134,48 @@
         <!-- ── Magic 8 Ball ──────────────────────────────── -->
         <section id="magic-8-ball">
 
-          <h2 style="margin-bottom: 0.5rem;">🔮 Magic 8 Ball</h2>
-          <p style="margin-bottom: 1.25rem;">Ask the Magic 8 Ball a question, and it randomly chooses an answer from a list.</p>
+          <div class="day-header">
+            <h2>🔮 Magic 8 Ball</h2>
+            <p class="day-quote">A game where the player asks a question and gets a randomly selected response.</p>
+          </div>
 
           <div class="example-frame-wrap" style="margin-bottom: 1.5rem;">
             <iframe src="games/magic-8-ball/index.html" title="Magic 8 Ball game example" scrolling="no"></iframe>
           </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">What are you building?</p>
-            <p>A game where someone asks a question and gets a randomly chosen response.</p>
-          </div>
+          <div class="day-meta">
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Make it yours</p>
-            <p>It doesn&rsquo;t have to be a Magic 8 Ball. Turn it into a fortune teller, advice machine, mysterious oracle, terrible life coach, compliment generator, or something completely different.</p>
-          </div>
+            <div class="day-goals">
+              <p class="day-number" style="margin-bottom:0.375rem">Tasks</p>
+              <ul>
+                <li>Your game has a name.</li>
+                <li>If your game needs instructions, write them.</li>
+                <li>Your game has your own pizzazz.</li>
+                <li>Your game responds when the player asks a question.</li>
+                <li>Your game has a variety of possible responses.</li>
+              </ul>
+            </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Success looks like</p>
-            <ul class="lesson-list" style="margin-bottom: 0;">
-              <li>The player can ask a question</li>
-              <li>The game chooses a random response</li>
-              <li>Your version feels like your own</li>
-            </ul>
-          </div>
+            <div>
+              <p class="day-number" style="margin-bottom:0.375rem">Plan Before You Start</p>
+              <ul>
+                <li>How does the player ask a question? Do they type it in or ask it out loud?</li>
+                <li>What action makes the Magic 8 Ball respond?</li>
+                <li>What kinds of answers can it give?</li>
+                <li>Where does the answer appear on the screen?</li>
+                <li>What happens when the player asks another question?</li>
+              </ul>
+            </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Want to go further?</p>
-            <ul class="lesson-list" style="margin-bottom: 0;">
-              <li>Write your own responses</li>
-              <li>Change the message when no question is entered</li>
-              <li>Add different types of answers</li>
-              <li>Add an animation or sound</li>
-              <li><strong>Stretch:</strong> Make certain questions trigger special responses</li>
-            </ul>
-          </div>
+            <div>
+              <p class="day-number" style="margin-bottom:0.375rem">Challenges!</p>
+              <ul>
+                <li>Add different answer modes. Let the player choose something like Pirate, Optimistic, or Dramatic before asking.</li>
+                <li>Make certain questions or words trigger special responses.</li>
+                <li>What else could you add?</li>
+              </ul>
+            </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Helpful Tricks</p>
-
-            <h3 style="margin-bottom: 0.5rem;">Pick something randomly</h3>
-            <p>First, choose a random spot in an array:</p>
-            <pre><code>let randomIndex = Math.floor(Math.random() * answers.length);</code></pre>
-            <p>Then grab the answer in that spot:</p>
-            <pre><code>let answer = answers[randomIndex];</code></pre>
-
-            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Read what someone typed</h3>
-            <pre><code>let question = questionInput.value;</code></pre>
-
-            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Change text on the page</h3>
-            <pre><code>answerDisplay.textContent = answer;</code></pre>
           </div>
 
         </section>
@@ -192,49 +183,50 @@
         <!-- ── Race Cars ──────────────────────────────────── -->
         <section id="race-cars">
 
-          <h2 style="margin-bottom: 1.75rem;">🏎️ Race Cars</h2>
+          <div class="day-header">
+            <h2>🏎️ Race Cars</h2>
+            <p class="day-quote">A racing game where players use the keyboard to move their racers toward a finish line.</p>
+          </div>
 
           <div class="example-frame-wrap" style="margin-bottom: 1.5rem;">
             <iframe src="games/race-cars/index.html" title="Race Cars game example" scrolling="no"></iframe>
           </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">What are you building?</p>
-            <p>A game where players use the keyboard to move racers toward a finish line.</p>
-          </div>
+          <div class="day-meta">
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Make it yours</p>
-            <p>Race cars, animals, spaceships, shopping carts, or anything else you can move across the screen.</p>
-          </div>
+            <div class="day-goals">
+              <p class="day-number" style="margin-bottom:0.375rem">Tasks</p>
+              <ul>
+                <li>Your game has a name.</li>
+                <li>If your game needs instructions, write them.</li>
+                <li>Your game has your own pizzazz.</li>
+                <li>Each player can control their racer.</li>
+                <li>Your game has a start and a finish.</li>
+                <li>Your game tells the players who won.</li>
+              </ul>
+            </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Success looks like</p>
-            <ul class="lesson-list" style="margin-bottom: 0;">
-              <li>The keyboard moves the racers</li>
-              <li>Someone can reach the finish line</li>
-              <li>Your version feels like your own</li>
-            </ul>
-          </div>
+            <div>
+              <p class="day-number" style="margin-bottom:0.375rem">Plan Before You Start</p>
+              <ul>
+                <li>What are you racing? Cars? Animals? Spaceships? Something else?</li>
+                <li>Which key controls each racer?</li>
+                <li>What happens each time a player presses their key?</li>
+                <li>How does the game know when a racer reaches the finish line?</li>
+                <li>What happens when someone wins?</li>
+                <li>How does a new race start?</li>
+              </ul>
+            </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Want to go further?</p>
-            <ul class="lesson-list" style="margin-bottom: 0;">
-              <li>Change the controls</li>
-              <li>Add a second player</li>
-              <li>Add obstacles or boosts</li>
-              <li><strong>Stretch:</strong> Create a new rule that changes how the race works</li>
-            </ul>
-          </div>
+            <div>
+              <p class="day-number" style="margin-bottom:0.375rem">Challenges!</p>
+              <ul>
+                <li>Add obstacles or special spaces that move a racer forward or backward.</li>
+                <li>Make it best of three and keep track of who wins each race.</li>
+                <li>What else could you add?</li>
+              </ul>
+            </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Helpful Tricks</p>
-            <ul class="lesson-list" style="margin-bottom: 0;">
-              <li>Listen for <code>keydown</code></li>
-              <li>Change an element&rsquo;s <code>left</code> position</li>
-              <li>Keep each racer&rsquo;s position in a variable</li>
-              <li>Check whether someone crossed the finish line</li>
-            </ul>
           </div>
 
         </section>
@@ -242,59 +234,50 @@
         <!-- ── Memory ─────────────────────────────────────── -->
         <section id="memory">
 
-          <h2 style="margin-bottom: 1.75rem;">🧠 Memory</h2>
+          <div class="day-header">
+            <h2>🧠 Memory</h2>
+            <p class="day-quote">A card game where the player flips over cards and tries to find all of the matching pairs.</p>
+          </div>
 
           <div class="example-frame-wrap" style="margin-bottom: 1.5rem;">
             <iframe src="games/memory/index.html" title="Memory game example" scrolling="no"></iframe>
           </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">What are you building?</p>
-            <p>A matching game where the player flips cards and tries to find pairs.</p>
-          </div>
+          <div class="day-meta">
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Make it yours</p>
-            <p>Choose what players are matching: animals, emojis, characters, food, your own drawings, or anything else you want.</p>
-          </div>
+            <div class="day-goals">
+              <p class="day-number" style="margin-bottom:0.375rem">Tasks</p>
+              <ul>
+                <li>Your game has a name.</li>
+                <li>If your game needs instructions, write them.</li>
+                <li>Your game has your own pizzazz.</li>
+                <li>Cards can be flipped over and hidden again.</li>
+                <li>Your game recognizes matching pairs.</li>
+                <li>Your game tells the player when they&rsquo;ve found every match.</li>
+              </ul>
+            </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Success looks like</p>
-            <ul class="lesson-list" style="margin-bottom: 0;">
-              <li>The player can flip cards</li>
-              <li>Matching pairs stay revealed</li>
-              <li>The game knows when a pair matches</li>
-            </ul>
-          </div>
+            <div>
+              <p class="day-number" style="margin-bottom:0.375rem">Plan Before You Start</p>
+              <ul>
+                <li>What will be on your cards?</li>
+                <li>What do the cards look like when they&rsquo;re hidden?</li>
+                <li>What happens when the player flips over one card? What about a second?</li>
+                <li>How does the game know if two cards match?</li>
+                <li>What happens to cards that don&rsquo;t match?</li>
+                <li>How does the game know when there are no matches left to find?</li>
+              </ul>
+            </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Want to go further?</p>
-            <ul class="lesson-list" style="margin-bottom: 0;">
-              <li>Keep track of the number of tries</li>
-              <li>Add a timer</li>
-              <li>Add an effect when a match is found</li>
-              <li><strong>Stretch:</strong> Add a new rule that changes how the game works</li>
-            </ul>
-          </div>
+            <div>
+              <p class="day-number" style="margin-bottom:0.375rem">Challenges!</p>
+              <ul>
+                <li>Count how many turns it takes to find every pair.</li>
+                <li>Add a timer so the player can try to beat their fastest time.</li>
+                <li>What else could you add?</li>
+              </ul>
+            </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Helpful Tricks</p>
-
-            <h3 style="margin-bottom: 0.5rem;">Keep your cards in an array</h3>
-            <pre><code>let cards = [
-  "🐶", "🐶",
-  "🐸", "🐸",
-  "🐱", "🐱"
-];</code></pre>
-
-            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Remember which cards were clicked</h3>
-            <pre><code>let firstCard;
-let secondCard;</code></pre>
-
-            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Check for a match</h3>
-            <pre><code>if (firstCard === secondCard) {
-  console.log("Match!");
-}</code></pre>
           </div>
 
         </section>
@@ -302,69 +285,50 @@ let secondCard;</code></pre>
         <!-- ── Rock Paper Scissors ────────────────────────── -->
         <section id="rock-paper-scissors">
 
-          <h2 style="margin-bottom: 1.75rem;">🪨 Rock Paper Scissors</h2>
+          <div class="day-header">
+            <h2>🪨 Rock Paper Scissors</h2>
+            <p class="day-quote">A game where the player chooses rock, paper, or scissors and competes against a randomly chosen computer move.</p>
+          </div>
 
           <div class="example-frame-wrap" style="margin-bottom: 1.5rem;">
             <iframe src="games/rock-paper-scissors/index.html" title="Rock Paper Scissors game example" scrolling="no"></iframe>
           </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">What are you building?</p>
-            <p>A game where the player chooses a move and plays against the computer.</p>
-          </div>
+          <div class="day-meta">
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Make it yours</p>
-            <p>Keep Rock Paper Scissors, or invent your own three-way battle: fire, water, grass; wizard, knight, dragon; cat, dog, squirrel; or something completely different.</p>
-          </div>
+            <div class="day-goals">
+              <p class="day-number" style="margin-bottom:0.375rem">Tasks</p>
+              <ul>
+                <li>Your game has a name.</li>
+                <li>If your game needs instructions, write them.</li>
+                <li>Your game has your own pizzazz.</li>
+                <li>The player can choose a move.</li>
+                <li>The computer randomly chooses a move.</li>
+                <li>Your game figures out and displays the winner.</li>
+              </ul>
+            </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Success looks like</p>
-            <ul class="lesson-list" style="margin-bottom: 0;">
-              <li>The player can choose a move</li>
-              <li>The computer chooses a move</li>
-              <li>The game decides who wins</li>
-            </ul>
-          </div>
+            <div>
+              <p class="day-number" style="margin-bottom:0.375rem">Plan Before You Start</p>
+              <ul>
+                <li>How does the player choose rock, paper, or scissors?</li>
+                <li>How will the computer choose?</li>
+                <li>How does the game know which move wins?</li>
+                <li>What happens when both players choose the same thing?</li>
+                <li>Where will you show each choice and the result?</li>
+                <li>What happens when the player wants to play again?</li>
+              </ul>
+            </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Want to go further?</p>
-            <ul class="lesson-list" style="margin-bottom: 0;">
-              <li>Keep score</li>
-              <li>Add a best-of-three mode</li>
-              <li>Add images or animations for each move</li>
-              <li><strong>Stretch:</strong> Invent your own moves and rules</li>
-            </ul>
-          </div>
+            <div>
+              <p class="day-number" style="margin-bottom:0.375rem">Challenges!</p>
+              <ul>
+                <li>Keep score across multiple rounds and make the first to a certain score the winner.</li>
+                <li>Invent new moves and decide what beats what. Rock, Paper, Scissors, Lizard, Spock? Or something completely your own.</li>
+                <li>What else could you add?</li>
+              </ul>
+            </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Helpful Tricks</p>
-
-            <h3 style="margin-bottom: 0.5rem;">Give the computer some choices</h3>
-            <pre><code>let choices = [
-  "rock",
-  "paper",
-  "scissors"
-];</code></pre>
-
-            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Let the computer choose randomly</h3>
-            <pre><code>let randomIndex =
-  Math.floor(Math.random() * choices.length);
-
-let computerChoice =
-  choices[randomIndex];</code></pre>
-
-            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Decide who wins</h3>
-            <pre><code>if (playerChoice === computerChoice) {
-  result.textContent = "Tie!";
-} else if (
-  playerChoice === "rock" &&
-  computerChoice === "scissors"
-) {
-  result.textContent = "You win!";
-} else {
-  result.textContent = "Computer wins!";
-}</code></pre>
           </div>
 
         </section>
@@ -372,59 +336,50 @@ let computerChoice =
         <!-- ── Impossible Game ────────────────────────────── -->
         <section id="impossible-game">
 
-          <h2 style="margin-bottom: 1.75rem;">🤯 The Impossible Game</h2>
+          <div class="day-header">
+            <h2>🤯 The Impossible Game</h2>
+            <p class="day-quote">A game where the player tries to win without knowing all of the rules in advance.</p>
+          </div>
 
           <div class="example-frame-wrap" style="margin-bottom: 1.5rem;">
             <iframe src="games/impossible-game/index.html" title="The Impossible Game example" scrolling="no"></iframe>
           </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">What are you building?</p>
-            <p>A game where the rules are hidden, strange, or constantly changing.</p>
-          </div>
+          <div class="day-meta">
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Make it yours</p>
-            <p>There are no normal rules. A button might disappear, the wrong-looking choice might be correct, or winning one round might completely change what happens next.</p>
-          </div>
+            <div class="day-goals">
+              <p class="day-number" style="margin-bottom:0.375rem">Tasks</p>
+              <ul>
+                <li>Your game has a name.</li>
+                <li>Decide what the player is trying to accomplish.</li>
+                <li>Your game has your own pizzazz.</li>
+                <li>Your game responds to what the player does.</li>
+                <li>Your game has rules the player has to figure out.</li>
+                <li>There is a way to win.</li>
+              </ul>
+            </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Success looks like</p>
-            <ul class="lesson-list" style="margin-bottom: 0;">
-              <li>The player can make choices</li>
-              <li>Different choices lead to different outcomes</li>
-              <li>The game has at least a few stages or surprises</li>
-            </ul>
-          </div>
+            <div>
+              <p class="day-number" style="margin-bottom:0.375rem">Plan Before You Start</p>
+              <ul>
+                <li>What does the player think they&rsquo;re supposed to do?</li>
+                <li>What is the actual rule?</li>
+                <li>What happens when the player does the wrong thing?</li>
+                <li>How does the player figure out what to try next?</li>
+                <li>Do the rules stay the same or change?</li>
+                <li>How does the player eventually win?</li>
+              </ul>
+            </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Want to go further?</p>
-            <ul class="lesson-list" style="margin-bottom: 0;">
-              <li>Add fake buttons or misleading instructions</li>
-              <li>Change the rules halfway through</li>
-              <li>Add secret ways to win or lose</li>
-              <li><strong>Stretch:</strong> Create a moment where the player has to figure out a rule you never explained</li>
-            </ul>
-          </div>
+            <div>
+              <p class="day-number" style="margin-bottom:0.375rem">Challenges!</p>
+              <ul>
+                <li>Make the rules change as the player gets further into the game.</li>
+                <li>Add a secret interaction or hidden way to win that the player has to discover.</li>
+                <li>What else could you add?</li>
+              </ul>
+            </div>
 
-          <div class="concept-card" style="margin-bottom: 1.5rem;">
-            <p class="lang-label" style="margin-bottom: 0.5rem;">Helpful Tricks</p>
-
-            <h3 style="margin-bottom: 0.5rem;">Show or hide something</h3>
-            <pre><code>triangle.style.display = "none";</code></pre>
-
-            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Change what the player sees</h3>
-            <pre><code>message.textContent = "Wrong. Obviously.";</code></pre>
-
-            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Make choices lead somewhere different</h3>
-            <pre><code>if (choice === "triangleTwo") {
-  showNextRound();
-} else {
-  loseGame();
-}</code></pre>
-
-            <h3 style="margin-top: 1.25rem; margin-bottom: 0.5rem;">Keep track of what stage you&rsquo;re on</h3>
-            <pre><code>let round = 1;</code></pre>
           </div>
 
         </section>
