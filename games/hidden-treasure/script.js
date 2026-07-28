@@ -11,11 +11,9 @@ const idleContent = {
   blank: "❔",
 };
 
-let treasureSpot;
+const treasureSpot = 0;
 
 function startGame() {
-  treasureSpot = Math.floor(Math.random() * spots.length);
-
   message.textContent = "";
   playAgainButton.style.display = "none";
 
