@@ -84,8 +84,8 @@
           <div class="concept-card" id="the-dom">
             <h3>The DOM</h3>
             <p>The <strong>DOM</strong> is how JavaScript finds and changes things on your page.</p>
-            <pre><code>let message = document.getElementById("message");
-message.textContent = "Something happened!";</code></pre>
+            <pre><code>let scoreDisplay = document.getElementById("score");
+scoreDisplay.textContent = "Score: 10";</code></pre>
             <p>You might use it for: updating a score, changing text, or showing a win message.</p>
           </div>
 
@@ -105,7 +105,9 @@ console.log(score);</code></pre>
           <div class="concept-card" id="variables">
             <h3>Variables</h3>
             <p>A variable lets JavaScript remember something.</p>
-            <pre><code>let score = 0;</code></pre>
+            <pre><code>const playerName = "Alex";
+let score = 0;</code></pre>
+            <p>Most of the time, we&rsquo;ll use <code>let</code> when a value needs to change and <code>const</code> when it doesn&rsquo;t. You may also see <code>var</code> in other JavaScript code.</p>
             <p>You might use one for scores, player names, lives, speed, or whether the game is over.</p>
           </div>
 
@@ -176,44 +178,58 @@ celebrate();</code></pre>
             <p>You might use it for: player names, answers, or guesses &mdash; anything the player provides.</p>
           </div>
 
-          <div class="concept-card" id="changing-the-page">
-            <h3>Changing the Page</h3>
-            <p>JavaScript can change your webpage while someone is using it &mdash; text, images, styles, and more.</p>
-            <pre><code>message.textContent = "You win!";</code></pre>
-            <p>You might use it for: anything that needs to update while the game runs.</p>
-          </div>
-
         </section>
 
         <!-- ── Making Decisions ───────────────────────────── -->
         <section id="making-decisions" class="concepts-section concepts-section--yellow">
 
           <div class="concept-card" id="if-statements">
-            <h3>if / else</h3>
-            <p><code>if</code> lets JavaScript make a decision. <code>else</code> gives it something to do otherwise.</p>
-            <pre><code>if (score === 10) {
+            <h3>Conditionals</h3>
+            <p>Conditionals let your code decide what to do based on whether something is true or false.</p>
+            <pre><code>if (score >= 10) {
   console.log("You win!");
 } else {
-  console.log("Keep playing!");
+  console.log("Keep going!");
 }</code></pre>
-            <div class="concept-pattern">
-              <span class="pattern-part">IF this is true</span>
-              <span class="pattern-arrow">&rarr;</span>
-              <span class="pattern-part">DO this</span>
-            </div>
-            <p>You might use this for game rules, like:</p>
-            <ul class="lesson-list">
-              <li>If the score reaches 10&hellip;</li>
-              <li>If the cards match&hellip;</li>
-              <li>If the player reaches the finish line&hellip;</li>
-            </ul>
+            <p>You might use it for: winning, losing, checking answers, matching cards, reaching a finish line, or deciding what happens next.</p>
           </div>
 
           <div class="concept-card" id="conditions">
-            <h3>Conditions</h3>
-            <p>A <strong>condition</strong> is the true-or-false question JavaScript checks inside an <code>if</code>.</p>
-            <pre><code>score === 10</code></pre>
-            <p>You might use one for comparing scores, checking answers, or matching cards.</p>
+            <h3>Comparison Operators</h3>
+            <p>Comparison operators compare two things. JavaScript answers the comparison with true or false.</p>
+            <ul class="lesson-list">
+              <li><code>===</code> equal to</li>
+              <li><code>!==</code> not equal to</li>
+              <li><code>&gt;</code> greater than</li>
+              <li><code>&lt;</code> less than</li>
+              <li><code>&gt;=</code> greater than or equal to</li>
+              <li><code>&lt;=</code> less than or equal to</li>
+            </ul>
+            <pre><code>score >= 10
+answer === "yes"</code></pre>
+            <p>Comparisons help your game check things like scores, answers, lives, and time.</p>
+          </div>
+
+          <div class="concept-card" id="logical-operators">
+            <h3>Logical Operators</h3>
+            <p>Logical operators let you check more than one thing at a time.</p>
+            <ul class="lesson-list">
+              <li><code>&amp;&amp;</code> AND &mdash; both things must be true</li>
+              <li><code>||</code> OR &mdash; at least one thing must be true</li>
+              <li><code>!</code> NOT &mdash; flips true and false</li>
+            </ul>
+            <pre><code>if (score >= 10 && timeLeft > 0) {
+  console.log("You win!");
+}</code></pre>
+            <p>The score has to be at least 10 AND there still has to be time left.</p>
+            <pre><code>if (lives === 0 || timeLeft === 0) {
+  console.log("Game over!");
+}</code></pre>
+            <p>The game ends if you&rsquo;re out of lives OR out of time.</p>
+            <pre><code>if (!gameOver) {
+  // keep playing
+}</code></pre>
+            <p>! means NOT. Here, the game keeps going if the game is not over.</p>
           </div>
 
         </section>
@@ -264,12 +280,6 @@ const choice = choices[randomIndex];</code></pre>
   console.log(event.key);
 });</code></pre>
             <p>You might use it for: moving a character, controlling a paddle, or triggering an action.</p>
-          </div>
-
-          <div class="concept-card" id="sound-animation">
-            <h3>Sound + Animation</h3>
-            <p>Games don&rsquo;t just have to work &mdash; they can feel fun too. JavaScript can trigger sounds, animations, and other finishing touches.</p>
-            <p>You might use these once your game already works and you&rsquo;re ready to add something extra.</p>
           </div>
 
         </section>

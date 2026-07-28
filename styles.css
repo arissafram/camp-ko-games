@@ -576,8 +576,15 @@ pre code {
   padding: 0;
 }
 
+.day-block li {
+  position: relative;
+  padding-left: 1em;
+}
+
 .day-block li::before {
-  content: '• ';
+  content: '•';
+  position: absolute;
+  left: 0;
   color: #888;
 }
 
@@ -594,13 +601,23 @@ pre code {
   margin: 0;
 }
 
+.day-goals li,
+.day-meta > div:not(.day-goals) li {
+  position: relative;
+  padding-left: 1.25em;
+}
+
 .day-goals li::before {
-  content: '→ ';
+  content: '→';
+  position: absolute;
+  left: 0;
   color: #888;
 }
 
 .day-meta > div:not(.day-goals) li::before {
-  content: '• ';
+  content: '•';
+  position: absolute;
+  left: 0;
   color: #888;
 }
 
@@ -1046,6 +1063,15 @@ pre code {
 @media (min-width: 600px) {
   .lang-grid--3 { grid-template-columns: repeat(3, 1fr); }
   .lang-grid--2 { grid-template-columns: repeat(2, 1fr); }
+}
+
+.lang-grid > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.lang-grid pre {
+  flex: 1;
 }
 
 .lang-label {
