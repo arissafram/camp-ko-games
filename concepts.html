@@ -36,12 +36,12 @@
 
   <nav class="page-nav">
     <div class="container">
-      <a href="#web-basics"          data-text="Web Basics">Web Basics</a>
-      <a href="#js-basics"           data-text="JS Basics">JS Basics</a>
+      <a href="#getting-started"     data-text="Getting Started">Getting Started</a>
+      <a href="#remembering-things"  data-text="Remembering Things">Remembering Things</a>
       <a href="#making-things-happen" data-text="Making Things Happen">Making Things Happen</a>
-      <a href="#storing-information" data-text="Storing Information">Storing Information</a>
       <a href="#making-decisions"    data-text="Making Decisions">Making Decisions</a>
-      <a href="#making-games"        data-text="Making Games">Making Games</a>
+      <a href="#working-with-lists"  data-text="Working With Lists">Working With Lists</a>
+      <a href="#game-tricks"         data-text="Game Tricks">Game Tricks</a>
       <a href="#thinking"            data-text="Thinking Like a Programmer">Thinking Like a Programmer</a>
     </div>
   </nav>
@@ -51,22 +51,17 @@
 
       <div class="page-header">
         <h1>Core Concepts</h1>
-        <p>Everything you need to build your game, all in one place.</p>
+        <p>Forget how something works? Look it up here. These are the tools we&rsquo;ll use to make our games work.</p>
       </div>
 
       <div class="page-content">
 
-        <!-- ── Web Basics ─────────────────────────────────── -->
-        <section id="web-basics" class="concepts-section concepts-section--blue">
+        <!-- ── Getting Started ────────────────────────────── -->
+        <section id="getting-started" class="concepts-section concepts-section--blue">
 
           <div class="concept-card" id="html-css-js">
             <h3>HTML + CSS + JavaScript</h3>
-            <p>Websites are built with three main tools:</p>
-            <ul class="lesson-list">
-              <li><strong>HTML</strong> puts things on the page.</li>
-              <li><strong>CSS</strong> changes how things look.</li>
-              <li><strong>JavaScript</strong> makes things happen.</li>
-            </ul>
+            <p>Three tools build a webpage together: <strong>HTML</strong> puts things on the page, <strong>CSS</strong> makes them look good, and <strong>JavaScript</strong> makes them do things.</p>
             <div class="lang-grid lang-grid--3">
               <div>
                 <p class="lang-label">HTML</p>
@@ -83,60 +78,40 @@
                 <pre><code>console.log("Hello!");</code></pre>
               </div>
             </div>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>Change the button text, its style, and the message in the console.</p>
-            </div>
+            <p>You might use this for: every game on this site &mdash; all three working together.</p>
           </div>
 
           <div class="concept-card" id="the-dom">
             <h3>The DOM</h3>
-            <p>The <strong>DOM</strong> is how JavaScript sees and interacts with your webpage.</p>
-            <p>JavaScript can find something on the page:</p>
-            <pre><code>let message = document.getElementById("message");</code></pre>
-            <p>Then change it:</p>
-            <pre><code>message.textContent = "Something happened!";</code></pre>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>Find an element on your page and change its text.</p>
-            </div>
+            <p>The <strong>DOM</strong> is how JavaScript finds and changes things on your page.</p>
+            <pre><code>let message = document.getElementById("message");
+message.textContent = "Something happened!";</code></pre>
+            <p>You might use it for: updating a score, changing text, or showing a win message.</p>
           </div>
 
           <div class="concept-card" id="console-log">
             <h3>console.log()</h3>
-            <p><strong><code>console.log()</code> lets us see what our JavaScript is doing.</strong></p>
+            <p><code>console.log()</code> lets you peek at what your code is doing while it runs.</p>
             <pre><code>let score = 10;
-
 console.log(score);</code></pre>
-            <p>You can print messages too:</p>
-            <pre><code>console.log("The game has started!");</code></pre>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>Make the console show your name and the value of a variable.</p>
-            </div>
+            <p>You might use it for: checking a variable&rsquo;s value, confirming a function ran, or debugging when something&rsquo;s not working.</p>
           </div>
 
         </section>
 
-        <!-- ── JavaScript Basics ──────────────────────────── -->
-        <section id="js-basics" class="concepts-section concepts-section--green">
+        <!-- ── Remembering Things ─────────────────────────── -->
+        <section id="remembering-things" class="concepts-section concepts-section--green">
 
           <div class="concept-card" id="variables">
             <h3>Variables</h3>
-            <p><strong>A variable lets us remember something.</strong></p>
-            <pre><code>let score = 0;
-let playerName = "Pickle";
-let gameOver = false;</code></pre>
-            <p>Variables can remember all kinds of things in a game: scores, names, lives, speed, and more.</p>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>Change the player&rsquo;s name and starting score.</p>
-            </div>
+            <p>A variable lets JavaScript remember something.</p>
+            <pre><code>let score = 0;</code></pre>
+            <p>You might use one for scores, player names, lives, speed, or whether the game is over.</p>
           </div>
 
           <div class="concept-card" id="types">
             <h3>Strings, Numbers + Booleans</h3>
-            <p>JavaScript can remember different <strong>types</strong> of information.</p>
+            <p>These are the different <strong>types</strong> of things a variable can remember.</p>
             <pre><code>let playerName = "Pickle";  // string
 let score = 10;             // number
 let gameOver = false;       // boolean</code></pre>
@@ -145,25 +120,25 @@ let gameOver = false;       // boolean</code></pre>
               <li><strong>Number</strong> = a number</li>
               <li><strong>Boolean</strong> = <code>true</code> or <code>false</code></li>
             </ul>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>Create one variable of each type.</p>
-            </div>
+            <p>You might use these for: text (string), scores or lives (number), and yes/no situations like game over (boolean).</p>
           </div>
 
-          <div class="concept-card" id="functions">
-            <h3>Functions</h3>
-            <p><strong>A function is a set of instructions we can use whenever we need it.</strong></p>
-            <pre><code>function celebrate() {
-  console.log("You did it!");
-}</code></pre>
-            <p>To use it, we call the function:</p>
-            <pre><code>celebrate();</code></pre>
-            <p>Functions can tell your game what to do when you score, click something, start a round, or win.</p>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>Create a function that prints your own message.</p>
-            </div>
+          <div class="concept-card" id="arrays">
+            <h3>Arrays</h3>
+            <p>An array stores a list of things.</p>
+            <pre><code>let animals = ["dog", "cat", "raccoon", "frog"];</code></pre>
+            <p>You might use one for characters, cards, questions, choices, or possible answers.</p>
+          </div>
+
+          <div class="concept-card" id="objects">
+            <h3>Objects</h3>
+            <p>An object keeps related information together.</p>
+            <pre><code>let player = {
+  name: "Pickle",
+  lives: 3,
+  score: 10
+};</code></pre>
+            <p>You might use one to bundle up everything about a character, card, or item in one place.</p>
           </div>
 
         </section>
@@ -171,92 +146,41 @@ let gameOver = false;       // boolean</code></pre>
         <!-- ── Making Things Happen ───────────────────────── -->
         <section id="making-things-happen" class="concepts-section concepts-section--orange">
 
+          <div class="concept-card" id="functions">
+            <h3>Functions</h3>
+            <p>A function is a set of instructions you can reuse whenever you need it.</p>
+            <pre><code>function celebrate() {
+  console.log("You did it!");
+}
+
+celebrate();</code></pre>
+            <p>You might use one for what happens when you score, click something, start a round, or win.</p>
+          </div>
+
           <div class="concept-card" id="events">
             <h3>Events + Event Listeners</h3>
-            <p>An <strong>event</strong> is something that happens. A player might click a button, press a key, or submit an answer.</p>
-            <p>An <strong>event listener</strong> waits for an event and tells JavaScript what to do next.</p>
+            <p>An <strong>event</strong> is something that happens &mdash; a click, a key press, a submitted answer. An <strong>event listener</strong> waits for it and tells JavaScript what to do next.</p>
             <pre><code>button.addEventListener("click", celebrate);</code></pre>
             <div class="concept-pattern">
-              <span class="pattern-part">WHEN the button is clicked</span>
+              <span class="pattern-part">WHEN this happens</span>
               <span class="pattern-arrow">&rarr;</span>
               <span class="pattern-part">DO this</span>
             </div>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>Connect a button to one of your functions.</p>
-            </div>
-          </div>
-
-          <div class="concept-card" id="changing-the-page">
-            <h3>Changing the Page</h3>
-            <p>JavaScript can change your webpage while someone is using it.</p>
-            <pre><code>let message = document.getElementById("message");
-
-message.textContent = "You win!";</code></pre>
-            <p>You can change text, images, styles, and more.</p>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>Make a button change something on your page.</p>
-            </div>
+            <p>You might use one for: clicks, key presses, or anything else the player does.</p>
           </div>
 
           <div class="concept-card" id="user-input">
             <h3>User Input</h3>
-            <p>Your game can use information that a player types.</p>
-            <pre><code>let playerName = nameInput.value;
-
-console.log(playerName);</code></pre>
-            <p>This lets players become part of what happens in your program.</p>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>Add an input and print what the player typed.</p>
-            </div>
+            <p>Your game can use information that a player types or picks.</p>
+            <pre><code>let playerName = nameInput.value;</code></pre>
+            <p>You might use it for: player names, answers, or guesses &mdash; anything the player provides.</p>
           </div>
 
-        </section>
-
-        <!-- ── Storing Information ────────────────────────── -->
-        <section id="storing-information" class="concepts-section concepts-section--purple">
-
-          <div class="concept-card" id="arrays">
-            <h3>Arrays</h3>
-            <p><strong>An array stores a list of things.</strong></p>
-            <pre><code>let animals = ["dog", "cat", "raccoon", "frog"];</code></pre>
-            <p>Games use arrays for things like characters, cards, questions, choices, or possible answers.</p>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>Make an array of five things you like.</p>
-            </div>
-          </div>
-
-          <div class="concept-card" id="objects">
-            <h3>Objects</h3>
-            <p><strong>An object keeps related information together.</strong></p>
-            <pre><code>let player = {
-  name: "Pickle",
-  lives: 3,
-  score: 10
-};</code></pre>
-            <p>Each piece of information has a <strong>property</strong> and a <strong>value</strong>.</p>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>Create an object for your own game character.</p>
-            </div>
-          </div>
-
-          <div class="concept-card" id="foreach">
-            <h3>forEach</h3>
-            <p><strong><code>forEach</code> does something once for every item in an array.</strong></p>
-            <pre><code>let animals = ["dog", "cat", "frog"];
-
-animals.forEach(function(animal) {
-  console.log(animal);
-});</code></pre>
-            <p>Instead of writing the same instructions over and over, we can tell JavaScript to do them for each item.</p>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>Use <code>forEach</code> to print every item in your array.</p>
-            </div>
+          <div class="concept-card" id="changing-the-page">
+            <h3>Changing the Page</h3>
+            <p>JavaScript can change your webpage while someone is using it &mdash; text, images, styles, and more.</p>
+            <pre><code>message.textContent = "You win!";</code></pre>
+            <p>You might use it for: anything that needs to update while the game runs.</p>
           </div>
 
         </section>
@@ -265,91 +189,87 @@ animals.forEach(function(animal) {
         <section id="making-decisions" class="concepts-section concepts-section--yellow">
 
           <div class="concept-card" id="if-statements">
-            <h3>if Statements</h3>
-            <p><strong><code>if</code> lets JavaScript make a decision.</strong></p>
+            <h3>if / else</h3>
+            <p><code>if</code> lets JavaScript make a decision. <code>else</code> gives it something to do otherwise.</p>
             <pre><code>if (score === 10) {
   console.log("You win!");
+} else {
+  console.log("Keep playing!");
 }</code></pre>
             <div class="concept-pattern">
               <span class="pattern-part">IF this is true</span>
               <span class="pattern-arrow">&rarr;</span>
               <span class="pattern-part">DO this</span>
             </div>
-            <p>Games use decisions everywhere: winning, losing, matching cards, checking answers, and more.</p>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>Change the score and see when the message appears.</p>
-            </div>
+            <p>You might use this for game rules, like:</p>
+            <ul class="lesson-list">
+              <li>If the score reaches 10&hellip;</li>
+              <li>If the cards match&hellip;</li>
+              <li>If the player reaches the finish line&hellip;</li>
+            </ul>
           </div>
 
           <div class="concept-card" id="conditions">
             <h3>Conditions</h3>
-            <p>A <strong>condition</strong> is the question JavaScript checks.</p>
+            <p>A <strong>condition</strong> is the true-or-false question JavaScript checks inside an <code>if</code>.</p>
             <pre><code>score === 10</code></pre>
-            <p>That condition can be either <code>true</code> or <code>false</code>.</p>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>What happens if you change <code>10</code> to another number?</p>
-            </div>
-          </div>
-
-          <div class="concept-card" id="input-rules-output">
-            <h3>Input &rarr; Rules &rarr; Output</h3>
-            <p>A simple way to think about a game:</p>
-            <div class="iro-pattern">
-              <div class="iro-block">
-                <span class="iro-label">INPUT</span>
-                <span class="iro-text">What does the player do?</span>
-              </div>
-              <div class="iro-block">
-                <span class="iro-label">RULES</span>
-                <span class="iro-text">What does the game decide?</span>
-              </div>
-              <div class="iro-block">
-                <span class="iro-label">OUTPUT</span>
-                <span class="iro-text">What happens next?</span>
-              </div>
-            </div>
-            <p>For example: <strong>Player clicks a mole &rarr; Is it still visible? &rarr; Add a point</strong></p>
-            <p>Use this pattern when you&rsquo;re not sure how to build a feature.</p>
+            <p>You might use one for comparing scores, checking answers, or matching cards.</p>
           </div>
 
         </section>
 
-        <!-- ── Making Games ───────────────────────────────── -->
-        <section id="making-games" class="concepts-section concepts-section--red">
+        <!-- ── Working With Lists ─────────────────────────── -->
+        <section id="working-with-lists" class="concepts-section concepts-section--purple">
+
+          <div class="concept-card" id="foreach">
+            <h3>forEach</h3>
+            <p>You already know how to make a list &mdash; an array (see Remembering Things). <code>forEach</code> does something once for every item in it.</p>
+            <pre><code>let animals = ["dog", "cat", "frog"];
+
+animals.forEach(function(animal) {
+  console.log(animal);
+});</code></pre>
+            <p>You might use it for: showing every card, checking every answer, or moving every enemy on screen.</p>
+          </div>
+
+        </section>
+
+        <!-- ── Game Tricks ─────────────────────────────────── -->
+        <section id="game-tricks" class="concepts-section concepts-section--red">
+
+          <div class="concept-card" id="random">
+            <h3>Random Choices</h3>
+            <p><code>Math.random()</code> lets JavaScript pick something at random.</p>
+            <pre><code>const choices = ["cat", "dog", "frog"];
+
+const randomIndex = Math.floor(Math.random() * choices.length);
+const choice = choices[randomIndex];</code></pre>
+            <p>This picks a random item out of the list &mdash; you don&rsquo;t need to know the math to use it.</p>
+            <p>You might use it for: random enemies, random questions, random rewards, or shuffling cards.</p>
+          </div>
 
           <div class="concept-card" id="timers">
             <h3>Timers</h3>
-            <p>JavaScript can make something happen after a certain amount of time.</p>
+            <p>JavaScript can wait, then make something happen.</p>
             <pre><code>setTimeout(function() {
   console.log("Time's up!");
 }, 2000);</code></pre>
-            <p><code>2000</code> means 2 seconds. Timers can control rounds, animations, enemies, messages, and more.</p>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>Change how long JavaScript waits.</p>
-            </div>
+            <p><code>2000</code> means 2 seconds. You might use a timer for rounds, countdowns, or messages that disappear.</p>
           </div>
 
           <div class="concept-card" id="movement">
-            <h3>Movement</h3>
+            <h3>Keyboard Input + Movement</h3>
             <p>Games can respond when a player presses a key.</p>
             <pre><code>document.addEventListener("keydown", function(event) {
   console.log(event.key);
 });</code></pre>
-            <p>From there, your code can decide how your character or object should move.</p>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>Press different keys and watch the console.</p>
-            </div>
+            <p>You might use it for: moving a character, controlling a paddle, or triggering an action.</p>
           </div>
 
           <div class="concept-card" id="sound-animation">
             <h3>Sound + Animation</h3>
-            <p>Games don&rsquo;t just have to work &mdash; they can feel fun too.</p>
-            <p>JavaScript can trigger sounds, animations, visual effects, and other finishing touches.</p>
-            <p>Use these when your game works and you&rsquo;re ready to add something extra.</p>
+            <p>Games don&rsquo;t just have to work &mdash; they can feel fun too. JavaScript can trigger sounds, animations, and other finishing touches.</p>
+            <p>You might use these once your game already works and you&rsquo;re ready to add something extra.</p>
           </div>
 
         </section>
@@ -359,56 +279,64 @@ animals.forEach(function(animal) {
 
           <div class="concept-card" id="pseudocode">
             <h3>Pseudocode</h3>
-            <p><strong>Pseudocode means planning your code in normal language first.</strong></p>
-            <p>You don&rsquo;t need to know the JavaScript yet.</p>
+            <p>Pseudocode means planning what your code should do, in plain language, before writing any JavaScript. Ask yourself:</p>
+            <ul class="lesson-list">
+              <li>What appears on screen?</li>
+              <li>What does the game need to remember?</li>
+              <li>What makes something happen?</li>
+              <li>What happens next?</li>
+            </ul>
             <pre class="pseudo"><code>START with a score of 0
 
 WHEN the player clicks:
     add 1 to the score
     show the new score</code></pre>
-            <p>Now we know what our program needs to do before figuring out exactly how to code it.</p>
-            <div class="try-it">
-              <p class="try-it-label">Try it</p>
-              <p>Write the steps for one part of your game without using any JavaScript.</p>
-            </div>
+            <p>You might use this for: planning any part of your game before you code it.</p>
           </div>
 
           <div class="concept-card" id="breaking-down">
             <h3>Breaking Down a Problem</h3>
-            <p>Big problems are easier when we turn them into little problems.</p>
-            <p>Instead of <strong>&ldquo;Build a game,&rdquo;</strong> ask:</p>
-            <ul class="lesson-list">
-              <li>What does the player do?</li>
-              <li>What does the game need to remember?</li>
-              <li>What happens next?</li>
-            </ul>
-            <p>Then solve one piece at a time.</p>
+            <p>Big problems are easier when you turn them into little ones. Instead of &ldquo;Build a game,&rdquo; ask the pseudocode questions above, then solve one piece at a time.</p>
           </div>
 
           <div class="concept-card" id="debugging">
             <h3>Debugging</h3>
-            <p><strong>A bug is something in your code that isn&rsquo;t working the way you expected.</strong> Debugging means figuring out why.</p>
-            <p>When something doesn&rsquo;t work:</p>
+            <p>A bug is something in your code that isn&rsquo;t working the way you expected. Debugging means figuring out why &mdash; and it&rsquo;s a normal part of programming.</p>
             <ol class="concept-steps">
-              <li>Read the error.</li>
-              <li>Check the console.</li>
-              <li>Find where the problem starts.</li>
+              <li>What did I expect?</li>
+              <li>What actually happened?</li>
+              <li>Where can I check what&rsquo;s going on?</li>
               <li>Change one thing.</li>
               <li>Try again.</li>
             </ol>
-            <p>Bugs are part of programming. Finding them is part of programming too.</p>
           </div>
 
           <div class="concept-card" id="testing">
             <h3>Testing</h3>
-            <p>Don&rsquo;t wait until your game is finished to test it.</p>
-            <p>Play it. Break it. Give it to someone else.</p>
+            <p>Don&rsquo;t wait until your game is finished to test it. Play it. Break it. Give it to someone else.</p>
             <ul class="lesson-list">
               <li>Does it work?</li>
               <li>Is anything confusing?</li>
               <li>What happens if I do something unexpected?</li>
             </ul>
-            <p>Then make it better.</p>
+          </div>
+
+          <div class="concept-card" id="reading-errors">
+            <h3>Reading Errors + Using the Console</h3>
+            <p>When something breaks, the console often tells you exactly where and why.</p>
+            <p>You might use it for: finding typos, catching mistakes, and figuring out where to start debugging.</p>
+          </div>
+
+          <div class="concept-card" id="asking-for-help">
+            <h3>Asking for Help</h3>
+            <p>Good questions get better help &mdash; including from AI. When you ask, explain:</p>
+            <ul class="lesson-list">
+              <li>What you&rsquo;re trying to make happen</li>
+              <li>What you expected</li>
+              <li>What actually happened</li>
+              <li>What you&rsquo;ve already tried</li>
+            </ul>
+            <p>Use AI to understand, debug, and ask questions &mdash; not to build the whole thing for you.</p>
           </div>
 
         </section>
