@@ -297,7 +297,7 @@ pre code {
   position: sticky;
   top: 56px;
   z-index: 90;
-  padding: 0.375rem 0;
+  padding: 0;
 }
 
 .page-nav .container {
@@ -851,6 +851,24 @@ pre code {
   margin-top: 3rem;
   font-size: 0.8125rem;
   color: #888;
+}
+
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-footer a,
+.site-footer a:visited,
+.site-footer a:active {
+  color: #888;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
 }
 
 /* Utility */
