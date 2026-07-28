@@ -17,6 +17,7 @@ function startGame() {
   treasureSpot = Math.floor(Math.random() * spots.length);
 
   message.textContent = "";
+  playAgainButton.style.display = "none";
 
   spots.forEach(function (spot) {
     spot.disabled = false;
@@ -40,6 +41,7 @@ function checkSpot(index, spot) {
 function revealTreasure(spot) {
   spot.textContent = "💰";
   message.textContent = "You found the treasure!";
+  playAgainButton.style.display = "inline-block";
 
   spots.forEach(function (s) {
     s.disabled = true;
@@ -73,6 +75,7 @@ function changeColor(spot) {
 function loseGame(spot) {
   spot.textContent = "❌";
   message.textContent = "You lost! Reset to try again.";
+  playAgainButton.style.display = "inline-block";
 
   spots.forEach(function (s) {
     s.disabled = true;
@@ -81,10 +84,8 @@ function loseGame(spot) {
 
 function wiggleSpot(spot) {
   spot.classList.add("wiggle");
+  message.textContent = "Nothing here. Keep looking!";
   spot.disabled = true;
-  setTimeout(function () {
-    loseGame(spot);
-  }, 400);
 }
 
 function growSpot(spot) {
@@ -98,9 +99,10 @@ function growSpot(spot) {
 
 function flipSpot(spot) {
   spot.classList.add("flip");
+  message.textContent = "Nothing here. Keep looking!";
   spot.disabled = true;
   setTimeout(function () {
-    loseGame(spot);
+    spot.textContent = "🂠";
   }, 200);
 }
 
