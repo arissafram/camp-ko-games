@@ -408,7 +408,6 @@ pre code {
 /* First section under the header already gets page-content's top padding —
    cancel its own top padding so the header-to-content gap is always 5rem. */
 .page-content > .day-section:first-child,
-.page-content > .concepts-section:first-child,
 .page-content > section:first-child > .day-section:first-child {
   padding-top: 0;
 }
@@ -441,6 +440,7 @@ pre code {
 
 .team-card ol {
   padding-left: 1.25rem;
+  margin-left: 0.5rem;
 }
 
 .team-card ol li + li {
@@ -936,7 +936,7 @@ pre code {
 
 .build-frame-wrap iframe {
   width: 100%;
-  height: 560px;
+  height: 350px;
   display: block;
   border: none;
   border-radius: var(--radius);
@@ -1190,6 +1190,12 @@ pre.pseudo {
   z-index: 200;
 }
 
+@media (max-width: 900px) {
+  .back-to-top {
+    bottom: 4.75rem;
+  }
+}
+
 .back-to-top.visible {
   opacity: 1;
   pointer-events: auto;
@@ -1201,7 +1207,7 @@ pre.pseudo {
 
 /* Concepts page ─────────────────────────────────────── */
 .concepts-section {
-  padding: 2rem 0;
+  margin-bottom: 3rem;
 }
 
 /* Concept cards */

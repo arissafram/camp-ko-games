@@ -64,7 +64,8 @@
             <div class="day-header">
               <h2>How do I start?</h2>
             </div>
-            <p>Start with <strong>pseudocode</strong>. Before you write JavaScript, think through what appears on the screen, what the player does, what your game needs to remember, what makes things happen, and what happens next.</p>
+            <p>First, describe what your game does in one sentence.</p>
+            <p>Next, start your <strong>pseudocode</strong>. Before you write JavaScript, think through what appears on the screen, what the player does, what your game needs to remember, what makes things happen, and what happens next.</p>
             <p>You don&rsquo;t need to know how to build every part yet. Start by figuring out what needs to happen.</p>
           </div>
 
@@ -111,11 +112,6 @@
                     <td>⏳ <a href="#clicker">Clicker</a></td>
                     <td>Click a button and watch your score climb</td>
                     <td>Counting, updating the page, adding upgrades</td>
-                  </tr>
-                  <tr>
-                    <td>🧠 <a href="#memory">Memory</a></td>
-                    <td>Flip cards and find matching pairs</td>
-                    <td>arrays, events, conditionals, timers</td>
                   </tr>
                 </tbody>
               </table>
@@ -469,69 +465,6 @@
               <ul>
                 <li>Add a timer so the game ends after 10 seconds.</li>
                 <li>Give two players their own button and score, and see who gets the highest score.</li>
-                <li>What else could you add?</li>
-              </ul>
-            </div>
-
-            <div>
-              <p class="day-number" style="margin-bottom:0.375rem">Helpful Tricks</p>
-              <ul>
-                <li>Use <code>score += 1;</code> as a shortcut for <code>score = score + 1;</code>.</li>
-                <li><code>console.log(score)</code> after every click while you&rsquo;re building, so you can see it change.</li>
-                <li>Keep the code that updates the screen in its own function &mdash; call it every time the score changes.</li>
-              </ul>
-            </div>
-
-          </div>
-
-        </section>
-
-        <!-- ── Memory ─────────────────────────────────────── -->
-        <section id="memory" class="day-section">
-
-          <div class="day-header">
-            <h2>🧠 Memory</h2>
-            <p class="day-quote">A card game where the player flips over cards and tries to find all of the matching pairs.</p>
-          </div>
-
-          <div class="example-frame-wrap" style="margin-bottom: 1.5rem;">
-            <iframe src="games/memory/index.html" title="Memory game example" scrolling="no"></iframe>
-            <div class="example-frame-source">
-              <a href="https://github.com/arissafram/camp-ko-games/tree/main/games/memory" target="_blank" rel="noopener">Source Code ↗</a>
-            </div>
-          </div>
-
-          <div class="day-meta">
-
-            <div class="day-goals">
-              <p class="day-number" style="margin-bottom:0.375rem">Tasks</p>
-              <ul>
-                <li>Your game has a name.</li>
-                <li>If your game needs instructions, write them.</li>
-                <li>Your game has your own pizzazz.</li>
-                <li>Cards can be flipped over and hidden again.</li>
-                <li>Your game recognizes matching pairs.</li>
-                <li>Your game tells the player when they&rsquo;ve found every match.</li>
-              </ul>
-            </div>
-
-            <div>
-              <p class="day-number" style="margin-bottom:0.375rem">Plan Before You Start</p>
-              <ul>
-                <li>What will be on your cards?</li>
-                <li>What do the cards look like when they&rsquo;re hidden?</li>
-                <li>What happens when the player flips over one card? What about a second?</li>
-                <li>How does the game know if two cards match?</li>
-                <li>What happens to cards that don&rsquo;t match?</li>
-                <li>How does the game know when there are no matches left to find?</li>
-              </ul>
-            </div>
-
-            <div>
-              <p class="day-number" style="margin-bottom:0.375rem">Challenges!</p>
-              <ul>
-                <li>Count how many turns it takes to find every pair.</li>
-                <li>Add a timer so the player can try to beat their fastest time.</li>
                 <li>What else could you add?</li>
               </ul>
             </div>

@@ -136,10 +136,6 @@ body {
   margin-bottom: 12px;
 }
 
-#play-again {
-  display: none;
-}
-
 button {
   padding: 8px 20px;
   font-size: 15px;
