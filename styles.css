@@ -814,7 +814,7 @@ pre code {
 }
 
 .cheat-table td a:hover {
-  color: var(--tn-blue);
+  color: var(--tn-aqua);
 }
 
 #camp-schedule .cheat-table td:first-child,
