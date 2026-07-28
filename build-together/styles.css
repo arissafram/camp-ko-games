@@ -4,4 +4,10 @@ body {
   font-family: system-ui, sans-serif;
   text-align: center;
   padding: 40px;
+  background: #1d1f21;
+}
+
+h1 {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  color: #ffffff;
 }
