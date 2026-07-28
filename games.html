@@ -16,8 +16,9 @@
       <a href="index.html" class="nav-brand">{ .home }</a>
       <ul class="nav-links">
         <li><a href="schedule.html">Schedule</a></li>
-        <li><a href="concepts.html">JS Concepts</a></li>
+        <li><a href="concepts.html">Core Concepts</a></li>
         <li><a href="games.html">Games</a></li>
+        <li><a href="build-together.html">Build Together</a></li>
       </ul>
       <button class="nav-hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -26,8 +27,9 @@
     <div class="nav-mobile">
       <ul>
         <li><a href="schedule.html">Schedule</a></li>
-        <li><a href="concepts.html">JS Concepts</a></li>
+        <li><a href="concepts.html">Core Concepts</a></li>
         <li><a href="games.html">Games</a></li>
+        <li><a href="build-together.html">Build Together</a></li>
       </ul>
     </div>
   </nav>
@@ -40,6 +42,7 @@
       <a href="#memory" data-text="🧠 Memory">🧠 Memory</a>
       <a href="#rock-paper-scissors" data-text="🪨 Rock Paper Scissors">🪨 Rock Paper Scissors</a>
       <a href="#impossible-game" data-text="🤯 Impossible Game">🤯 Impossible Game</a>
+      <a href="#clicker" data-text="⏳ Clicker">⏳ Clicker</a>
     </div>
   </nav>
 
@@ -56,83 +59,99 @@
         <!-- ── Get Started ──────────────────────────────── -->
         <section id="get-started">
 
-          <div class="day-header">
-            <h2>How do I start?</h2>
-          </div>
-          <p>Start with <strong>pseudocode</strong>. Before you write JavaScript, think through what appears on the screen, what the player does, what your game needs to remember, what makes things happen, and what happens next.</p>
-          <p>You don&rsquo;t need to know how to build every part yet. Start by figuring out what needs to happen.</p>
-
-          <div class="day-header" style="margin-top: 1.75rem;">
-            <h2>Choose your game</h2>
+          <div class="day-section">
+            <div class="day-header">
+              <h2>How do I start?</h2>
+            </div>
+            <p>Start with <strong>pseudocode</strong>. Before you write JavaScript, think through what appears on the screen, what the player does, what your game needs to remember, what makes things happen, and what happens next.</p>
+            <p>You don&rsquo;t need to know how to build every part yet. Start by figuring out what needs to happen.</p>
           </div>
 
-          <table class="cheat-table">
-            <thead>
-              <tr>
-                <th>Game</th>
-                <th>The Idea</th>
-                <th>You&rsquo;ll Use</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>🔮 <a href="#magic-8-ball">Magic 8 Ball</a></td>
-                <td>Ask a question and get a random response</td>
-                <td>arrays, randomness, input, events</td>
-              </tr>
-              <tr>
-                <td>🏎️ <a href="#race-cars">Race Cars</a></td>
-                <td>Move a racer to the finish line with the keyboard</td>
-                <td>keyboard events, variables, conditionals</td>
-              </tr>
-              <tr>
-                <td>🧠 <a href="#memory">Memory</a></td>
-                <td>Flip cards and find matching pairs</td>
-                <td>arrays, events, conditionals, timers</td>
-              </tr>
-              <tr>
-                <td>🪨 <a href="#rock-paper-scissors">Rock Paper Scissors</a></td>
-                <td>Choose a move and play against the computer</td>
-                <td>arrays, randomness, conditionals</td>
-              </tr>
-              <tr>
-                <td>🤯 <a href="#impossible-game">The Impossible Game</a></td>
-                <td>A game where the rules are hidden or constantly changing</td>
-                <td>functions, DOM changes, conditionals, timers</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div class="day-header" style="margin-top: 1.75rem;">
-            <h2>What if I get stuck?</h2>
+          <div class="day-section">
+            <div class="day-header">
+              <h2>Choose your game</h2>
+            </div>
+            <div class="table-wrap">
+              <table class="cheat-table">
+                <thead>
+                  <tr>
+                    <th>Game</th>
+                    <th>Description</th>
+                    <th>Core Concepts</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>🔮 <a href="#magic-8-ball">Magic 8 Ball</a></td>
+                    <td>Ask a question and get a random response</td>
+                    <td>arrays, randomness, input, events</td>
+                  </tr>
+                  <tr>
+                    <td>🏎️ <a href="#race-cars">Race Cars</a></td>
+                    <td>Move a racer to the finish line with the keyboard</td>
+                    <td>keyboard events, variables, conditionals</td>
+                  </tr>
+                  <tr>
+                    <td>🧠 <a href="#memory">Memory</a></td>
+                    <td>Flip cards and find matching pairs</td>
+                    <td>arrays, events, conditionals, timers</td>
+                  </tr>
+                  <tr>
+                    <td>🪨 <a href="#rock-paper-scissors">Rock Paper Scissors</a></td>
+                    <td>Choose a move and play against the computer</td>
+                    <td>arrays, randomness, conditionals</td>
+                  </tr>
+                  <tr>
+                    <td>🤯 <a href="#impossible-game">The Impossible Game</a></td>
+                    <td>A game where the rules are hidden or constantly changing</td>
+                    <td>functions, DOM changes, conditionals, timers</td>
+                  </tr>
+                  <tr>
+                    <td>⏳ <a href="#clicker">Clicker</a></td>
+                    <td>Click a button and watch your score climb</td>
+                    <td>variables, functions, events</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-          <p>Getting stuck is part of coding! Try to figure out what&rsquo;s not working before you try to fix it.</p>
-          <p>Read the error. Check your code. Try changing one thing. Use the Concepts page. Ask a teammate what they tried. Ask for help.</p>
-          <p>Each game page also includes the finished code. Use it as a reference when you&rsquo;re really stuck&mdash;but don&rsquo;t copy/paste! Look for the part you need, figure out how it works, then try it in your own code.</p>
 
-          <div class="day-header" style="margin-top: 1.75rem;">
-            <h2>What if I don&rsquo;t finish?</h2>
+          <div class="day-section">
+            <div class="day-header">
+              <h2>What if I get stuck?</h2>
+            </div>
+            <p>Getting stuck is part of coding! Try to figure out what&rsquo;s not working before you try to fix it.</p>
+            <p>Read the error. Check your code. Try changing one thing. Use the Concepts page. Ask a teammate what they tried. Ask for help.</p>
+            <p>Each game page also includes the finished code. Use it as a reference when you&rsquo;re really stuck&mdash;but don&rsquo;t copy/paste! Look for the part you need, figure out how it works, then try it in your own code.</p>
           </div>
-          <p>That&rsquo;s okay! In engineering, things are rarely truly finished&mdash;we iterate.</p>
-          <p>Think of your game as an MVP: Minimum Viable Product. First, make it work. Then make it yours. If you have time, add something extra.</p>
-          <p>Each game page will show you what the basic version needs. Everything after that is up to you&mdash;and you can keep building long after this week is over.</p>
 
-          <div class="day-header" style="margin-top: 1.75rem;">
-            <h2>Can I use AI?</h2>
+          <div class="day-section">
+            <div class="day-header">
+              <h2>What if I don&rsquo;t finish?</h2>
+            </div>
+            <p>That&rsquo;s okay! In engineering, things are rarely truly finished&mdash;we iterate.</p>
+            <p>Think of your game as an MVP: Minimum Viable Product. First, make it work. Then make it yours. If you have time, add something extra.</p>
+            <p>Each game page will show you what the basic version needs. Everything after that is up to you&mdash;and you can keep building long after this week is over.</p>
           </div>
-          <p>Yes&mdash;but&hellip; AI should help you think, not think for you.</p>
-          <p class="lang-label" style="margin-bottom: 0.5rem;">Try</p>
-          <ul class="arrow-list">
-            <li>&ldquo;I&rsquo;m learning JavaScript. Don&rsquo;t give me the answer, but point me in the right direction.&rdquo;</li>
-            <li>&ldquo;Can you explain why this isn&rsquo;t working without fixing it for me?&rdquo;</li>
-            <li>&ldquo;Can you explain this JavaScript like I&rsquo;m five? Keep it short.&rdquo;</li>
-            <li>&ldquo;What should I investigate next?&rdquo;</li>
-          </ul>
+
+          <div class="day-section">
+            <div class="day-header">
+              <h2>Can I use AI?</h2>
+            </div>
+            <p>Yes&mdash;but&hellip; AI should help you think, not think for you.</p>
+            <p class="lang-label" style="margin-bottom: 0.5rem;">Try</p>
+            <ul class="arrow-list">
+              <li>&ldquo;I&rsquo;m learning JavaScript. Don&rsquo;t give me the answer, but point me in the right direction.&rdquo;</li>
+              <li>&ldquo;Can you explain why this isn&rsquo;t working without fixing it for me?&rdquo;</li>
+              <li>&ldquo;Can you explain this JavaScript like I&rsquo;m five? Keep it short.&rdquo;</li>
+              <li>&ldquo;What should I investigate next?&rdquo;</li>
+            </ul>
+          </div>
 
         </section>
 
         <!-- ── Magic 8 Ball ──────────────────────────────── -->
-        <section id="magic-8-ball">
+        <section id="magic-8-ball" class="day-section">
 
           <div class="day-header">
             <h2>🔮 Magic 8 Ball</h2>
@@ -184,7 +203,7 @@
         </section>
 
         <!-- ── Race Cars ──────────────────────────────────── -->
-        <section id="race-cars">
+        <section id="race-cars" class="day-section">
 
           <div class="day-header">
             <h2>🏎️ Race Cars</h2>
@@ -238,7 +257,7 @@
         </section>
 
         <!-- ── Memory ─────────────────────────────────────── -->
-        <section id="memory">
+        <section id="memory" class="day-section">
 
           <div class="day-header">
             <h2>🧠 Memory</h2>
@@ -292,7 +311,7 @@
         </section>
 
         <!-- ── Rock Paper Scissors ────────────────────────── -->
-        <section id="rock-paper-scissors">
+        <section id="rock-paper-scissors" class="day-section">
 
           <div class="day-header">
             <h2>🪨 Rock Paper Scissors</h2>
@@ -346,7 +365,7 @@
         </section>
 
         <!-- ── Impossible Game ────────────────────────────── -->
-        <section id="impossible-game">
+        <section id="impossible-game" class="day-section">
 
           <div class="day-header">
             <h2>🤯 The Impossible Game</h2>
@@ -392,6 +411,68 @@
                 <li>Make the rules change as the player gets further into the game.</li>
                 <li>Add a secret interaction or hidden way to win that the player has to discover.</li>
                 <li>What else could you add?</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- ── Clicker ──────────────────────────────────── -->
+        <section id="clicker" class="day-section">
+
+          <div class="day-header">
+            <h2>⏳ Clicker</h2>
+            <p class="day-quote">A game where every click adds to your score.</p>
+          </div>
+
+          <div class="example-frame-wrap" style="margin-bottom: 1.5rem;">
+            <iframe src="games/clicker/index.html" title="Clicker game example" scrolling="no"></iframe>
+            <div class="example-frame-source">
+              <a href="https://github.com/arissafram/camp-ko-games/tree/main/games/clicker" target="_blank" rel="noopener">Source Code ↗</a>
+            </div>
+          </div>
+
+          <div class="day-meta">
+
+            <div class="day-goals">
+              <p class="day-number" style="margin-bottom:0.375rem">Tasks</p>
+              <ul>
+                <li>Your game has a name.</li>
+                <li>If your game needs instructions, write them.</li>
+                <li>Your game has your own pizzazz.</li>
+                <li>Clicking increases your score.</li>
+                <li>Your score is always visible on the screen.</li>
+                <li>There&rsquo;s a way to reset your score.</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="day-number" style="margin-bottom:0.375rem">Plan Before You Start</p>
+              <ul>
+                <li>What should happen every time the player clicks?</li>
+                <li>Does the score keep going forever, or does the game end?</li>
+                <li>What happens when the player resets?</li>
+                <li>Where does the score appear on the screen?</li>
+                <li>What could make clicking feel more fun or satisfying?</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="day-number" style="margin-bottom:0.375rem">Challenges!</p>
+              <ul>
+                <li>Add a timer so the game ends after 10 seconds.</li>
+                <li>Give two players their own button and score, and see who gets the highest score.</li>
+                <li>What else could you add?</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="day-number" style="margin-bottom:0.375rem">Helpful Tricks</p>
+              <ul>
+                <li>Use <code>score += 1;</code> as a shortcut for <code>score = score + 1;</code>.</li>
+                <li><code>console.log(score)</code> after every click while you&rsquo;re building, so you can see it change.</li>
+                <li>Keep the code that updates the screen in its own function &mdash; call it every time the score changes.</li>
               </ul>
             </div>
 
