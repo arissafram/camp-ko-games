@@ -577,6 +577,17 @@ pre code {
   color: #888;
 }
 
+.arrow-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.arrow-list li::before {
+  content: '→ ';
+  color: #888;
+}
+
 .day-divider {
   border: none;
   border-top: 1px solid var(--border);
