@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+html {
+  scroll-padding-top: 116px;
+}
+
 /* Variables */
 :root {
   /* Tomorrow Night palette */
@@ -375,7 +379,7 @@ pre code {
 
 /* Page header */
 .page-header {
-  padding: 3.25rem 0 3rem;
+  padding: 2.5rem 0 3rem;
   border-bottom: 1px solid var(--border-light);
 }
 
@@ -383,10 +387,6 @@ pre code {
   .page-header {
     padding-bottom: 0.5rem;
   }
-}
-
-.page-header--home {
-  padding-top: 4.5rem;
 }
 
 .page-header h1 {
@@ -405,17 +405,26 @@ pre code {
   padding: 2rem 0;
 }
 
+/* First section under the header already gets page-content's top padding —
+   cancel its own top padding so the header-to-content gap is always 5rem. */
+.page-content > .day-section:first-child,
+.page-content > .concepts-section:first-child,
+.page-content > section:first-child > .day-section:first-child {
+  padding-top: 0;
+}
+
 /* Team card (home page) */
 .team-card {
   padding: 1.5rem 1.75rem;
-  background: #252c35;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   margin-bottom: 3rem;
+  color: var(--fg);
 }
 
 .team-card h3 {
-  color: var(--tn-blue);
+  color: var(--tn-aqua);
   margin-bottom: 0.25rem;
   margin-top: 1.25rem;
 }
@@ -426,7 +435,7 @@ pre code {
 
 .team-card p,
 .team-card ol {
-  color: var(--fg-muted);
+  color: var(--fg);
   margin-bottom: 0;
 }
 
@@ -565,7 +574,6 @@ pre code {
 }
 
 .day-block p {
-  font-size: 0.9375rem;
   margin-bottom: 0;
   color: var(--fg);
 }
@@ -592,7 +600,6 @@ pre code {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  font-size: 0.9375rem;
 }
 
 .day-goals ul,
@@ -676,6 +683,7 @@ pre code {
   display: block;
   text-decoration: none;
   padding: 1.25rem;
+  padding-bottom: 2.5rem;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -980,7 +988,7 @@ pre code {
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--border-light);
-  padding: 1.5rem 0;
+  padding: 1.5rem 1.25rem;
   margin-top: 3rem;
   font-size: 0.8125rem;
   color: #888;
@@ -991,6 +999,8 @@ pre code {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .site-footer a,

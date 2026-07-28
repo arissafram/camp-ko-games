@@ -50,6 +50,6 @@ function play(playerChoice) {
   ) {
     result.textContent = "You win!";
   } else {
-    result.textContent = "Computer wins!";
+    result.textContent = "BOT wins!";
   }
 }
