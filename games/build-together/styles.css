@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px 40px;
+  background: #1d1f21;
+  color: #c5c8c6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game {
+  max-width: 420px;
+  width: 100%;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: 32px;
+}
+
+#score {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0 0 32px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+
+#clickButton {
+  background: #81a2be;
+  color: #1d1f21;
+}
+
+#resetButton {
+  background: #373b41;
+  color: #c5c8c6;
+}

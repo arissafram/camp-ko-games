@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build Together &mdash; Camp KO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="container">
+      <a href="index.html" class="nav-brand">{ .home }</a>
+      <ul class="nav-links">
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="concepts.html">Core Concepts</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="build-together.html">Build Together</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile">
+      <ul>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="concepts.html">Core Concepts</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="build-together.html">Build Together</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header">
+        <h1>Build Together: Clicker</h1>
+        <p>One game the whole class builds and evolves together, all week long.</p>
+      </div>
+
+      <div class="page-content">
+
+        <div class="build-frame-wrap">
+          <iframe src="games/build-together/index.html" title="Clicker &mdash; Build Together" scrolling="no"></iframe>
+          <div class="example-frame-source">
+            <a href="https://github.com/arissafram/camp-ko-games/tree/main/games/build-together" target="_blank" rel="noopener">Source Code &#8599;</a>
+          </div>
+        </div>
+
+        <!-- ── What Are We Building? ────────────────────────── -->
+        <section id="what-are-we-building" class="day-section">
+          <div class="day-header">
+            <h2>What Are We Building?</h2>
+          </div>
+          <p>Right now, Clicker is as simple as it gets: click a button and your score goes up. That&rsquo;s the whole game.</p>
+          <p>This section changes as the game does &mdash; check back here after every new feature to see what Clicker can do now.</p>
+        </section>
+
+        <!-- ── Pseudocode ───────────────────────────────────── -->
+        <section id="pseudocode" class="day-section">
+          <div class="day-header">
+            <h2>Pseudocode</h2>
+          </div>
+          <p>Before we write any JavaScript, we plan it out together as a class. Every plan answers the same four questions:</p>
+          <ul class="arrow-list">
+            <li>What appears on screen?</li>
+            <li>What does the game need to remember?</li>
+            <li>What makes something happen?</li>
+            <li>What happens next?</li>
+          </ul>
+          <p class="day-number" style="margin-top:1.25rem">Our plan for today</p>
+          <pre class="pseudo"><code>START with a score of 0
+SHOW the score on the screen
+
+WHEN the player clicks the button:
+    add 1 to the score
+    show the new score
+
+WHEN the player clicks reset:
+    set the score back to 0
+    show the new score</code></pre>
+        </section>
+
+        <!-- ── Today's Goal ─────────────────────────────────── -->
+        <section id="todays-goal" class="day-section">
+          <div class="day-header">
+            <h2>Today&rsquo;s Goal</h2>
+          </div>
+          <ul class="arrow-list">
+            <li>Clicking the button increases the score by 1.</li>
+            <li>The score is always visible on the screen.</li>
+            <li>A reset button sets the score back to 0.</li>
+          </ul>
+        </section>
+
+        <!-- ── What We Learned ──────────────────────────────── -->
+        <section id="what-we-learned" class="day-section">
+          <div class="day-header">
+            <h2>What We Learned</h2>
+          </div>
+          <ul class="arrow-list">
+            <li><strong>Variables</strong> &mdash; remember the score.</li>
+            <li><strong>Functions</strong> &mdash; reuse the code that updates the screen.</li>
+            <li><strong>Event listeners</strong> &mdash; react when someone clicks a button.</li>
+          </ul>
+        </section>
+
+        <!-- ── What Should We Add Next? ─────────────────────── -->
+        <section id="whats-next" class="day-section">
+          <div class="day-header">
+            <h2>What Should We Add Next?</h2>
+          </div>
+          <p>Right now, the game never ends &mdash; you could click forever. How could we make it stop after 10 seconds?</p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>Camp KO &mdash; August 3&ndash;7, 2026</span>
+      <a href="https://arissafram.com" target="_blank" rel="noopener">arissafram.com</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

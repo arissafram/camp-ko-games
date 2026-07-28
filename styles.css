@@ -75,9 +75,11 @@ code::selection,
 .quick-link-card::selection,
 .template-card::selection,
 .cheat-card::selection,
+.table-wrap::selection,
 .cheat-table th::selection,
 .challenge-card::selection,
 .example-frame-wrap::selection,
+.build-frame-wrap::selection,
 .activity-card::selection,
 .back-to-top::selection,
 .concept-card::selection,
@@ -772,37 +774,73 @@ pre code {
   color: var(--tn-purple);
 }
 
+.table-wrap {
+  border-radius: var(--radius);
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1rem;
+}
+
 .cheat-table {
   width: 100%;
+  min-width: 480px;
   border-collapse: collapse;
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
+  font-size: 16px;
 }
 
 .cheat-table th {
   text-align: left;
   font-weight: 600;
-  padding: 0.4rem 0.75rem;
+  padding: 0.75rem 1.1rem;
   background: var(--tn-bg);
-  border: 1px solid var(--border);
   color: var(--fg);
 }
 
 .cheat-table td {
-  padding: 0.4rem 0.75rem;
-  border: 1px solid var(--border);
+  padding: 0.75rem 1.1rem;
   vertical-align: top;
-  color: var(--black);
+  color: var(--fg);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
 }
 
 .cheat-table td code {
   font-size: 0.8125rem;
 }
 
+.cheat-table td a {
+  color: inherit;
+}
+
+.cheat-table td a:hover {
+  color: var(--tn-blue);
+}
+
 #camp-schedule .cheat-table td:first-child,
 #camp-schedule .cheat-table th:first-child {
   width: 160px;
   white-space: nowrap;
+}
+
+#get-started .cheat-table {
+  min-width: 700px;
+}
+
+#get-started .cheat-table td:first-child,
+#get-started .cheat-table th:first-child {
+  width: 220px;
+  white-space: nowrap;
+}
+
+#get-started .cheat-table td:nth-child(2),
+#get-started .cheat-table th:nth-child(2) {
+  min-width: 260px;
+}
+
+#get-started .cheat-table td:nth-child(3),
+#get-started .cheat-table th:nth-child(3) {
+  min-width: 220px;
 }
 
 .anchor-link {
@@ -855,6 +893,25 @@ pre code {
 .example-frame-wrap iframe {
   width: 100%;
   height: 350px;
+  display: block;
+  border: none;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* Build Together — larger, more prominent embed than .example-frame-wrap */
+.build-frame-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.build-frame-wrap iframe {
+  width: 100%;
+  height: 560px;
   display: block;
   border: none;
   border-radius: var(--radius);
