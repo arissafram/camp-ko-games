@@ -56,8 +56,6 @@ h1 {
 }
 
 .card.matched {
-  background: #c8e6c9;
-  color: #1d1f21;
   cursor: default;
 }
 

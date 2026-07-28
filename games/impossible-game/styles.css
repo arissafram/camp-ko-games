@@ -63,14 +63,19 @@ button:hover {
 }
 
 
-/* The nearly invisible button in round 3 */
+/* The period that's secretly a button in round 3 */
 
 .invisible-btn {
-  color: rgba(0, 0, 0, 0.07);
-  border-color: rgba(0, 0, 0, 0.07);
-  background: transparent;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
 }
 
 .invisible-btn:hover {
-  background: rgba(0, 0, 0, 0.02);
+  color: #8abeb7;
+  background: none;
+  text-decoration: underline;
 }
