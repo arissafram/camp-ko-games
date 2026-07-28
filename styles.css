@@ -985,7 +985,7 @@ pre code {
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--border-light);
-  padding: 1.5rem 0;
+  padding: 1.5rem 1.25rem;
   margin-top: 3rem;
   font-size: 0.8125rem;
   color: #888;
@@ -996,6 +996,8 @@ pre code {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .site-footer a,
