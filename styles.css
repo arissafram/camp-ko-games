@@ -297,7 +297,7 @@ pre code {
   position: sticky;
   top: 56px;
   z-index: 90;
-  padding: 0.375rem 0;
+  padding: 0;
 }
 
 .page-nav .container {
@@ -577,6 +577,17 @@ pre code {
   color: #888;
 }
 
+.arrow-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.arrow-list li::before {
+  content: '→ ';
+  color: #888;
+}
+
 .day-divider {
   border: none;
   border-top: 1px solid var(--border);
@@ -806,63 +817,42 @@ pre code {
 }
 
 
-/* Crayon stroke system */
-/* SVG filter is inlined in each page's HTML */
-.corner-mark {
-  position: absolute;
-  width: 32px;
-  height: 5px;
-  border-radius: 3px;
-  filter: url(#crayon-rough);
-  pointer-events: none;
-}
-
-.corner-mark--blue   { background: var(--accent-blue); }
-.corner-mark--red    { background: var(--accent-red); }
-.corner-mark--yellow { background: var(--accent-yellow); }
-.corner-mark--green  { background: var(--accent-green); }
-
-.corner-mark--top-left {
-  top: -4px;
-  left: -4px;
-  transform: rotate(-38deg);
-  transform-origin: left center;
-}
-
-.corner-mark--top-right {
-  top: -4px;
-  right: -4px;
-  transform: rotate(38deg);
-  transform-origin: right center;
-}
-
-.corner-mark--bottom-left {
-  bottom: -4px;
-  left: -4px;
-  transform: rotate(38deg);
-  transform-origin: left center;
-}
-
-.corner-mark--bottom-right {
-  bottom: -4px;
-  right: -4px;
-  transform: rotate(-38deg);
-  transform-origin: right center;
-}
-
 /* Example iframe wrapper */
 .example-frame-wrap {
-  border: 1px solid var(--border-light);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  overflow: hidden;
+  padding: 1.5rem;
+  padding-bottom: 0.75rem;
   margin-bottom: 0.75rem;
 }
 
 .example-frame-wrap iframe {
   width: 100%;
-  height: 280px;
+  height: 350px;
   display: block;
   border: none;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.example-frame-source {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.75rem;
+}
+
+.example-frame-source a {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  text-decoration: none;
+}
+
+.example-frame-source a:hover {
+  color: var(--tn-aqua);
 }
 
 /* Team page editor aesthetic */
@@ -895,6 +885,24 @@ pre code {
   margin-top: 3rem;
   font-size: 0.8125rem;
   color: #888;
+}
+
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-footer a,
+.site-footer a:visited,
+.site-footer a:active {
+  color: #888;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
 }
 
 /* Utility */

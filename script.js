@@ -75,6 +75,14 @@ function getCampDay() {
     return document.querySelector(link.getAttribute('href'));
   }).filter(Boolean);
 
+  // Only games.html has a "Get Started" tab whose content the shared
+  // page-header (title + byline) actually describes — hide that header
+  // on the other tabs, where each section has its own title instead.
+  var hasGetStarted = sections.some(function (section) {
+    return section.id === 'get-started';
+  });
+  var pageHeader = hasGetStarted ? document.querySelector('.page-header') : null;
+
   function showSection(targetId) {
     sections.forEach(function (section) {
       section.style.display = section.id === targetId ? '' : 'none';
@@ -82,6 +90,9 @@ function getCampDay() {
     navLinks.forEach(function (link) {
       link.classList.toggle('active', link.getAttribute('href') === '#' + targetId);
     });
+    if (pageHeader) {
+      pageHeader.style.display = targetId === 'get-started' ? '' : 'none';
+    }
     window.scrollTo(0, 0);
   }
 
