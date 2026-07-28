@@ -1,0 +1,40 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 40px;
+  background: #1a1a2e;
+  color: white;
+}
+
+h1 {
+  color: #e0e0e0;
+}
+
+input[type="text"] {
+  font-size: 1rem;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  margin: 10px;
+  width: 260px;
+}
+
+button {
+  font-size: 1rem;
+  padding: 10px 24px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #7c4dff;
+  color: white;
+}
+
+button:hover {
+  background: #5e35b1;
+}
+
+#answer {
+  font-size: 1.6rem;
+  margin-top: 24px;
+  min-height: 2em;
+}

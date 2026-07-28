@@ -1,0 +1,41 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 40px;
+  background: #0f0f1a;
+  color: white;
+}
+
+h1 {
+  color: #ff4757;
+}
+
+#game {
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+.instruction {
+  font-size: 1.3rem;
+  margin-bottom: 24px;
+}
+
+.choices {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+button {
+  font-size: 1rem;
+  padding: 12px 24px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #ff4757;
+  color: white;
+}
+
+button:hover {
+  background: #c0392b;
+}
