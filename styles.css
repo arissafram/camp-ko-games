@@ -62,6 +62,31 @@ main {
   flex: 1;
 }
 
+/* Selection highlight — only on dark (Tomorrow Night) surfaces; leave the
+   lilac page background using the browser default */
+.btn::selection,
+pre::selection,
+code::selection,
+.card::selection,
+.team-card::selection,
+.day-block::selection,
+.vocab-tag::selection,
+.today-badge::selection,
+.quick-link-card::selection,
+.template-card::selection,
+.cheat-card::selection,
+.cheat-table th::selection,
+.challenge-card::selection,
+.example-frame-wrap::selection,
+.activity-card::selection,
+.back-to-top::selection,
+.concept-card::selection,
+.pattern-part::selection,
+.iro-block::selection {
+  background: var(--tn-fg);
+  color: var(--tn-bg);
+}
+
 /* Container */
 .container {
   max-width: 960px;
