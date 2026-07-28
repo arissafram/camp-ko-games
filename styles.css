@@ -823,6 +823,7 @@ pre code {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.5rem;
+  padding-bottom: 0.75rem;
   margin-bottom: 0.75rem;
 }
 
@@ -833,6 +834,25 @@ pre code {
   border: none;
   border-radius: var(--radius);
   overflow: hidden;
+}
+
+.example-frame-source {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.75rem;
+}
+
+.example-frame-source a {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  text-decoration: none;
+}
+
+.example-frame-source a:hover {
+  color: var(--tn-aqua);
 }
 
 /* Team page editor aesthetic */
