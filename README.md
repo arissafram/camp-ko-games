@@ -40,20 +40,15 @@ To enable Pages on a fresh fork: **Settings → Pages → Deploy from branch →
 
 ```
 camp-ko-games/
-├── index.html           home page
-├── schedule.html        5-day schedule
-├── lessons.html         8 concept lessons (reference)
-├── team.html            team name + values
-├── templates.html       game template cards + download instructions
-├── examples.html        5 interactive demos
-├── cheat-sheets.html    quick-reference syntax cards
-├── challenges.html      tiered bonus tasks
-├── styles.css           shared styles
-├── site.js              shared JS (nav, today widget)
-├── games/               5 finished games (instructor reference)
-├── templates/           starter / guided / finished per game
-├── examples/            standalone demo mini-apps
-├── cheat-sheets/        printable reference cards
-├── challenges/          challenge prompts by tier
-└── scratchpad/          blank canvas for Day 1 experimentation
+├── index.html            home page (must stay at repo root for GitHub Pages)
+└── web-app/
+    ├── schedule.html      5-day schedule
+    ├── concepts.html      core concept reference
+    ├── build-together.html  in-class shared build
+    ├── games.html         more games to build
+    ├── styles.css         shared styles
+    ├── script.js          shared JS (nav, page-nav, today widget)
+    ├── favicon.png
+    ├── games/             finished games (instructor reference)
+    └── templates/         starter templates per game
 ```
