@@ -9,6 +9,15 @@ const treasureSpot = Math.floor(Math.random() * spots.length);
 window.addEventListener('load', function () {
   console.log('page loaded!');
   startGame();
+
+  // Tip: forEach gives you each spot AND its index (position number)
+  spots.forEach(function (spot, index) {
+    spot.addEventListener('click', function () {
+      checkSpot(index, spot);
+    });
+  });
+
+  playAgainButton.addEventListener('click', startGame);
 });
 
 // start here
@@ -41,12 +50,3 @@ function checkSpot(index, spot) {
     message.textContent = 'Nope! Keep looking...';
   }
 }
-
-// Tip: forEach gives you each spot AND its index (position number)
-spots.forEach(function (spot, index) {
-  spot.addEventListener('click', function () {
-    checkSpot(index, spot);
-  });
-});
-
-playAgainButton.addEventListener('click', startGame);

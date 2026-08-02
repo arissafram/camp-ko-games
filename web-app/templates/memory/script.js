@@ -15,10 +15,13 @@ let matches = 0;
 // Find elements on the page
 let grid = document.getElementById('grid');
 let status = document.getElementById('status');
+let resetButton = document.getElementById('resetButton');
 
 window.addEventListener('load', function () {
   console.log('page loaded!');
   setup();
+
+  resetButton.addEventListener('click', setup);
 });
 
 // Tip: this shuffle function mixes up an array randomly — you don't need to change it!

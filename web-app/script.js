@@ -123,6 +123,7 @@ function getCampDay() {
       var id = link.getAttribute('href').slice(1);
       history.pushState(null, '', '#' + id);
       showSection(id);
+      link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     });
   });
 

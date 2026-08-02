@@ -14,6 +14,8 @@ let answerDisplay = document.getElementById('answer');
 
 window.addEventListener('load', function () {
   console.log('page loaded!');
+
+  askButton.addEventListener('click', answerQuestion);
 });
 
 // start here
@@ -32,5 +34,3 @@ function answerQuestion() {
 
   // Now show the answer on the page!
 }
-
-askButton.addEventListener('click', answerQuestion);
