@@ -30,14 +30,18 @@ function showRound() {
 function showStart() {
   // Tip: set game.innerHTML to put HTML inside the game div
   // Use backticks ` ` to write multi-line HTML strings
-  // Use onclick="functionName()" to call a function when a button is clicked
   game.innerHTML = `
     <p class="instruction">Are you ready?</p>
     <div class="choices">
-      <button onclick="nextRound()">Yes</button>
-      <button onclick="showLose()">No</button>
+      <button id="yesButton">Yes</button>
+      <button id="noButton">No</button>
     </div>
   `;
+
+  // Tip: since these buttons were just created, find them and
+  // add their event listeners here, after setting innerHTML
+  document.getElementById('yesButton').addEventListener('click', nextRound);
+  document.getElementById('noButton').addEventListener('click', showLose);
 }
 
 // Add your own tricky round here!
@@ -45,22 +49,29 @@ function showRound1() {
   game.innerHTML = `
     <p class="instruction">[Your challenge here]</p>
     <div class="choices">
-      <button onclick="nextRound()">...</button>
-      <button onclick="showLose()">...</button>
+      <button id="round1YesButton">...</button>
+      <button id="round1NoButton">...</button>
     </div>
   `;
+
+  document.getElementById('round1YesButton').addEventListener('click', nextRound);
+  document.getElementById('round1NoButton').addEventListener('click', showLose);
 }
 
 function showWin() {
   game.innerHTML = `
     <p class="instruction">You Win! 🎉</p>
-    <button onclick="restart()">Play Again</button>
+    <button id="playAgainButton">Play Again</button>
   `;
+
+  document.getElementById('playAgainButton').addEventListener('click', restart);
 }
 
 function showLose() {
   game.innerHTML = `
     <p class="instruction">You Lose! 😢</p>
-    <button onclick="restart()">Try Again</button>
+    <button id="tryAgainButton">Try Again</button>
   `;
+
+  document.getElementById('tryAgainButton').addEventListener('click', restart);
 }

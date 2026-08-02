@@ -12,9 +12,18 @@ let gameOver = false;
 let car1 = document.getElementById('car1');
 let car2 = document.getElementById('car2');
 let status = document.getElementById('status');
+let resetButton = document.getElementById('resetButton');
 
 window.addEventListener('load', function () {
   console.log('page loaded!');
+
+  resetButton.addEventListener('click', resetRace);
+
+  // Tip: keydown fires whenever a key is pressed — check which key with event.key
+  document.addEventListener('keydown', function (event) {
+    if (event.key.toLowerCase() === player1Key) moveCar(1);
+    if (event.key.toLowerCase() === player2Key) moveCar(2);
+  });
 });
 
 // start here — move one car forward each time a key is pressed
@@ -47,9 +56,3 @@ function resetRace() {
   car2.style.left = '0%';
   status.textContent = '';
 }
-
-// Tip: keydown fires whenever a key is pressed — check which key with event.key
-document.addEventListener('keydown', function (event) {
-  if (event.key.toLowerCase() === player1Key) moveCar(1);
-  if (event.key.toLowerCase() === player2Key) moveCar(2);
-});

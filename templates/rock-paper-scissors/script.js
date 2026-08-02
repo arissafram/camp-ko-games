@@ -4,9 +4,22 @@ let choices = ['rock', 'paper', 'scissors'];
 let playerDisplay = document.getElementById('playerDisplay');
 let computerDisplay = document.getElementById('computerDisplay');
 let result = document.getElementById('result');
+let rockButton = document.getElementById('rockButton');
+let paperButton = document.getElementById('paperButton');
+let scissorsButton = document.getElementById('scissorsButton');
 
 window.addEventListener('load', function () {
   console.log('page loaded!');
+
+  rockButton.addEventListener('click', function () {
+    play('rock');
+  });
+  paperButton.addEventListener('click', function () {
+    play('paper');
+  });
+  scissorsButton.addEventListener('click', function () {
+    play('scissors');
+  });
 });
 
 // start here — called when the player clicks a button
