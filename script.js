@@ -15,6 +15,27 @@
   });
 })();
 
+// Clicker version toggle (Build Together page)
+(function () {
+  var toggle = document.querySelector('.clicker-toggle');
+  if (!toggle) return;
+  var buttons = Array.from(toggle.querySelectorAll('.toggle-btn'));
+  var panels = Array.from(document.querySelectorAll('.toggle-panel'));
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = btn.dataset.target;
+
+      buttons.forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      panels.forEach(function (panel) {
+        panel.hidden = panel.id !== target;
+      });
+    });
+  });
+})();
+
 // Hamburger nav toggle
 (function () {
   var hamburger = document.querySelector('.nav-hamburger');

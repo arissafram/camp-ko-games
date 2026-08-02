@@ -412,6 +412,15 @@ pre code {
   padding-top: 0;
 }
 
+/* Schedule day sections stack directly under one another with no extra gap. */
+#tuesday,
+#wednesday,
+#thursday,
+#friday,
+#camp-schedule {
+  padding-top: 0;
+}
+
 /* Team card (home page) */
 .team-card {
   padding: 1.5rem 1.75rem;
@@ -432,15 +441,18 @@ pre code {
   margin-top: 0;
 }
 
-.team-card p,
-.team-card ol {
+.team-card p {
   color: var(--fg);
   margin-bottom: 0;
 }
 
 .team-card ol {
+  color: var(--tn-aqua);
+  margin-bottom: 0;
+}
+
+.team-card ol {
   padding-left: 1.25rem;
-  margin-left: 0.5rem;
 }
 
 .team-card ol li + li {
@@ -460,6 +472,7 @@ pre code {
 .section-title {
   margin-bottom: 2rem;
 }
+
 
 /* Concept block (lessons page) */
 .concept {
@@ -505,6 +518,10 @@ pre code {
 .day-section {
   padding: 2rem 0;
   border-bottom: 1px solid var(--border-light);
+}
+
+.day-section:target {
+  padding-top: 0;
 }
 
 .day-section:last-of-type {
@@ -554,6 +571,10 @@ pre code {
 
 @media (min-width: 640px) {
   .day-blocks { grid-template-columns: repeat(3, 1fr); }
+}
+
+.day-blocks.single-block {
+  grid-template-columns: 1fr;
 }
 
 .day-block {
@@ -637,6 +658,16 @@ pre code {
 .arrow-list li::before {
   content: '→ ';
   color: #888;
+}
+
+.plain-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plain-list li {
+  padding: 0.375rem 0;
 }
 
 .day-divider {
@@ -922,6 +953,34 @@ pre code {
   border: none;
   border-radius: var(--radius);
   overflow: hidden;
+}
+
+/* Clicker version toggle (Build Together page) */
+.clicker-toggle {
+  display: inline-flex;
+  gap: 0.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.toggle-btn {
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--fg-muted);
+  background: transparent;
+  border: none;
+  border-radius: calc(var(--radius) - 2px);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.toggle-btn.active {
+  background: var(--tn-aqua);
+  color: var(--tn-bg);
 }
 
 /* Build Together — larger, more prominent embed than .example-frame-wrap */

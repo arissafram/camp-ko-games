@@ -18,8 +18,8 @@
       <ul class="nav-links">
         <li><a href="schedule.html">Schedule</a></li>
         <li><a href="concepts.html">Core Concepts</a></li>
-        <li><a href="games.html">Games</a></li>
         <li><a href="build-together.html">Build Together</a></li>
+        <li><a href="games.html">More Games</a></li>
       </ul>
       <button class="nav-hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -29,8 +29,8 @@
       <ul>
         <li><a href="schedule.html">Schedule</a></li>
         <li><a href="concepts.html">Core Concepts</a></li>
-        <li><a href="games.html">Games</a></li>
         <li><a href="build-together.html">Build Together</a></li>
+        <li><a href="games.html">More Games</a></li>
       </ul>
     </div>
   </nav>
@@ -40,48 +40,47 @@
 
       <div class="page-header">
         <h1>Build Together</h1>
-        <p>We&rsquo;ll build this game together, adding something new each day as we practice our core JavaScript concepts. We&rsquo;ll keep our plans, notes, and what we learn here along the way.</p>
+        <p>We&rsquo;ll all start with the same Clicker game, but that&rsquo;s where the similarities end. As we learn new JavaScript concepts, you&rsquo;ll decide what your game looks like, how it works, and what makes it unique.</p>
       </div>
 
       <div class="page-content">
 
-        <div class="build-frame-wrap">
-          <iframe src="build-together/index.html" title="Build Together workspace" scrolling="no"></iframe>
-          <div class="example-frame-source">
-            <a href="https://github.com/arissafram/camp-ko-games/tree/main/build-together" target="_blank" rel="noopener">Source Code &#8599;</a>
-          </div>
+        <div class="clicker-toggle" role="tablist">
+          <button type="button" class="toggle-btn active" data-target="clicker">Clicker Basic</button>
+          <button type="button" class="toggle-btn" data-target="clicker-advanced">Clicker Speed</button>
         </div>
 
-        <!-- ── What Are We Building? ────────────────────────── -->
-        <section id="what-are-we-building" class="day-section">
-          <div class="day-header">
-            <h2>What Are We Building?</h2>
+        <section id="clicker" class="toggle-panel">
+          <div class="build-frame-wrap">
+            <iframe src="games/clicker/index.html" title="Clicker game" scrolling="no"></iframe>
+            <div class="example-frame-source">
+              <a href="https://github.com/arissafram/camp-ko-games/tree/main/games/clicker" target="_blank" rel="noopener">Source Code &#8599;</a>
+            </div>
           </div>
-          <p>[We&rsquo;ll keep track of what our game can do as we build it]</p>
         </section>
 
-        <!-- ── Pseudocode ───────────────────────────────────── -->
-        <section id="pseudocode" class="day-section">
-          <div class="day-header">
-            <h2>Pseudocode</h2>
+        <section id="clicker-advanced" class="toggle-panel" hidden>
+          <div class="build-frame-wrap">
+            <iframe src="games/clicker-advanced/index.html" title="Clicker Advanced game" scrolling="no"></iframe>
+            <div class="example-frame-source">
+              <a href="https://github.com/arissafram/camp-ko-games/tree/main/games/clicker-advanced" target="_blank" rel="noopener">Source Code &#8599;</a>
+            </div>
           </div>
-          <p>[We&rsquo;ll plan what we want to build before we start coding]</p>
         </section>
 
-        <!-- ── Core Concepts ─────────────────────────────────── -->
-        <section id="core-concepts" class="day-section">
+        <!-- ── Make It Yours ────────────────────────────────── -->
+        <section id="make-it-yours" class="day-section">
           <div class="day-header">
-            <h2>Core Concepts</h2>
+            <h2>Make It Yours</h2>
           </div>
-          <p>[We&rsquo;ll keep a list of everything we learn as we go]</p>
-        </section>
-
-        <!-- ── What Should We Add Next? ─────────────────────── -->
-        <section id="whats-next" class="day-section">
-          <div class="day-header">
-            <h2>What Should We Add Next?</h2>
-          </div>
-          <p>[We&rsquo;ll decide together how to make our game better]</p>
+          <ul class="plain-list">
+            <li>🎨 Design your own look with colors, images, fonts, and sounds.</li>
+            <li>🎮 Make it a single-player game, a two-player battle, or even a six-player competition.</li>
+            <li>🖱️ Decide how players score&mdash;mouse clicks, keyboard presses, or something completely different.</li>
+            <li>⏱️ Add a timer to see who can score the most before time runs out.</li>
+            <li>🏆 Save the highest score and challenge your friends.</li>
+            <li>🎯 Replace the button with moving targets, bouncing objects, or anything else you can imagine.</li>
+          </ul>
         </section>
 
       </div>
