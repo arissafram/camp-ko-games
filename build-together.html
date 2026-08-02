@@ -45,12 +45,28 @@
 
       <div class="page-content">
 
-        <div class="build-frame-wrap">
-          <iframe src="build-together/index.html" title="Build Together workspace" scrolling="no"></iframe>
-          <div class="example-frame-source">
-            <a href="https://github.com/arissafram/camp-ko-games/tree/main/build-together" target="_blank" rel="noopener">Source Code &#8599;</a>
-          </div>
+        <div class="clicker-toggle" role="tablist">
+          <button type="button" class="toggle-btn active" data-target="clicker">Clicker Basic</button>
+          <button type="button" class="toggle-btn" data-target="clicker-advanced">Clicker Ultra</button>
         </div>
+
+        <section id="clicker" class="toggle-panel">
+          <div class="build-frame-wrap">
+            <iframe src="games/clicker/index.html" title="Clicker game" scrolling="no"></iframe>
+            <div class="example-frame-source">
+              <a href="https://github.com/arissafram/camp-ko-games/tree/main/games/clicker" target="_blank" rel="noopener">Source Code &#8599;</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="clicker-advanced" class="toggle-panel" hidden>
+          <div class="build-frame-wrap">
+            <iframe src="games/clicker-advanced/index.html" title="Clicker Advanced game" scrolling="no"></iframe>
+            <div class="example-frame-source">
+              <a href="https://github.com/arissafram/camp-ko-games/tree/main/games/clicker-advanced" target="_blank" rel="noopener">Source Code &#8599;</a>
+            </div>
+          </div>
+        </section>
 
         <!-- ── Make It Yours ────────────────────────────────── -->
         <section id="make-it-yours" class="day-section">

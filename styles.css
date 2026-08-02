@@ -934,6 +934,34 @@ pre code {
   overflow: hidden;
 }
 
+/* Clicker version toggle (Build Together page) */
+.clicker-toggle {
+  display: inline-flex;
+  gap: 0.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.toggle-btn {
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--fg-muted);
+  background: transparent;
+  border: none;
+  border-radius: calc(var(--radius) - 2px);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.toggle-btn.active {
+  background: var(--tn-aqua);
+  color: var(--tn-bg);
+}
+
 /* Build Together — larger, more prominent embed than .example-frame-wrap */
 .build-frame-wrap {
   background: var(--surface);
