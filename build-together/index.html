@@ -3,16 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Build Together</title>
+  <title>Clicker</title>
   <link rel="icon" type="image/png" href="../favicon.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-  <div>
-    <h1>Clicker</h1>
-    <p>Hello world.</p>
+  <div class="top-bar">
+    <div id="highScore" class="high-score">High Score: 0</div>
+    <div id="timer" class="timer">5s</div>
+  </div>
+
+  <div class="content-wrap">
+    <main class="game">
+
+      <h1>Clicker Game</h1>
+
+      <p id="score">Score: 0</p>
+
+      <div class="action-area">
+        <p id="countdown" class="countdown is-hidden"></p>
+        <button id="startButton">Start</button>
+        <div id="playControls" class="play-controls is-hidden">
+          <button id="clickButton">Click me!</button>
+          <button id="resetButton" class="is-hidden">Reset</button>
+        </div>
+      </div>
+
+    </main>
   </div>
 
   <script src="script.js"></script>
