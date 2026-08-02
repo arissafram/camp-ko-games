@@ -4,18 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>[Your Title Here]</title>
-  <link rel="icon" type="image/png" href="../../favicon.png" />
+  <link rel="icon" type="image/png" href="../../web-app/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <h1>[Your Title Here]</h1>
-  <p>[Instructions: find all the matching pairs!]</p>
+  <p>[Instructions: type a yes/no question and press Ask!]</p>
 
-  <div id="status"></div>
-  <div id="grid"></div>
+  <input type="text" id="questionInput" placeholder="Ask a question..." />
+  <button id="askButton">Ask!</button>
 
-  <button id="resetButton">Reset</button>
+  <p id="answer"></p>
 
   <script src="script.js"></script>
 </body>
