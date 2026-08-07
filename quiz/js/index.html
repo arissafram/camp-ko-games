@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <a href="../index.html" class="home-link">&larr; Home</a>
+    <div class="nav-group">
+      <button id="backButton" class="nav-arrow" type="button">&larr;</button>
+      <div id="counter" class="counter">1 / 9</div>
+      <button id="forwardButton" class="nav-arrow" type="button">&rarr;</button>
+    </div>
+  </div>
+
+  <div class="content-wrap">
+    <main class="game">
+
+      <h1>This Week in JavaScript</h1>
+
+      <p id="question" class="question">1. Create a variable.</p>
+
+      <div id="varsPanel" class="panel is-hidden">
+        <h2 class="panel-title">Variables</h2>
+        <div id="varsList" class="vars-list"></div>
+      </div>
+
+      <label for="editor" class="editor-label">Type your JavaScript:</label>
+      <textarea id="editor" class="editor" spellcheck="false"></textarea>
+
+      <p id="feedback" class="feedback"></p>
+
+      <button id="checkButton">Check &#10003;</button>
+      <p class="hint">Tip: press Cmd/Ctrl + Enter to check</p>
+
+      <div id="completeScreen" class="complete-screen is-hidden">
+        <h2>&#127881; Nice work!</h2>
+        <p>You wrote real JavaScript — variables, math, and booleans.</p>
+        <button id="playAgainButton">Play Again</button>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

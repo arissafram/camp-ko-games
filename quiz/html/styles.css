@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px 40px;
+  background: #1d1f21;
+  color: #c5c8c6;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-link {
+  color: #969896;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.home-link:hover {
+  color: #c5c8c6;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.counter {
+  font-size: 26px;
+  font-weight: 700;
+  background: #373b41;
+  color: #f0c674;
+  padding: 10px 18px;
+  border-radius: 6px;
+}
+
+.nav-arrow {
+  display: inline-block;
+  width: auto;
+  margin: 0;
+  padding: 8px 14px;
+  font-size: 22px;
+  background: #373b41;
+  color: #c5c8c6;
+}
+
+.nav-arrow:hover:not(:disabled) {
+  background: #45494f;
+}
+
+.nav-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.content-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game {
+  max-width: 640px;
+  width: 100%;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: 42px;
+}
+
+.question {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0 0 24px;
+}
+
+.editor-label {
+  display: block;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  color: #969896;
+  margin-bottom: 8px;
+}
+
+.editor {
+  width: 100%;
+  height: 90px;
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-size: 20px;
+  color: #c5c8c6;
+  background: #282a2e;
+  border: 2px solid #373b41;
+  border-radius: 6px;
+  padding: 14px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.editor:focus {
+  outline: none;
+  border-color: #81a2be;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.choice-btn {
+  background: #373b41;
+  color: #c5c8c6;
+}
+
+.choice-btn:hover:not(:disabled) {
+  background: #45494f;
+}
+
+.choice-btn:disabled {
+  cursor: default;
+}
+
+.choice-code {
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-size: 17px;
+  text-align: left;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.choice-correct {
+  background: #b5bd68 !important;
+  color: #1d1f21 !important;
+}
+
+.choice-wrong {
+  background: #b294bb !important;
+  color: #1d1f21 !important;
+}
+
+.feedback {
+  min-height: 1.4em;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 14px 0 0;
+}
+
+.feedback-success {
+  color: #b5bd68;
+}
+
+.feedback-error {
+  color: #b294bb;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin-top: 14px;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: #81a2be;
+  color: #1d1f21;
+}
+
+button:hover:not(:disabled) {
+  background: #6c94b3;
+}
+
+.complete-screen h2 {
+  font-size: 36px;
+  margin: 0 0 10px;
+}
+
+.is-hidden {
+  display: none;
+}

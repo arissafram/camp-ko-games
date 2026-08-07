@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <a href="../index.html" class="home-link">&larr; Home</a>
+    <div class="nav-group">
+      <button id="backButton" class="nav-arrow" type="button">&larr;</button>
+      <div id="counter" class="counter">1 / 10</div>
+      <button id="forwardButton" class="nav-arrow" type="button">&rarr;</button>
+    </div>
+  </div>
+
+  <div class="content-wrap">
+    <main class="game">
+
+      <h1>This Week in CSS</h1>
+
+      <p id="question" class="question">1. Add a background to my div.</p>
+
+      <div id="preview" class="preview"><span>div</span></div>
+
+      <div id="quizControls">
+        <label for="editor" class="editor-label">Type your CSS:</label>
+        <textarea id="editor" class="editor" spellcheck="false"></textarea>
+
+        <p id="feedback" class="feedback"></p>
+
+        <button id="checkButton">Check &#10003;</button>
+        <p class="hint">Tip: press Cmd/Ctrl + Enter to check</p>
+      </div>
+
+      <div id="completeScreen" class="complete-screen is-hidden">
+        <h2>&#127881; Nice work!</h2>
+        <p>You styled the box all by yourself.</p>
+        <button id="playAgainButton">Play Again</button>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

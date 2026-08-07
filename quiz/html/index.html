@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <a href="../index.html" class="home-link">&larr; Home</a>
+    <div class="nav-group">
+      <button id="backButton" class="nav-arrow" type="button">&larr;</button>
+      <div id="counter" class="counter">1 / 13</div>
+      <button id="forwardButton" class="nav-arrow" type="button">&rarr;</button>
+    </div>
+  </div>
+
+  <div class="content-wrap">
+    <main class="game">
+
+      <h1>This Week in HTML</h1>
+
+      <p id="question" class="question">1. Add a div.</p>
+
+      <div id="choiceControls">
+        <div id="choices" class="choices"></div>
+      </div>
+
+      <div id="buildControls" class="is-hidden">
+        <label for="editor" class="editor-label">Type your HTML:</label>
+        <textarea id="editor" class="editor" spellcheck="false"></textarea>
+        <button id="checkButton">Check &#10003;</button>
+      </div>
+
+      <p id="feedback" class="feedback"></p>
+
+      <div id="completeScreen" class="complete-screen is-hidden">
+        <h2>&#127881; Nice work!</h2>
+        <button id="playAgainButton">Play Again</button>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
