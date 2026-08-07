@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="../../web-app/favicon.png">
+
+    <title>CSS — Magic 8 Ball — Camp KO</title>
+
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <a href="../../index.html" class="nav-brand">{ .home }</a>
+
+            <ul class="nav-links">
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+
+            <button class="nav-hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="nav-mobile">
+            <ul>
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="lesson-subnav">
+        <div class="container">
+            <a href="../index.html" class="subnav-back">← All Lessons</a>
+            <a href="index.html">Home: Magic 8 Ball</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html" class="active">CSS</a>
+            <a href="js.html">JS</a>
+            <a href="help.html">Uh Oh!</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>CSS</h1>
+        <p>CSS changes how the page looks. It controls colors, shapes, sizes, and glows.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>How to Write CSS</h2>
+
+            <p>Every CSS rule is written the same way — a selector, curly braces, and a property with a value that ends in a semicolon.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>button</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">selector — matches every &lt;button&gt; on the page</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>{</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">opening curly brace</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>border-radius: 50%;</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">property: value;</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>}</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">closing curly brace</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="remember">
+                <p>Every selector looks like this:</p>
+                <pre><code>div {
+    property: value;
+    property: value;
+}
+
+button {
+    property: value;
+    property: value;
+}</code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>Helpful CSS Properties</h2>
+
+            <p>
+                Here are the properties we used to build our ball, with an
+                example of what each one actually does.
+            </p>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>background</h3>
+                    <p><code>background: radial-gradient(circle, #7ec2ff, #2f8eff);</code></p>
+                    <p>Sets the background of an element — a solid color, or a gradient like the glow inside our ball.</p>
+                </div>
+                <div class="trick-example">
+                    <div class="demo demo-background"></div>
+                </div>
+            </div>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>background-image</h3>
+                    <p><code>background-image: url("...");</code></p>
+                    <p>Sets a picture as the background of an element, instead of a solid color or gradient.</p>
+                </div>
+                <div class="trick-example">
+                    <div class="demo demo-bg-image"></div>
+                </div>
+            </div>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>border</h3>
+                    <p><code>border: 4px dashed dodgerblue;</code></p>
+                    <p>Draws a line around the edge of an element. It can be solid, dashed, dotted, and more.</p>
+                </div>
+                <div class="trick-example">
+                    <div class="demo demo-dashed"></div>
+                </div>
+            </div>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>border-radius</h3>
+                    <p><code>border-radius: 50%;</code></p>
+                    <p>Rounds the corners of a box. At 50%, a square div turns into a perfect circle — that's how our ball (and the answer window inside it) become round.</p>
+                </div>
+                <div class="trick-example">
+                    <div class="demo-shape"></div>
+                    <span class="demo-arrow">→</span>
+                    <div class="demo-shape demo-circle"></div>
+                </div>
+            </div>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>box-shadow</h3>
+                    <p><code>box-shadow: 0 0 20px 6px dodgerblue;</code></p>
+                    <p>Adds a shadow, or a glow, around an element. That's what makes the answer window in our ball light up.</p>
+                </div>
+                <div class="trick-example">
+                    <div class="demo demo-glow"></div>
+                </div>
+            </div>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>color</h3>
+                    <p><code>color: #7ec2ff;</code></p>
+                    <p>Sets the color of text.</p>
+                </div>
+                <div class="trick-example">
+                    <p class="demo-text demo-color">Not likely</p>
+                </div>
+            </div>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>font-size</h3>
+                    <p><code>font-size: 48px;</code></p>
+                    <p>Sets how big text is.</p>
+                </div>
+                <div class="trick-example">
+                    <span class="demo-text demo-fontsize-small">8</span>
+                    <span class="demo-arrow">→</span>
+                    <span class="demo-text demo-fontsize-big">8</span>
+                </div>
+            </div>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>width / height</h3>
+                    <p><code>width: 180px; height: 180px;</code></p>
+                    <p>Sets how big a box is — that's how we control the size of our ball.</p>
+                </div>
+                <div class="trick-example">
+                    <div class="demo demo-size-small"></div>
+                    <span class="demo-arrow">→</span>
+                    <div class="demo demo-size-big"></div>
+                </div>
+            </div>
+
+            <p class="more-link">Explore more properties here — <a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">w3schools.com</a>.</p>
+        </section>
+
+        <section>
+            <h2>Add styles to your game</h2>
+
+            <p>Here's our ball with CSS added. Open the Preview tab — it's round and glowing now, but clicking it doesn't do anything yet. That's JavaScript's job. Add everything in green — check all three tabs.</p>
+
+            <div class="editor">
+                <div class="editor-tabs" role="tablist">
+                    <button class="editor-tab" data-tab="html" role="tab" aria-selected="false">index.html</button>
+                    <button class="editor-tab active" data-tab="css" role="tab" aria-selected="true">styles.css</button>
+                    <button class="editor-tab editor-tab-preview" data-tab="preview" role="tab" aria-selected="false">▶ Preview</button>
+                </div>
+
+                <div class="editor-panels">
+                    <div class="editor-panel" data-panel="html">
+                        <pre><code id="code-html"></code></pre>
+                        <div class="code-lock">
+                            <div class="code-lock-emoji">🔒</div>
+                            <p>Ask Arissa for the password after you tried yourself.</p>
+                            <form class="code-lock-form">
+                                <input type="password" placeholder="HTML password" autocomplete="off">
+                                <button type="submit">Unlock</button>
+                            </form>
+                            <p class="code-lock-error"></p>
+                        </div>
+                    </div>
+                    <div class="editor-panel active" data-panel="css">
+                        <pre><code id="code-css"></code></pre>
+                        <div class="code-lock">
+                            <div class="code-lock-emoji">🔒</div>
+                            <p>Ask Arissa for the password after you tried yourself.</p>
+                            <form class="code-lock-form">
+                                <input type="password" placeholder="CSS password" autocomplete="off">
+                                <button type="submit">Unlock</button>
+                            </form>
+                            <p class="code-lock-error"></p>
+                        </div>
+                    </div>
+                    <div class="editor-panel editor-panel-preview" data-panel="preview">
+                        <iframe id="preview-frame" title="Magic 8 Ball preview"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>Camp KO &mdash; August 3&ndash;7, 2026</span>
+            <a href="https://arissafram.com" target="_blank" rel="noopener">arissafram.com</a>
+        </div>
+    </footer>
+
+    <script src="content.js"></script>
+    <script src="../shared/engine.js"></script>
+</body>
+</html>

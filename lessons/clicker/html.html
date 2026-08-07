@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="../../web-app/favicon.png">
+
+    <title>HTML — Clicker Game — Camp KO</title>
+
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <a href="../../index.html" class="nav-brand">{ .home }</a>
+
+            <ul class="nav-links">
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+
+            <button class="nav-hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="nav-mobile">
+            <ul>
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="lesson-subnav">
+        <div class="container">
+            <a href="../index.html" class="subnav-back">← All Lessons</a>
+            <a href="index.html">Home: Clicker Game</a>
+            <a href="html.html" class="active">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="js.html">JS</a>
+            <a href="help.html">Uh Oh!</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>HTML</h1>
+        <p>HTML creates the things you see on a webpage, including headings, paragraphs, buttons, and images.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>How to Write HTML</h2>
+
+            <p>Every HTML element is written the same way — an opening tag, the content inside it, and a closing tag.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>&lt;p&gt;</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">opening tag</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>Hello</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">content</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>&lt;/p&gt;</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">closing tag</span>
+                    </div>
+                </div>
+            </div>
+
+            <p>Sometimes elements are self-closing.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>&lt;img src="..." /&gt;</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">self-closing tag with an attribute</span>
+                    </div>
+                </div>
+            </div>
+
+            <p>Sometimes elements contain many elements.</p>
+
+            <div class="remember">
+                <pre><code>&lt;div&gt;
+    &lt;p&gt;Some text&lt;/p&gt;
+    &lt;button&gt;
+        &lt;img src="..." /&gt;
+    &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>Common HTML Tags</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>What It Creates</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><code>&lt;main&gt;</code></td>
+                        <td>The main content of the page. Everything we add is inside of these tags.</td>
+                        <td><code>&lt;main&gt;...&lt;/main&gt;</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>&lt;h1&gt;</code></td>
+                        <td>A large heading</td>
+                        <td><code>&lt;h1&gt;My Clicker Game&lt;/h1&gt;</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>&lt;p&gt;</code></td>
+                        <td>A paragraph of text</td>
+                        <td><code>&lt;p&gt;Click the button to play!&lt;/p&gt;</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>&lt;button&gt;</code></td>
+                        <td>A button the player can click</td>
+                        <td><code>&lt;button&gt;Click Me&lt;/button&gt;</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>&lt;img /&gt;</code></td>
+                        <td>A picture</td>
+                        <td><code>&lt;img src="spongebob.png" alt="SpongeBob"&gt;</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>&lt;a&gt;</code></td>
+                        <td>A clickable link to another page or site</td>
+                        <td><code>&lt;a href="https://example.com"&gt;Visit&lt;/a&gt;</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>&lt;div&gt;</code></td>
+                        <td>A generic container for grouping other elements together</td>
+                        <td><code>&lt;div class="card"&gt;...&lt;/div&gt;</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="more-link">Explore more tags here — <a href="https://www.w3schools.com/html/html_intro.asp" target="_blank" rel="noopener">w3schools.com</a>.</p>
+        </section>
+
+        <section>
+            <h2>IDs and Classes</h2>
+
+            <p>Sometimes elements can have an <code>id</code> or a <code>class</code> to make them easier to select and style.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>&lt;p id="score"&gt;</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">id — unique, only one per page</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>&lt;button class="game-button"&gt;</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">class — can be reused on many elements</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="more-link">
+                Learn more about ids and classes here —
+                <a href="https://www.w3schools.com/html/html_id.asp" target="_blank" rel="noopener">ids</a>,
+                <a href="https://www.w3schools.com/html/html_classes.asp" target="_blank" rel="noopener">classes</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Start building your game</h2>
+
+            <p>
+                Every game should have a title, description, button, and
+                image. If you want to add more elements, you can.
+            </p>
+
+            <p>
+                This is the HTML for our example clicker game. Open the
+                Preview tab to see what plain HTML looks like before any
+                styling is added.
+            </p>
+
+            <div class="editor">
+                <div class="editor-tabs" role="tablist">
+                    <button class="editor-tab active" data-tab="html" role="tab" aria-selected="true">index.html</button>
+                    <button class="editor-tab editor-tab-preview" data-tab="preview" role="tab" aria-selected="false">▶ Preview</button>
+                </div>
+
+                <div class="editor-panels">
+                    <pre class="editor-panel active" data-panel="html"><code id="code-html"></code></pre>
+                    <div class="editor-panel editor-panel-preview" data-panel="preview">
+                        <iframe id="preview-frame" title="Clicker game preview"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>More HTML Tricks</h2>
+
+            <p>
+                HTML has more built-in tricks than just the tags we've
+                covered. Here are a few fun ones to try — no CSS required.
+            </p>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>Emoji</h3>
+                    <p>Type emoji directly into your text — no extra code needed.</p>
+                </div>
+                <div class="trick-example">
+                    <p class="demo-emoji">🎉🕹️🏆</p>
+                </div>
+            </div>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>Collapsible Info</h3>
+                    <p><code>&lt;details&gt;&lt;summary&gt;Click me!&lt;/summary&gt;Surprise!&lt;/details&gt;</code></p>
+                    <p>Hides extra info until someone clicks to reveal it.</p>
+                </div>
+                <div class="trick-example">
+                    <details class="demo-details">
+                        <summary>Click me!</summary>
+                        <p>Surprise! 🎉</p>
+                    </details>
+                </div>
+            </div>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>Highlight Text</h3>
+                    <p><code>&lt;mark&gt;Score: 100&lt;/mark&gt;</code></p>
+                    <p>Highlights text with a background color, right out of the box.</p>
+                </div>
+                <div class="trick-example">
+                    <mark>Score: 100</mark>
+                </div>
+            </div>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>Progress Bar</h3>
+                    <p><code>&lt;progress value="70" max="100"&gt;&lt;/progress&gt;</code></p>
+                    <p>A built-in progress bar — no CSS required.</p>
+                </div>
+                <div class="trick-example">
+                    <progress value="70" max="100"></progress>
+                </div>
+            </div>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>Divider Line</h3>
+                    <p><code>&lt;hr&gt;</code></p>
+                    <p>Draws a horizontal line to separate sections.</p>
+                </div>
+                <div class="trick-example">
+                    <hr class="demo-hr">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>Camp KO &mdash; August 3&ndash;7, 2026</span>
+            <a href="https://arissafram.com" target="_blank" rel="noopener">arissafram.com</a>
+        </div>
+    </footer>
+
+    <script src="content.js"></script>
+    <script src="../shared/engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="../../web-app/favicon.png">
+
+    <title>SOS! Help — Magic 8 Ball — Camp KO</title>
+
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <a href="../../index.html" class="nav-brand">{ .home }</a>
+
+            <ul class="nav-links">
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+
+            <button class="nav-hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="nav-mobile">
+            <ul>
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="lesson-subnav">
+        <div class="container">
+            <a href="../index.html" class="subnav-back">← All Lessons</a>
+            <a href="index.html">Home: Magic 8 Ball</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="js.html">JS</a>
+            <a href="help.html" class="active">Uh Oh!</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Something's not working... how can I fix it?</h1>
+        <p>Common reasons my code isn't working.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>HTML</h2>
+
+            <ul class="plain-list">
+                <li>
+                    <strong>❌ Misspelled a tag</strong>
+                    <p class="mistake-example">e.g. &lt;buton&gt; instead of &lt;button&gt;</p>
+                </li>
+                <li>
+                    <strong>❌ Forgot to close a tag</strong>
+                    <p class="mistake-example">e.g. &lt;p&gt;Hello instead of &lt;p&gt;Hello&lt;/p&gt;</p>
+                </li>
+                <li>
+                    <strong>❌ Forgot quotation marks around an attribute</strong>
+                    <p class="mistake-example">Needs double quotes — e.g. class=answer instead of class="answer"</p>
+                </li>
+                <li>
+                    <strong>❌ Forgot to save</strong>
+                    <p class="mistake-example">Ctrl + S</p>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>CSS</h2>
+
+            <ul class="plain-list">
+                <li>
+                    <strong>❌ Forgot the semicolon</strong>
+                    <p class="mistake-example">Every style needs to end in a semicolon</p>
+                </li>
+                <li><strong>❌ Misspelled a property name</strong></li>
+                <li>
+                    <strong>❌ Changed HTML instead of CSS</strong>
+                    <p class="mistake-example">HTML is the structure, CSS is the style</p>
+                </li>
+                <li>
+                    <strong>❌ Forgot the curly braces</strong>
+                    <p class="mistake-example">All styles are wrapped in { ... }</p>
+                </li>
+                <li>
+                    <strong>❌ Selector doesn't match the element</strong>
+                    <p class="mistake-example">Check your element type, class name, or id</p>
+                </li>
+                <li>
+                    <strong>❌ Forgot to save</strong>
+                    <p class="mistake-example">Ctrl + S</p>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>JavaScript</h2>
+
+            <ul class="plain-list">
+                <li>
+                    <strong>❌ Misspelled a variable or function name</strong>
+                    <p class="mistake-example">e.g. scoreElemnt instead of scoreElement</p>
+                </li>
+                <li>
+                    <strong>❌ Forgot quotation marks around a string</strong>
+                    <p class="mistake-example">e.g. console.log(Hi!) instead of console.log("Hi!")</p>
+                </li>
+                <li>
+                    <strong>❌ Used the wrong id</strong>
+                    <p class="mistake-example">e.g. getElementById("Score") when the HTML says id="score" — case matters!</p>
+                </li>
+                <li>
+                    <strong>❌ Forgot the parentheses when calling a function</strong>
+                    <p class="mistake-example">e.g. clickButton instead of clickButton()</p>
+                </li>
+                <li>
+                    <strong>❌ Forgot to save</strong>
+                    <p class="mistake-example">Ctrl + S</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>Camp KO &mdash; August 3&ndash;7, 2026</span>
+            <a href="https://arissafram.com" target="_blank" rel="noopener">arissafram.com</a>
+        </div>
+    </footer>
+
+    <script src="content.js"></script>
+    <script src="../shared/engine.js"></script>
+</body>
+</html>

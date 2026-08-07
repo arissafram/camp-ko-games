@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="../../web-app/favicon.png">
+
+    <title>JavaScript — Clicker Game — Camp KO</title>
+
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <a href="../../index.html" class="nav-brand">{ .home }</a>
+
+            <ul class="nav-links">
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+
+            <button class="nav-hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="nav-mobile">
+            <ul>
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="lesson-subnav">
+        <div class="container">
+            <a href="../index.html" class="subnav-back">← All Lessons</a>
+            <a href="index.html">Home: Clicker Game</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="js.html" class="active">JS</a>
+            <a href="help.html">Uh Oh!</a>
+        </div>
+    </nav>
+
+    <nav class="page-nav">
+        <div class="container">
+            <a href="js.html" data-text="1. Update the Score">1. Update the Score</a>
+            <a href="js-win-logic.html" class="active" data-text="2. Add Win Logic">2. Add Win Logic</a>
+            <a href="js-timer.html" data-text="3. Add a Timer">3. Add a Timer</a>
+            <a href="js-next.html" data-text="4. What should we add next?">4. What should we add next?</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>JavaScript</h1>
+        <p>JavaScript makes the webpage interactive. It tells the page what to do when someone clicks, types, or moves the mouse.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>How to Write JavaScript - Booleans & conditionals</h2>
+
+            <p>A boolean is a value that's either true or false.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>true</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">yes / on</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>false</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">no / off</span>
+                    </div>
+                </div>
+            </div>
+
+            <p>Booleans can also be stored as variables.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>let isGameOver = true;</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">a variable that stores a boolean</span>
+                    </div>
+                </div>
+            </div>
+
+            <p>Conditionals let your code make decisions.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>if</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">keyword</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>(score >= 10)</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">condition — true or false</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>{ ... }</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">runs if true</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>else { ... }</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">runs if false</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="remember">
+                <pre><code>if (score >= 10) {
+  // do something
+} else {
+  // do something else
+}</code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>Common JavaScript Concepts</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Concept</th>
+                        <th>What It Does</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Boolean</td>
+                        <td>A value that's true or false</td>
+                        <td><code>let gameOver = false;</code></td>
+                    </tr>
+
+                    <tr>
+                        <td>Conditional</td>
+                        <td>Runs different code depending on whether something is true or false</td>
+                        <td><code>if (score >= 10) { ... } else { ... }</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Add win logic</h2>
+
+            <p>
+                Now that our game keeps score, we can use a conditional to
+                check it. Open the Preview tab, click the button 5 times, and
+                watch the message change.
+            </p>
+
+            <div class="editor">
+                <div class="editor-tabs" role="tablist">
+                    <button class="editor-tab" data-tab="html" role="tab" aria-selected="false">index.html</button>
+                    <button class="editor-tab" data-tab="css" role="tab" aria-selected="false">styles.css</button>
+                    <button class="editor-tab active" data-tab="js" role="tab" aria-selected="true">script.js</button>
+                    <button class="editor-tab editor-tab-preview" data-tab="preview" role="tab" aria-selected="false">▶ Preview</button>
+                </div>
+
+                <div class="editor-panels">
+                    <pre class="editor-panel" data-panel="html"><code id="code-html"></code></pre>
+                    <pre class="editor-panel" data-panel="css"><code id="code-css"></code></pre>
+                    <pre class="editor-panel active" data-panel="js"><code id="code-js"></code></pre>
+                    <div class="editor-panel editor-panel-preview" data-panel="preview">
+                        <iframe id="preview-frame" title="Clicker game preview"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>Camp KO &mdash; August 3&ndash;7, 2026</span>
+            <a href="https://arissafram.com" target="_blank" rel="noopener">arissafram.com</a>
+        </div>
+    </footer>
+
+    <script src="content.js"></script>
+    <script src="../shared/engine.js"></script>
+</body>
+</html>

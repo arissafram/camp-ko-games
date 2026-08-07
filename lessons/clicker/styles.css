@@ -1,0 +1,196 @@
+/* Clicker Game — track-specific overrides on top of ../shared/styles.css */
+
+/* Wider live-preview iframe (the taught game has more vertical content) */
+.editor-panel-preview iframe { height: 640px; }
+
+/* Clicker's tables are wider (3-4 columns) — scroll instead of shrinking columns */
+table {
+  display: block;
+  table-layout: auto;
+}
+
+/* Sub nav (in-topic page switcher, js.html and its 3 extra JS steps) —
+   sits below the site-nav (56px) and the lesson-subnav (44px) above it */
+.page-nav {
+  background: #e7ebfc;
+  position: sticky;
+  top: 100px;
+  z-index: 80;
+  padding: 0;
+}
+
+.page-nav .container {
+  display: flex;
+  gap: 0.25rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  height: 44px;
+  align-items: stretch;
+}
+
+.page-nav .container::-webkit-scrollbar { display: none; }
+
+.page-nav a {
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--tn-bg);
+  padding: 0 1rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 3px solid transparent;
+  flex-shrink: 0;
+}
+
+/* Reserve bold width so tabs don't shift on select */
+.page-nav a::after {
+  content: attr(data-text);
+  font-weight: 700;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.page-nav a.active,
+.page-nav a:hover {
+  border-bottom-color: var(--tn-bg);
+  color: var(--tn-bg);
+  font-weight: 700;
+}
+
+/* Loading dots (What should we add next?) */
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 6rem 0;
+}
+
+.loading-dots span {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #555;
+  animation: dot-fade 2.2s ease-in-out infinite;
+}
+
+.loading-dots span:nth-child(2) { animation-delay: 0.3s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes dot-fade {
+  0%, 80%, 100% { opacity: 0.2; }
+  40% { opacity: 1; }
+}
+
+/* Trick demos (More HTML/CSS Tricks) */
+.demo-emoji { font-size: 3rem; }
+
+.demo-hr {
+  width: 100%;
+  border: none;
+  border-top: 2px solid var(--tn-fg);
+}
+
+.demo {
+  width: 100px;
+  height: 100px;
+  background: var(--tn-red);
+}
+
+.demo-circle { border-radius: 50%; }
+
+.demo-dotted {
+  background: none;
+  border: 6px dotted var(--tn-red);
+}
+
+.demo-shadow { box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.35); }
+
+.demo-tilt { transform: rotate(15deg); }
+
+.demo-gradient { background: linear-gradient(to right, pink, purple); }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.demo-spin { animation: spin 5s linear infinite; }
+
+/* Give each trick its own accent color */
+.trick-row:has(.demo-circle) .trick-text h3 { color: color-mix(in srgb, var(--tn-blue) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-circle) .demo { background: var(--tn-blue); }
+.trick-row:has(.demo-circle) .trick-example {
+  background: color-mix(in srgb, var(--tn-blue) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-blue) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-dotted) .trick-text h3 { color: color-mix(in srgb, var(--tn-aqua) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-dotted) .demo-dotted { border-color: var(--tn-aqua); }
+.trick-row:has(.demo-dotted) .trick-example {
+  background: color-mix(in srgb, var(--tn-aqua) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-aqua) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-shadow) .trick-text h3 { color: color-mix(in srgb, var(--tn-yellow) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-shadow) .demo { background: var(--tn-yellow); }
+.trick-row:has(.demo-shadow) .trick-example {
+  background: color-mix(in srgb, var(--tn-yellow) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-yellow) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-tilt) .trick-text h3 { color: color-mix(in srgb, var(--tn-purple) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-tilt) .demo { background: var(--tn-purple); }
+.trick-row:has(.demo-tilt) .trick-example {
+  background: color-mix(in srgb, var(--tn-purple) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-purple) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-gradient) .trick-text h3 { color: color-mix(in srgb, #ec4899 20%, var(--tn-surface)); }
+.trick-row:has(.demo-gradient) .trick-example {
+  background: color-mix(in srgb, #ec4899 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, #ec4899 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-spin) .trick-text h3 { color: color-mix(in srgb, var(--tn-green) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-spin) .demo { background: var(--tn-green); }
+.trick-row:has(.demo-spin) .trick-example {
+  background: color-mix(in srgb, var(--tn-green) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-green) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-emoji) .trick-text h3 { color: color-mix(in srgb, var(--tn-yellow) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-emoji) .trick-example {
+  background: color-mix(in srgb, var(--tn-yellow) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-yellow) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-details) .trick-text h3 { color: color-mix(in srgb, var(--tn-green) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-details) .trick-example {
+  background: color-mix(in srgb, var(--tn-green) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-green) 50%, var(--tn-surface));
+}
+
+.trick-row:has(mark) .trick-text h3 { color: color-mix(in srgb, var(--tn-orange) 20%, var(--tn-surface)); }
+.trick-row:has(mark) .trick-example {
+  background: color-mix(in srgb, var(--tn-orange) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-orange) 50%, var(--tn-surface));
+}
+
+.trick-row:has(progress) .trick-text h3 { color: color-mix(in srgb, var(--tn-blue) 20%, var(--tn-surface)); }
+.trick-row:has(progress) .trick-example {
+  background: color-mix(in srgb, var(--tn-blue) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-blue) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-hr) .trick-text h3 { color: color-mix(in srgb, var(--tn-purple) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-hr) .trick-example {
+  background: color-mix(in srgb, var(--tn-purple) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-purple) 50%, var(--tn-surface));
+}

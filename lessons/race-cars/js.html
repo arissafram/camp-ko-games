@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="../../web-app/favicon.png">
+
+    <title>JavaScript — Race Cars — Camp KO</title>
+
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <a href="../../index.html" class="nav-brand">{ .home }</a>
+
+            <ul class="nav-links">
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+
+            <button class="nav-hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="nav-mobile">
+            <ul>
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="lesson-subnav">
+        <div class="container">
+            <a href="../index.html" class="subnav-back">← All Lessons</a>
+            <a href="index.html">Home: Race Cars</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="js.html" class="active">JS</a>
+            <a href="help.html">Uh Oh!</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>JavaScript</h1>
+        <p>JavaScript makes the page do things. Our game needs to track each car's position, listen for key presses, move the right car, and check for a winner.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Variables</h2>
+
+            <p>A <strong>variable</strong> stores a value we plan to change later — like how far along the track a car has moved.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>let</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">keyword — makes a variable we can update</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>car1Position</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">the variable's name</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>= 0</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">starting value</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="remember">
+                <p>In practice, a variable looks like this:</p>
+                <pre><code>let car1Position = 0;
+let car2Position = 0;</code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>Finding elements</h2>
+
+            <p>To find an element on the page and control it, we use <code>getElementById</code> — it finds the one element whose <code>id</code> attribute matches.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>document.getElementById('car1')</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">finds player 1's car, so we can move it</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>document.getElementById('car2')</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">finds player 2's car</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>document.getElementById('result')</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">finds the message paragraph, so we can announce a winner</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Listening for key presses</h2>
+
+            <p>An <strong>event listener</strong> waits for something to happen, then runs a function. We listen for <code>keydown</code> on the whole window, then check <code>event.key</code> to see which key was pressed.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>'keydown'</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">the event — fires every time a key is pressed</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>event.key</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">which key was pressed, as text like 'a'</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>if (event.key === 'a')</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">only move player 1's car if it was the 'a' key</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Moving a car</h2>
+
+            <p>Each key press adds to that player's position, then writes it onto the car's <code>left</code> style — the same <code>left</code> we set up with <code>position: absolute</code> in CSS.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>car1Position += 20</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">add 20 to the running total</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>car1.style.left</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">the CSS left property, controlled from JS</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>car1Position + 'px'</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">CSS needs units — 'px' means pixels</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Checking for a winner</h2>
+
+            <p>An <strong>if statement</strong> only runs its code when a condition is true. We use <code>&gt;=</code> ("greater than or equal to") to check if a car has reached — or fully crossed — the finish line, which is drawn as its own line partway down the track, well before the track's edge.</p>
+
+            <div class="remember">
+                <pre><code>const finishLine = 600;
+
+if (car1Position &gt;= finishLine) {
+    result.textContent = 'Player 1 wins!';
+}</code></pre>
+            </div>
+
+            <p>Once someone wins, the cars shouldn't keep moving. We add a <code>gameOver</code> variable that starts as <code>false</code>, flip it to <code>true</code> the moment a car wins, and check it at the very top of <code>moveCars</code> — if the game is already over, we <code>return</code> before anything else can happen.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>let gameOver = false;</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">starts false — the race is still on</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>if (gameOver) { return; }</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">stops the function early, before any key can move a car</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>gameOver = true;</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">set the moment a car wins</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Practice Challenges</h2>
+
+            <h3>Get started</h3>
+
+            <p>
+                These challenges aren't part of the race game — they're just
+                about getting comfortable with <strong>booleans</strong> and
+                <strong>if / else</strong> before we use them for real. Press
+                <code>F12</code> to open the console, then try each one in
+                your <code>script.js</code> file.
+            </p>
+
+            <h3>Booleans</h3>
+
+            <p>A <strong>boolean</strong> is a value that's only ever <code>true</code> or <code>false</code>. Comparisons — like <code>&gt;</code>, <code>&lt;</code>, and <code>===</code> — always produce a boolean.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>true</code> / <code>false</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">the only two boolean values</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>10 &gt; 3</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">a comparison — evaluates to true</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>10 &lt; 3</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">evaluates to false</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3>if / else</h3>
+
+            <p>An <code>if</code> runs its code when the condition is <code>true</code>. Add an <code>else</code> to run different code when it's <code>false</code> — one branch or the other always runs, never both.</p>
+
+            <div class="remember">
+                <pre><code>let age = 15;
+
+if (age &gt;= 13) {
+    console.log('Teenager');
+} else {
+    console.log('Kid');
+}</code></pre>
+            </div>
+
+            <h3>Try it yourself</h3>
+
+            <div class="remember">
+                <p>1. Make a variable called <code>isSunny</code> set to <code>true</code>, then log it.</p>
+                <pre><code>let isSunny = <span class="code-comment">// finish this line</span>
+console.log(isSunny);</code></pre>
+            </div>
+
+            <div class="remember">
+                <p>2. Log what <code>10 &gt; 3</code> evaluates to. Then try <code>10 &lt; 3</code>.</p>
+                <pre><code>console.log(10 &gt; 3);
+console.log(10 &lt; 3);</code></pre>
+            </div>
+
+            <div class="remember">
+                <p>3. Write an if statement that logs <code>'It's cold!'</code> when <code>temperature</code> is less than 60.</p>
+                <pre><code>let temperature = 45;
+<span class="code-comment">// write an if statement here</span>
+
+
+</code></pre>
+            </div>
+
+            <div class="remember">
+                <p>4. Add an <code>else</code> to this if statement so it logs <code>'Not a match'</code> when the names aren't equal.</p>
+                <pre><code>let name1 = 'Max';
+let name2 = 'Sam';
+
+if (name1 === name2) {
+    console.log('Match!');
+}
+<span class="code-comment">// add an else here</span></code></pre>
+            </div>
+
+            <div class="remember">
+                <p>5. This always logs <code>'You can ride!'</code>, no matter what. Fix the condition so it only logs that when <code>height</code> is 48 or more.</p>
+                <pre><code>let height = 40;
+
+if (true) { <span class="code-comment">// change this</span>
+    console.log('You can ride!');
+}</code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>Build the game</h2>
+
+            <p>Here's the finished game. Open the Preview tab, click inside it, then press A and L — it's fully working now. Add everything in green — check all three tabs.</p>
+
+            <div class="editor">
+                <div class="editor-tabs" role="tablist">
+                    <button class="editor-tab" data-tab="html" role="tab" aria-selected="false">index.html</button>
+                    <button class="editor-tab" data-tab="css" role="tab" aria-selected="false">styles.css</button>
+                    <button class="editor-tab active" data-tab="js" role="tab" aria-selected="true">script.js</button>
+                    <button class="editor-tab editor-tab-preview" data-tab="preview" role="tab" aria-selected="false">▶ Preview</button>
+                </div>
+
+                <div class="editor-panels">
+                    <div class="editor-panel" data-panel="html">
+                        <pre><code id="code-html"></code></pre>
+                        <div class="code-lock">
+                            <div class="code-lock-emoji">🔒</div>
+                            <p>Ask Arissa for the password after you tried yourself.</p>
+                            <form class="code-lock-form">
+                                <input type="password" placeholder="HTML password" autocomplete="off">
+                                <button type="submit">Unlock</button>
+                            </form>
+                            <p class="code-lock-error"></p>
+                        </div>
+                    </div>
+                    <div class="editor-panel" data-panel="css">
+                        <pre><code id="code-css"></code></pre>
+                        <div class="code-lock">
+                            <div class="code-lock-emoji">🔒</div>
+                            <p>Ask Arissa for the password after you tried yourself.</p>
+                            <form class="code-lock-form">
+                                <input type="password" placeholder="CSS password" autocomplete="off">
+                                <button type="submit">Unlock</button>
+                            </form>
+                            <p class="code-lock-error"></p>
+                        </div>
+                    </div>
+                    <div class="editor-panel active" data-panel="js">
+                        <pre><code id="code-js"></code></pre>
+                        <div class="code-lock">
+                            <div class="code-lock-emoji">🔒</div>
+                            <p>Ask Arissa for the password after you tried yourself.</p>
+                            <form class="code-lock-form">
+                                <input type="password" placeholder="JS password" autocomplete="off">
+                                <button type="submit">Unlock</button>
+                            </form>
+                            <p class="code-lock-error"></p>
+                        </div>
+                    </div>
+                    <div class="editor-panel editor-panel-preview" data-panel="preview">
+                        <iframe id="preview-frame" title="Race Cars preview"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>Camp KO &mdash; August 3&ndash;7, 2026</span>
+            <a href="https://arissafram.com" target="_blank" rel="noopener">arissafram.com</a>
+        </div>
+    </footer>
+
+    <script src="content.js"></script>
+    <script src="../shared/engine.js"></script>
+</body>
+</html>

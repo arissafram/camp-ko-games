@@ -1,0 +1,41 @@
+body {
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 20px;
+    background: #1d1f21;
+    color: #c5c8c6;
+}
+
+.track {
+    width: 700px;
+    height: 80px;
+    margin: 20px auto;
+    border: 3px solid white;
+    position: relative;
+    overflow: hidden;
+}
+
+.finish-line {
+    position: absolute;
+    left: 600px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: gold;
+}
+
+#car1,
+#car2 {
+    position: absolute;
+    left: 0;
+    font-size: 50px;
+    transform: scaleX(-1);
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00e676;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="../../web-app/favicon.png">
+
+    <title>Magic 8 Ball — Camp KO</title>
+
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <a href="../../index.html" class="nav-brand">{ .home }</a>
+
+            <ul class="nav-links">
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+
+            <button class="nav-hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="nav-mobile">
+            <ul>
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="lesson-subnav">
+        <div class="container">
+            <a href="../index.html" class="subnav-back">← All Lessons</a>
+            <a href="index.html" class="active">Home: Magic 8 Ball</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="js.html">JS</a>
+            <a href="help.html">Uh Oh!</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>🎱 Magic 8 Ball</h1>
+        <p>
+            Today we'll learn the basics of HTML, CSS, and JS while making a
+            Magic 8 Ball. Here's a simple example below, but you'll add your
+            own flair and make it your own.
+        </p>
+    </header>
+
+    <main>
+        <section>
+            <div class="game-frame-wrap">
+                <iframe src="game/index.html" title="Magic 8 Ball game"></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>Starter HTML</h2>
+
+            <p>Every page starts the same way. Copy this into your own <code>index.html</code> file and build inside the body.</p>
+
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;My Magical 8 Ball&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+    &lt;script src="script.js" defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    <span class="code-comment">&lt;!-- Your HTML goes in here --&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Our Goals</h2>
+
+            <ol class="goals-list">
+                <li>
+                    <div>
+                        <strong>Build the ball</strong>
+                        <ol class="goals-sublist">
+                            <li>Add a header</li>
+                            <li>Add a magic eight ball - can be an image, or a circle</li>
+                            <li>Add a container for where the answers will go</li>
+                            <li>Add a description of the game</li>
+                        </ol>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <strong>Add styles</strong>
+                        <ol class="goals-sublist">
+                            <li>Background color</li>
+                            <li>Round it into a circle</li>
+                            <li>Give the answer a glow</li>
+                        </ol>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <strong>Add actions</strong>
+                        <ol class="goals-sublist">
+                            <li>Make a list of possible answers</li>
+                            <li>Pick a random one when the ball is clicked</li>
+                            <li>Show the answer on the screen</li>
+                        </ol>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <strong>Challenges</strong>
+                        <ol class="goals-sublist">
+                            <li>Add more answers to the list</li>
+                            <li>Change the ball's colors</li>
+                            <li>Add a CSS animation</li>
+                            <li>Count how many times you've asked</li>
+                        </ol>
+                    </div>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>Camp KO &mdash; August 3&ndash;7, 2026</span>
+            <a href="https://arissafram.com" target="_blank" rel="noopener">arissafram.com</a>
+        </div>
+    </footer>
+
+    <script src="content.js"></script>
+    <script src="../shared/engine.js"></script>
+</body>
+</html>

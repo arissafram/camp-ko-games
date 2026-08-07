@@ -1,0 +1,76 @@
+/* Race Cars — track-specific overrides on top of ../shared/styles.css */
+
+.game-frame-wrap iframe { height: 520px; }
+
+/* font-family demo */
+.demo-font-a { font-family: system-ui, sans-serif; font-size: 1.25rem; color: var(--tn-fg); }
+.demo-font-b { font-family: monospace; font-size: 1.25rem; color: var(--tn-fg); }
+
+/* text-align demo */
+.demo-align-box {
+  width: 130px;
+  height: 60px;
+  background: var(--tn-bg);
+  border: 1px solid var(--tn-raised);
+  border-radius: var(--radius);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.demo-align-left { justify-content: flex-start; padding-left: 0.5rem; }
+.demo-align-center { justify-content: center; }
+
+/* border demo (the track's edge) */
+.demo-border {
+  width: 130px;
+  height: 60px;
+  background: #1d1f21;
+  border: 3px solid white;
+  border-radius: var(--radius);
+}
+
+/* width/height demo (sizing the track) */
+.demo-size-small { width: 48px; height: 48px; background: var(--tn-green); border-radius: var(--radius); }
+.demo-size-big { width: 100px; height: 60px; background: var(--tn-green); border-radius: var(--radius); }
+
+/* transform demo (flipping the car) */
+.demo-flip-before,
+.demo-flip-after {
+  font-size: 2rem;
+}
+
+.demo-flip-after {
+  transform: scaleX(-1);
+}
+
+/* Give each trick its own accent color */
+.trick-row:has(.demo-font-b) .trick-text h3 { color: color-mix(in srgb, var(--tn-purple) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-font-b) .trick-example {
+  background: color-mix(in srgb, var(--tn-purple) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-purple) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-align-box) .trick-text h3 { color: color-mix(in srgb, var(--tn-aqua) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-align-box) .trick-example {
+  background: color-mix(in srgb, var(--tn-aqua) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-aqua) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-border) .trick-text h3 { color: color-mix(in srgb, var(--tn-blue) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-border) .trick-example {
+  background: color-mix(in srgb, var(--tn-blue) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-blue) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-size-big) .trick-text h3 { color: color-mix(in srgb, var(--tn-green) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-size-big) .trick-example {
+  background: color-mix(in srgb, var(--tn-green) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-green) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-flip-after) .trick-text h3 { color: color-mix(in srgb, var(--electric-blue) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-flip-after) .trick-example {
+  background: color-mix(in srgb, var(--electric-blue) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--electric-blue) 50%, var(--tn-surface));
+}

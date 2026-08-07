@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="../../web-app/favicon.png">
+
+    <title>JavaScript — Clicker Game — Camp KO</title>
+
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <a href="../../index.html" class="nav-brand">{ .home }</a>
+
+            <ul class="nav-links">
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+
+            <button class="nav-hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="nav-mobile">
+            <ul>
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="lesson-subnav">
+        <div class="container">
+            <a href="../index.html" class="subnav-back">← All Lessons</a>
+            <a href="index.html">Home: Clicker Game</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="js.html" class="active">JS</a>
+            <a href="help.html">Uh Oh!</a>
+        </div>
+    </nav>
+
+    <nav class="page-nav">
+        <div class="container">
+            <a href="js.html" data-text="1. Update the Score">1. Update the Score</a>
+            <a href="js-win-logic.html" data-text="2. Add Win Logic">2. Add Win Logic</a>
+            <a href="js-timer.html" class="active" data-text="3. Add a Timer">3. Add a Timer</a>
+            <a href="js-next.html" data-text="4. What should we add next?">4. What should we add next?</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>JavaScript</h1>
+        <p>JavaScript makes the webpage interactive. It tells the page what to do when someone clicks, types, or moves the mouse.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>How to Write JavaScript - setTimeout</h2>
+
+            <p><code>setTimeout()</code> waits a set amount of time, then runs some code.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>setTimeout</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">keyword — waits, then runs code</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>function() { ... }</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">the code that runs after waiting</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>2000</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">how long to wait, in milliseconds</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="remember">
+                <pre><code>setTimeout(function () {
+  // do something
+}, 2000);</code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>Common JavaScript Concepts</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Concept</th>
+                        <th>What It Does</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>setTimeout</td>
+                        <td>Waits a set amount of time, then runs code once</td>
+                        <td><code>setTimeout(function() { ... }, 2000);</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Add a timer</h2>
+
+            <p>
+                Now let's make our game timed. Open the Preview tab and wait
+                10 seconds without clicking — watch the message change.
+            </p>
+
+            <div class="editor">
+                <div class="editor-tabs" role="tablist">
+                    <button class="editor-tab" data-tab="html" role="tab" aria-selected="false">index.html</button>
+                    <button class="editor-tab" data-tab="css" role="tab" aria-selected="false">styles.css</button>
+                    <button class="editor-tab active" data-tab="js" role="tab" aria-selected="true">script.js</button>
+                    <button class="editor-tab editor-tab-preview" data-tab="preview" role="tab" aria-selected="false">▶ Preview</button>
+                </div>
+
+                <div class="editor-panels">
+                    <pre class="editor-panel" data-panel="html"><code id="code-html"></code></pre>
+                    <pre class="editor-panel" data-panel="css"><code id="code-css"></code></pre>
+                    <pre class="editor-panel active" data-panel="js"><code id="code-js"></code></pre>
+                    <div class="editor-panel editor-panel-preview" data-panel="preview">
+                        <iframe id="preview-frame" title="Clicker game preview"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>Camp KO &mdash; August 3&ndash;7, 2026</span>
+            <a href="https://arissafram.com" target="_blank" rel="noopener">arissafram.com</a>
+        </div>
+    </footer>
+
+    <script src="content.js"></script>
+    <script src="../shared/engine.js"></script>
+</body>
+</html>

@@ -1130,7 +1130,6 @@ pre code {
 }
 
 @media (min-width: 600px) {
-  .lang-grid--3 { grid-template-columns: repeat(3, 1fr); }
   .lang-grid--2 { grid-template-columns: repeat(2, 1fr); }
 }
 

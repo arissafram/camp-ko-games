@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="../../web-app/favicon.png">
+
+    <title>Clicker Game — Camp KO</title>
+
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <a href="../../index.html" class="nav-brand">{ .home }</a>
+
+            <ul class="nav-links">
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+
+            <button class="nav-hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="nav-mobile">
+            <ul>
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="lesson-subnav">
+        <div class="container">
+            <a href="../index.html" class="subnav-back">← All Lessons</a>
+            <a href="index.html" class="active">Home: Clicker Game</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="js.html">JS</a>
+            <a href="help.html">Uh Oh!</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Clicker Game</h1>
+        <p>
+            Throughout the week we'll learn the basics of HTML, CSS, and
+            JS while making a clicker game. Here's a simple example
+            below, but each of us will add our own flair and make it
+            our own.
+        </p>
+    </header>
+
+    <main>
+        <section>
+            <div class="game-frame-wrap">
+                <iframe src="game/index.html" title="Clicker game"></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>Our Goals</h2>
+
+            <ol class="goals-list">
+                <li>
+                    <div>
+                        <strong>Build a game board</strong>
+                        <ol class="goals-sublist">
+                            <li>Header</li>
+                            <li>Description</li>
+                            <li>Button</li>
+                            <li>Image or a link</li>
+                        </ol>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <strong>Add styles</strong>
+                        <ol class="goals-sublist">
+                            <li>Background color</li>
+                            <li>Font color</li>
+                            <li>Font size</li>
+                            <li>Height/width</li>
+                        </ol>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <strong>Add actions</strong>
+                        <ol class="goals-sublist">
+                            <li>Update the score when the button is clicked</li>
+                            <li>Display the updated score on the screen</li>
+                        </ol>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <strong>Challenges</strong>
+                        <ol class="goals-sublist">
+                            <li>Add a countdown timer</li>
+                            <li>Save and display a high score</li>
+                            <li>Show a "You win!" message once the score reaches a certain number</li>
+                            <li>Add more content to your game board - background image? more buttons? more p tags?</li>
+                        </ol>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <strong>Play!</strong>
+                        <ol class="goals-sublist">
+                            <li>Play and test each other's games</li>
+                        </ol>
+                    </div>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>Camp KO &mdash; August 3&ndash;7, 2026</span>
+            <a href="https://arissafram.com" target="_blank" rel="noopener">arissafram.com</a>
+        </div>
+    </footer>
+
+    <script src="content.js"></script>
+    <script src="../shared/engine.js"></script>
+</body>
+</html>

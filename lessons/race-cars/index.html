@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="../../web-app/favicon.png">
+
+    <title>Race Cars — Camp KO</title>
+
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <a href="../../index.html" class="nav-brand">{ .home }</a>
+
+            <ul class="nav-links">
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+
+            <button class="nav-hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="nav-mobile">
+            <ul>
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="lesson-subnav">
+        <div class="container">
+            <a href="../index.html" class="subnav-back">← All Lessons</a>
+            <a href="index.html" class="active">Home: Race Cars</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="js.html">JS</a>
+            <a href="help.html">Uh Oh!</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>🏎️ Race Cars</h1>
+        <p>
+            Today we'll learn the basics of HTML, CSS, and JS while making a
+            two player Race Cars game. Here's a simple example below, but
+            you'll add your own flair and make it your own.
+        </p>
+    </header>
+
+    <main>
+        <section>
+            <div class="game-frame-wrap">
+                <iframe src="game/index.html" title="Race Cars game" scrolling="no"></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>Starter HTML</h2>
+
+            <p>Every page starts the same way. Copy this into your own <code>index.html</code> file and build inside the body.</p>
+
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;My Race Cars Game&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+    &lt;script src="script.js" defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    <span class="code-comment">&lt;!-- Your HTML goes in here --&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Our Goals</h2>
+
+            <ol class="goals-list">
+                <li>
+                    <div>
+                        <strong>Build the track</strong>
+                        <ol class="goals-sublist">
+                            <li>Add a header</li>
+                            <li>Add a track for each player — a div works great</li>
+                            <li>Add a car inside each track, with its own id</li>
+                            <li>Add a place for the result message to show up</li>
+                        </ol>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <strong>Add styles</strong>
+                        <ol class="goals-sublist">
+                            <li>Give each track a size and a border</li>
+                            <li>Make the track position: relative</li>
+                            <li>Make each car position: absolute so it can move</li>
+                            <li>Hide anything that spills outside the track</li>
+                        </ol>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <strong>Add actions</strong>
+                        <ol class="goals-sublist">
+                            <li>Listen for key presses on the page</li>
+                            <li>Move the right car when its key is pressed</li>
+                            <li>Check if a car has reached the finish line</li>
+                            <li>Show who won</li>
+                        </ol>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <strong>Challenges</strong>
+                        <ol class="goals-sublist">
+                            <li>Change how far each key press moves the car</li>
+                            <li>Move the finish line closer or farther away</li>
+                            <li>Change the car emojis</li>
+                            <li>Add a "Reset" button to race again</li>
+                        </ol>
+                    </div>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>Camp KO &mdash; August 3&ndash;7, 2026</span>
+            <a href="https://arissafram.com" target="_blank" rel="noopener">arissafram.com</a>
+        </div>
+    </footer>
+
+    <script src="content.js"></script>
+    <script src="../shared/engine.js"></script>
+</body>
+</html>

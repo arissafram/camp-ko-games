@@ -1,0 +1,110 @@
+/* Magic 8 Ball — track-specific overrides on top of ../shared/styles.css */
+
+.demo-shape {
+  width: 72px;
+  height: 72px;
+  background: var(--tn-red);
+}
+
+.demo-shape.demo-circle { border-radius: 50%; }
+
+.demo {
+  width: 100px;
+  height: 100px;
+  background: var(--tn-blue);
+}
+
+.demo-background {
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #7ec2ff, #2f8eff 60%, #1a56b0 100%);
+}
+
+.demo-dashed {
+  background: transparent;
+  border: 4px dashed var(--tn-blue);
+}
+
+.demo-glow {
+  border-radius: 50%;
+  background: var(--electric-blue);
+  box-shadow: 0 0 24px 8px rgba(47, 142, 255, 0.8);
+}
+
+.demo-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://media.post.rvohealth.io/wp-content/uploads/2020/08/blueberries_fresh_fullframe_732x549_thumb.jpg");
+  background-repeat: repeat;
+  background-size: 140px;
+}
+
+.trick-row:has(.demo-bg-image) .trick-example {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.demo-color {
+  color: #7ec2ff;
+  font-size: 1.5rem;
+}
+
+.demo-fontsize-small { font-size: 1rem; color: var(--tn-fg); }
+.demo-fontsize-big { font-size: 3rem; color: var(--tn-fg); }
+
+.demo-size-small { width: 48px; height: 48px; }
+.demo-size-big { width: 100px; height: 100px; }
+
+/* Give each trick its own accent color */
+.trick-row:has(.demo-dashed) .trick-text h3 { color: color-mix(in srgb, var(--tn-blue) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-dashed) .trick-example {
+  background: color-mix(in srgb, var(--tn-blue) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-blue) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-background) .trick-text h3 { color: color-mix(in srgb, var(--tn-aqua) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-background) .trick-example {
+  background: color-mix(in srgb, var(--tn-aqua) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-aqua) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-bg-image) .trick-text h3 { color: color-mix(in srgb, var(--tn-red) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-bg-image) .trick-example {
+  background: color-mix(in srgb, var(--tn-red) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-red) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-circle) .trick-text h3 { color: color-mix(in srgb, var(--tn-red) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-circle) .trick-example {
+  background: color-mix(in srgb, var(--tn-red) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-red) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-glow) .trick-text h3 { color: color-mix(in srgb, var(--electric-blue) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-glow) .trick-example {
+  background: color-mix(in srgb, var(--electric-blue) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--electric-blue) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-color) .trick-text h3 { color: color-mix(in srgb, #ec4899 20%, var(--tn-surface)); }
+.trick-row:has(.demo-color) .trick-example {
+  background: var(--tn-surface);
+  border-color: color-mix(in srgb, #ec4899 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-fontsize-big) .trick-text h3 { color: color-mix(in srgb, var(--tn-purple) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-fontsize-big) .demo-fontsize-big { color: var(--tn-purple); }
+.trick-row:has(.demo-fontsize-big) .trick-example {
+  background: color-mix(in srgb, var(--tn-purple) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-purple) 50%, var(--tn-surface));
+}
+
+.trick-row:has(.demo-size-big) .trick-text h3 { color: color-mix(in srgb, var(--tn-green) 20%, var(--tn-surface)); }
+.trick-row:has(.demo-size-big) .demo-size-small,
+.trick-row:has(.demo-size-big) .demo-size-big { background: var(--tn-green); }
+.trick-row:has(.demo-size-big) .trick-example {
+  background: color-mix(in srgb, var(--tn-green) 20%, var(--tn-surface));
+  border-color: color-mix(in srgb, var(--tn-green) 50%, var(--tn-surface));
+}

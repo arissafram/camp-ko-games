@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="../../web-app/favicon.png">
+
+    <title>CSS — Clicker Game — Camp KO</title>
+
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <a href="../../index.html" class="nav-brand">{ .home }</a>
+
+            <ul class="nav-links">
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+
+            <button class="nav-hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="nav-mobile">
+            <ul>
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="lesson-subnav">
+        <div class="container">
+            <a href="../index.html" class="subnav-back">← All Lessons</a>
+            <a href="index.html">Home: Clicker Game</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html" class="active">CSS</a>
+            <a href="js.html">JS</a>
+            <a href="help.html">Uh Oh!</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>CSS</h1>
+        <p>CSS changes how the webpage looks. It controls colors, fonts, sizes, spacing, and borders.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>How to Write CSS</h2>
+
+            <p>Every CSS rule is written the same way — a selector, curly braces, and a property with a value that ends in a semicolon.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>button</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">selector</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>{</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">opening curly brace</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>color: purple;</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">property: value;</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>}</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">closing curly brace</span>
+                    </div>
+                </div>
+            </div>
+
+            <p>Sometimes we target elements by their id.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>#score { color: red; }</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">id selector — matches the element with id="score"</span>
+                    </div>
+                </div>
+            </div>
+
+            <p>Sometimes we target elements by their class.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>.game-button { color: red; }</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">class selector — matches every element with class="game-button"</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Common CSS Properties</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>What It Changes</th>
+                        <th>Example</th>
+                        <th>Other Values</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><code>background-color</code></td>
+                        <td>The background color</td>
+                        <td><code>background-color: lavender;</code></td>
+                        <td><code>pink</code>, <code>skyblue</code>, <code>#ff0000</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>color</code></td>
+                        <td>The text color</td>
+                        <td><code>color: blue;</code></td>
+                        <td><code>red</code>, <code>green</code>, <code>#333</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>font-size</code></td>
+                        <td>The size of the text</td>
+                        <td><code>font-size: 40px;</code></td>
+                        <td><code>16px</code>, <code>24px</code>, <code>72px</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>font-family</code></td>
+                        <td>The font used for the text</td>
+                        <td><code>font-family: Tahoma;</code></td>
+                        <td><code>Arial</code>, <code>Georgia</code>, <code>sans-serif</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>width</code></td>
+                        <td>How wide something is</td>
+                        <td><code>width: 200px;</code></td>
+                        <td><code>100px</code>, <code>250px</code>, <code>50%</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>height</code></td>
+                        <td>How tall something is</td>
+                        <td><code>height: 200px;</code></td>
+                        <td><code>100px</code>, <code>250px</code>, <code>50%</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>border</code></td>
+                        <td>The border around something</td>
+                        <td><code>border: 10px solid black;</code></td>
+                        <td><code>2px dashed red</code>, <code>5px solid blue</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>padding</code></td>
+                        <td>Space inside an element</td>
+                        <td><code>padding: 20px;</code></td>
+                        <td><code>10px</code>, <code>40px</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>margin</code></td>
+                        <td>Space outside an element</td>
+                        <td><code>margin: 20px;</code></td>
+                        <td><code>10px</code>, <code>40px</code>, <code>auto</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>text-align</code></td>
+                        <td>Where the text is placed</td>
+                        <td><code>text-align: center;</code></td>
+                        <td><code>left</code>, <code>right</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>cursor</code></td>
+                        <td>How the mouse cursor looks</td>
+                        <td><code>cursor: pointer;</code></td>
+                        <td><code>grab</code>, <code>help</code>, <code>not-allowed</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="more-link">Explore more properties here — <a href="https://www.w3schools.com/html/html_css.asp" target="_blank" rel="noopener">w3schools.com</a>.</p>
+        </section>
+
+        <section>
+            <h2>Add styles to your game</h2>
+
+            <p>
+                Every game should have a title, description, button, and
+                image. If you want to add more elements, you can. The styles below
+                are just an example to get you started.
+            </p>
+
+            <p>
+                Here our clicker game has CSS. Open the Preview tab to see how
+                styling changes the same HTML — though nothing is clickable
+                yet, since we haven't added JavaScript.
+            </p>
+
+            <div class="editor">
+                <div class="editor-tabs" role="tablist">
+                    <button class="editor-tab" data-tab="html" role="tab" aria-selected="false">index.html</button>
+                    <button class="editor-tab active" data-tab="css" role="tab" aria-selected="true">styles.css</button>
+                    <button class="editor-tab editor-tab-preview" data-tab="preview" role="tab" aria-selected="false">▶ Preview</button>
+                </div>
+
+                <div class="editor-panels">
+                    <pre class="editor-panel" data-panel="html"><code id="code-html"></code></pre>
+                    <pre class="editor-panel active" data-panel="css"><code id="code-css"></code></pre>
+                    <div class="editor-panel editor-panel-preview" data-panel="preview">
+                        <iframe id="preview-frame" title="Clicker game preview"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>More CSS Tricks</h2>
+
+            <p>
+                All of the designs you see on the web come from CSS. Here are
+                a few fun ones to try, but you can Google anything else you
+                can think of. If you can dream it, you can build it.
+            </p>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>Circle</h3>
+                    <p><code>border-radius: 50%;</code></p>
+                    <p>Turns a square into a circle.</p>
+                </div>
+                <div class="trick-example">
+                    <div class="demo demo-circle"></div>
+                </div>
+            </div>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>Dotted Border</h3>
+                    <p><code>border-style: dotted;</code></p>
+                    <p>Makes the border a row of dots instead of a solid line.</p>
+                </div>
+                <div class="trick-example">
+                    <div class="demo demo-dotted"></div>
+                </div>
+            </div>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>Drop Shadow</h3>
+                    <p><code>box-shadow: 5px 5px 10px gray;</code></p>
+                    <p>Adds a soft shadow behind an element.</p>
+                </div>
+                <div class="trick-example">
+                    <div class="demo demo-shadow"></div>
+                </div>
+            </div>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>Tilt</h3>
+                    <p><code>transform: rotate(15deg);</code></p>
+                    <p>Rotates an element.</p>
+                </div>
+                <div class="trick-example">
+                    <div class="demo demo-tilt"></div>
+                </div>
+            </div>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>Color Gradient</h3>
+                    <p><code>background: linear-gradient(to right, pink, purple);</code></p>
+                    <p>Blends two colors together as a background.</p>
+                </div>
+                <div class="trick-example">
+                    <div class="demo demo-gradient"></div>
+                </div>
+            </div>
+
+            <div class="trick-row">
+                <div class="trick-text">
+                    <h3>Animation</h3>
+                    <p><code>animation: spin 5s linear infinite;</code></p>
+                    <p>Makes an element move, spin, or change over time.</p>
+                    <p>If you're interested in learning more, <a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank" rel="noopener">click here</a>.</p>
+                </div>
+                <div class="trick-example">
+                    <div class="demo demo-spin"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>Camp KO &mdash; August 3&ndash;7, 2026</span>
+            <a href="https://arissafram.com" target="_blank" rel="noopener">arissafram.com</a>
+        </div>
+    </footer>
+
+    <script src="content.js"></script>
+    <script src="../shared/engine.js"></script>
+</body>
+</html>

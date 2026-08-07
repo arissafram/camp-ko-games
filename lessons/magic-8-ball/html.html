@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="../../web-app/favicon.png">
+
+    <title>HTML — Magic 8 Ball — Camp KO</title>
+
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <a href="../../index.html" class="nav-brand">{ .home }</a>
+
+            <ul class="nav-links">
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+
+            <button class="nav-hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="nav-mobile">
+            <ul>
+                <li><a href="../../web-app/schedule.html">Schedule</a></li>
+                <li><a href="../../web-app/concepts.html">Core Concepts</a></li>
+                <li><a href="../index.html" class="active">Build Together</a></li>
+                <li><a href="../../web-app/games.html">More Games</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="lesson-subnav">
+        <div class="container">
+            <a href="../index.html" class="subnav-back">← All Lessons</a>
+            <a href="index.html">Home: Magic 8 Ball</a>
+            <a href="html.html" class="active">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="js.html">JS</a>
+            <a href="help.html">Uh Oh!</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>HTML</h1>
+        <p>HTML creates the things you see on the page, including headings, text, and containers.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>How to Write HTML</h2>
+
+            <p>Every HTML element is written the same way — an opening tag, the content inside it, and a closing tag.</p>
+
+            <div class="remember">
+                <div class="anatomy-diagram">
+                    <div class="anatomy-part">
+                        <code>&lt;h1&gt;</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">opening tag</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>My Magical 8 Ball</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">content</span>
+                    </div>
+                    <div class="anatomy-part">
+                        <code>&lt;/h1&gt;</code>
+                        <span class="anatomy-arrow">↑</span>
+                        <span class="anatomy-label">closing tag</span>
+                    </div>
+                </div>
+            </div>
+
+            <p>Sometimes elements contain other elements. Our ball is a <code>&lt;button&gt;</code> with a <code>&lt;p&gt;</code> nested inside it for the answer text.</p>
+
+            <div class="remember">
+                <pre><code>&lt;button&gt;
+    &lt;p&gt;8&lt;/p&gt;
+&lt;/button&gt;</code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>Common HTML Tags</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>What It Creates</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><code>&lt;h1&gt;</code></td>
+                        <td>A large heading</td>
+                        <td><code>&lt;h1&gt;My Magical 8 Ball&lt;/h1&gt;</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>&lt;p&gt;</code></td>
+                        <td>A paragraph of text</td>
+                        <td><code>&lt;p&gt;Ask a question&lt;/p&gt;</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>&lt;div&gt;</code></td>
+                        <td>A generic container for grouping other elements together</td>
+                        <td><code>&lt;div&gt;...&lt;/div&gt;</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><code>&lt;button&gt;</code></td>
+                        <td>A clickable button — this is our ball</td>
+                        <td><code>&lt;button type="button"&gt;...&lt;/button&gt;</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="more-link">Explore more tags here — <a href="https://www.w3schools.com/html/html_intro.asp" target="_blank" rel="noopener">w3schools.com</a>.</p>
+        </section>
+
+        <section>
+            <h2>Start building your game</h2>
+
+            <p>This is the HTML for our Magic 8 Ball. Open the Preview tab to see what plain HTML looks like before any styling is added. Add everything in green — check all three tabs.</p>
+
+            <div class="editor">
+                <div class="editor-tabs" role="tablist">
+                    <button class="editor-tab active" data-tab="html" role="tab" aria-selected="true">index.html</button>
+                    <button class="editor-tab editor-tab-preview" data-tab="preview" role="tab" aria-selected="false">▶ Preview</button>
+                </div>
+
+                <div class="editor-panels">
+                    <div class="editor-panel active" data-panel="html">
+                        <pre><code id="code-html"></code></pre>
+                        <div class="code-lock">
+                            <div class="code-lock-emoji">🔒</div>
+                            <p>Ask Arissa for the password after you tried yourself.</p>
+                            <form class="code-lock-form">
+                                <input type="password" placeholder="HTML password" autocomplete="off">
+                                <button type="submit">Unlock</button>
+                            </form>
+                            <p class="code-lock-error"></p>
+                        </div>
+                    </div>
+                    <div class="editor-panel editor-panel-preview" data-panel="preview">
+                        <iframe id="preview-frame" title="Magic 8 Ball preview"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>Camp KO &mdash; August 3&ndash;7, 2026</span>
+            <a href="https://arissafram.com" target="_blank" rel="noopener">arissafram.com</a>
+        </div>
+    </footer>
+
+    <script src="content.js"></script>
+    <script src="../shared/engine.js"></script>
+</body>
+</html>
